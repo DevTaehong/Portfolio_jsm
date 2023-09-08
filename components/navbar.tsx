@@ -1,144 +1,113 @@
+"use client";
+
 import {
-	Navbar as NextUINavbar,
-	NavbarContent,
-	NavbarMenu,
-	NavbarMenuToggle,
-	NavbarBrand,
-	NavbarItem,
-	NavbarMenuItem,
-} from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
-import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-
-import { link as linkStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
-import clsx from "clsx";
+  Navbar as NextUiNavBar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+} from "@nextui-org/react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
-	SearchIcon,
-} from "@/components/icons";
-
-import { Logo } from "@/components/icons";
+import { righteous } from "@/config/fonts";
+import NavBarMenuButton from "@/components/NavBarMenuButton";
+import { siteConfig } from "@/config/site";
+import { DownloadResumeIcon, DividerIcon } from "./icons";
 
 export const Navbar = () => {
-	const searchInput = (
-		<Input
-			aria-label="Search"
-			classNames={{
-				inputWrapper: "bg-default-100",
-				input: "text-sm",
-			}}
-			endContent={
-				<Kbd className="hidden lg:inline-block" keys={["command"]}>
-					K
-				</Kbd>
-			}
-			labelPlacement="outside"
-			placeholder="Search..."
-			startContent={
-				<SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-			}
-			type="search"
-		/>
-	);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-	return (
-		<NextUINavbar maxWidth="xl" position="sticky">
-			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<NavbarBrand as="li" className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
-						<p className="font-bold text-inherit">ACME</p>
-					</NextLink>
-				</NavbarBrand>
-				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (
-						<NavbarItem key={item.href}>
-							<NextLink
-								className={clsx(
-									linkStyles({ color: "foreground" }),
-									"data-[active=true]:text-primary data-[active=true]:font-medium"
-								)}
-								color="foreground"
-								href={item.href}
-							>
-								{item.label}
-							</NextLink>
-						</NavbarItem>
-					))}
-				</ul>
-			</NavbarContent>
-
-			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
-				justify="end"
-			>
-				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-						<TwitterIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-						<DiscordIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.github} aria-label="Github">
-						<GithubIcon className="text-default-500" />
-					</Link>
-					<ThemeSwitch />
-				</NavbarItem>
-				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-				<NavbarItem className="hidden md:flex">
-					<Button
-            isExternal
-						as={Link}
-						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
-						startContent={<HeartFilledIcon className="text-danger" />}
-						variant="flat"
-					>
-						Sponsor
-					</Button>
-				</NavbarItem>
-			</NavbarContent>
-
-			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-default-500" />
-				</Link>
-				<ThemeSwitch />
-				<NavbarMenuToggle />
-			</NavbarContent>
-
-			<NavbarMenu>
-				{searchInput}
-				<div className="mx-4 mt-2 flex flex-col gap-2">
-					{siteConfig.navMenuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index}`}>
-							<Link
-								color={
-									index === 2
-										? "primary"
-										: index === siteConfig.navMenuItems.length - 1
-										? "danger"
-										: "foreground"
-								}
-								href="#"
-								size="lg"
-							>
-								{item.label}
-							</Link>
-						</NavbarMenuItem>
-					))}
-				</div>
-			</NavbarMenu>
-		</NextUINavbar>
-	);
+  return (
+    <NextUiNavBar
+      maxWidth="full"
+      className="bg-white800 dark:bg-black300 lg:h-[6.25rem] lg:pl-[3.81rem] lg:pr-[3.94rem]"
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent>
+        <NavbarBrand>
+          <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-[11250px] lg:p-[12.5px]">
+            <span
+              className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
+            >
+              T
+            </span>
+          </div>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
+        <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.label}>
+              <Link
+                className={`smallBold w-full ${
+                  item.href === pathname
+                    ? "text-primaryLight dark:text-primaryDark"
+                    : "text-white500 dark:text-white800"
+                }`}
+                href={item.href}
+                size="lg"
+              >
+                {item.label}
+              </Link>
+            </NavbarItem>
+          ))}
+          <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
+            <DownloadResumeIcon />
+            <Link
+              className="smallRegular text-black200 dark:text-white900"
+              href="/public/Resume.pdf"
+              size="lg"
+            >
+              Resume
+            </Link>
+          </NavbarMenuItem>
+        </div>
+        <NavbarItem>
+          <DividerIcon />
+        </NavbarItem>
+        <NavbarItem className="h-[24px]">
+          <ThemeSwitch />
+        </NavbarItem>
+        <NavbarItem className="sm:hidden">
+          <NavbarMenuToggle
+            icon={NavBarMenuButton}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        {siteConfig.navItems.map((item) => (
+          <NavbarMenuItem key={item.label}>
+            <Link
+              className={`paragraphRegular w-full ${
+                item.href === pathname
+                  ? "text-primaryLight dark:text-primaryDark"
+                  : "text-white500 dark:text-white800"
+              }`}
+              href={item.href}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+        <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
+          <DownloadResumeIcon />
+          <Link
+            className="paragraphRegular text-black200 dark:text-white900"
+            href="/public/Resume.pdf"
+            size="lg"
+          >
+            Resume
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </NextUiNavBar>
+  );
 };

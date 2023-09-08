@@ -1,3 +1,141 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.heading1 {
+  text-align: center;
+  /* Heading/H1 */
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 83.2px */
+  letter-spacing: -0.64px;
+}
+
+.heading2 {
+  text-align: center;
+  /* Heading/H2 */
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  /* 55.2px */
+  letter-spacing: -0.48px;
+}
+
+.heading3 {
+  text-align: center;
+  /* Heading/H3 */
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%;
+  /* 33.6px */
+  letter-spacing: -0.16px;
+}
+
+.baseRegular {
+  /* Base/Regular */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 31.2px */
+}
+
+.baseBold {
+  /* Base/Semibold */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 31.2px */
+}
+
+.paragraphRegular {
+  /* Paragraph/Regular */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 30px */
+}
+
+.paragraphBold {
+  /* Paragraph/Semibold */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 26px */
+}
+
+.bodyRegular {
+  /* Body/Regular */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 28.8px */
+}
+
+.bodyBold {
+  /* Body/Semibold */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  /* 28.8px */
+}
+
+.smallRegular {
+  /* Small/Regular */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+  /* 21.7px */
+}
+
+.smallBold {
+  /* Small/Bold */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+  /* 20.3px */
+}
+
+.logo {
+  display: flex;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0.52081rem;
+  border-radius: 468.75rem;
+  background: conic-gradient(from 180deg at 50% 75.56%,
+      #0252cd 0deg,
+      rgba(2, 82, 205, 0.33) 360deg);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.52081rem;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+}
+
+.logoText {
+  display: flex;
+  width: 13.333px;
+  height: 13.333px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--white-900, #fff);
+  text-align: center;
+  font-size: 11.667px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 240%;
+  /* 28px */
+  transform: rotate(180deg);
+}

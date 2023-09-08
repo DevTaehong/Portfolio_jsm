@@ -1,11 +1,13 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google"
+import { Poppins, Righteous } from "next/font/google";
 
-export const fontSans = FontSans({
+export const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-sans",
-})
+  variable: "--font-poppins",
+  weight: "400",
+});
 
-export const fontMono = FontMono({
+export const righteous = Righteous({
   subsets: ["latin"],
-  variable: "--font-mono",
-})
+  variable: "--font-righteous",
+  weight: "400",
+});
