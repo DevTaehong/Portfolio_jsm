@@ -19,9 +19,8 @@ import NavBarMenuButton from "@/components/NavBarMenuButton";
 import { siteConfig } from "@/config/site";
 import { DownloadResumeIcon, DividerIcon } from "./icons";
 
-export const Navbar = () => {
+export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <NextUiNavBar
@@ -42,31 +41,7 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
         <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.label}>
-              <Link
-                className={`smallBold w-full ${
-                  item.href === pathname
-                    ? "text-primaryLight dark:text-primaryDark"
-                    : "text-white500 dark:text-white800"
-                }`}
-                href={item.href}
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarItem>
-          ))}
-          <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
-            <DownloadResumeIcon />
-            <Link
-              className="smallRegular text-black200 dark:text-white900"
-              href="/public/Resume.pdf"
-              size="lg"
-            >
-              Resume
-            </Link>
-          </NavbarMenuItem>
+          <NavBarLinks isMobile="smallBold" />
         </div>
         <NavbarItem>
           <DividerIcon />
@@ -82,32 +57,42 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {siteConfig.navItems.map((item) => (
-          <NavbarMenuItem key={item.label}>
-            <Link
-              className={`paragraphRegular w-full ${
-                item.href === pathname
-                  ? "text-primaryLight dark:text-primaryDark"
-                  : "text-white500 dark:text-white800"
-              }`}
-              href={item.href}
-              size="lg"
-            >
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-        <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
-          <DownloadResumeIcon />
-          <Link
-            className="paragraphRegular text-black200 dark:text-white900"
-            href="/public/Resume.pdf"
-            size="lg"
-          >
-            Resume
-          </Link>
-        </NavbarMenuItem>
+        <NavBarLinks isMobile="paragraphRegular" />
       </NavbarMenu>
     </NextUiNavBar>
+  );
+};
+
+const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
+  const pathname = usePathname();
+  return (
+    <>
+      {siteConfig.navItems.map((item) => (
+        <NavbarItem key={item.label}>
+          <Link
+            className={`${isMobile} w-full ${
+              item.href === pathname
+                ? "text-primaryLight dark:text-primaryDark"
+                : "text-white500 dark:text-white800"
+            }`}
+            href={item.href}
+            size="lg"
+          >
+            {item.label}
+          </Link>
+        </NavbarItem>
+      ))}
+      <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
+        <DownloadResumeIcon />
+        <Link
+          className={`text-black200 dark:text-white900 ${isMobile}`}
+          href="/Resume.pdf"
+          download="Resume.pdf"
+          size="lg"
+        >
+          Resume
+        </Link>
+      </NavbarMenuItem>
+    </>
   );
 };

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import "@/styles/globals.css";
-import { Navbar } from "@/components/navbar";
+import { NavBar } from "@/components/NavBar";
 import { poppins } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Providers } from "./providers";
@@ -33,7 +33,7 @@ export default function RootLayout({
       <head />
       <body>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <Navbar />
+          <NavBar />
           {children}
         </Providers>
       </body>
