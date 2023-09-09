@@ -42,7 +42,7 @@ const Hero = () => {
           >
             <span>minth1123@icloud.com</span>
             <Image
-              className="xl:h-[21px] xl:w-[21px]"
+              className="xl:h-[1.3125rem] xl:w-[1.3125rem]"
               src={contactIcon}
               alt="contact icon"
               width={16}
