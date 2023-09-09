@@ -31,13 +31,16 @@ export const NavBar = () => {
       >
         <NavbarContent>
           <NavbarBrand>
-            <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-[11250px] lg:p-[12.5px]">
-              <span
-                className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
-              >
-                T
-              </span>
-            </div>
+            {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
+            <Link href="/" className="lg:drop-shadow-2xl">
+              <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-full lg:p-[12.5px]">
+                <span
+                  className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
+                >
+                  T
+                </span>
+              </div>
+            </Link>
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
