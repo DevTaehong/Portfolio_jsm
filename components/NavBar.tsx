@@ -23,43 +23,48 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <NextUiNavBar
-      maxWidth="full"
-      className="bg-white800 dark:bg-black300 lg:h-[6.25rem] lg:pl-[3.81rem] lg:pr-[3.94rem]"
-      onMenuOpenChange={setIsMenuOpen}
-    >
-      <NavbarContent>
-        <NavbarBrand>
-          <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-[11250px] lg:p-[12.5px]">
-            <span
-              className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
-            >
-              T
-            </span>
+    <div className="bg-white800 dark:bg-black300">
+      <NextUiNavBar
+        maxWidth="full"
+        className="bg-white800 dark:bg-black300 lg:h-[6.25rem] lg:pl-[3.81rem] lg:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"
+        onMenuOpenChange={setIsMenuOpen}
+      >
+        <NavbarContent>
+          <NavbarBrand>
+            {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
+            <Link href="/" className="lg:drop-shadow-2xl">
+              <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-full lg:p-[12.5px]">
+                <span
+                  className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
+                >
+                  T
+                </span>
+              </div>
+            </Link>
+          </NavbarBrand>
+        </NavbarContent>
+        <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
+          <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
+            <NavBarLinks isMobile="smallBold" />
           </div>
-        </NavbarBrand>
-      </NavbarContent>
-      <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
-        <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
-          <NavBarLinks isMobile="smallBold" />
-        </div>
-        <NavbarItem>
-          <DividerIcon />
-        </NavbarItem>
-        <NavbarItem className="h-[24px]">
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="sm:hidden">
-          <NavbarMenuToggle
-            icon={NavBarMenuButton}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          />
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        <NavBarLinks isMobile="paragraphRegular" />
-      </NavbarMenu>
-    </NextUiNavBar>
+          <NavbarItem>
+            <DividerIcon />
+          </NavbarItem>
+          <NavbarItem className="h-[24px]">
+            <ThemeSwitch />
+          </NavbarItem>
+          <NavbarItem className="sm:hidden">
+            <NavbarMenuToggle
+              icon={NavBarMenuButton}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            />
+          </NavbarItem>
+        </NavbarContent>
+        <NavbarMenu className="items-center gap-6 pt-12">
+          <NavBarLinks isMobile="paragraphRegular" />
+        </NavbarMenu>
+      </NextUiNavBar>
+    </div>
   );
 };
 

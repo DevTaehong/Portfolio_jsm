@@ -2,15 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.heading1 {
-  text-align: center;
-  /* Heading/H1 */
-  font-size: 64px;
+@layer components {
+  .heading1 {
+    @apply text-black200 dark:text-white900 text-[2.625rem] tracking-[-0.02625rem] leading-[3.018rem] xl:text-[4rem] not-italic font-bold xl:leading-[5.2rem] xl:tracking-[-0.04rem];
+  }
+}
+
+.paragraphBold {
+  /* Paragraph/Semibold */
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 130%;
-  /* 83.2px */
-  letter-spacing: -0.64px;
+  /* 26px */
 }
 
 .heading2 {
@@ -62,15 +66,6 @@
   /* 30px */
 }
 
-.paragraphBold {
-  /* Paragraph/Semibold */
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
-  /* 26px */
-}
-
 .bodyRegular {
   /* Body/Regular */
   font-size: 18px;
@@ -113,9 +108,11 @@
   height: 1.875rem;
   padding: 0.52081rem;
   border-radius: 468.75rem;
-  background: conic-gradient(from 180deg at 50% 75.56%,
-      #0252cd 0deg,
-      rgba(2, 82, 205, 0.33) 360deg);
+  background: conic-gradient(
+    from 180deg at 50% 75.56%,
+    #0252cd 0deg,
+    rgba(2, 82, 205, 0.33) 360deg
+  );
   flex-direction: column;
   align-items: flex-start;
   gap: 0.52081rem;
@@ -138,4 +135,53 @@
   line-height: 240%;
   /* 28px */
   transform: rotate(180deg);
+}
+
+.primaryButton {
+  display: flex;
+  width: 100%;
+  height: 2.9375rem;
+  padding: 0.84394rem 0.50638rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.42194rem;
+  flex-shrink: 0;
+  border-radius: 379.77006rem;
+  background: var(--accent-primary-light, #0252cd);
+}
+
+.primaryButtonText {
+  color: var(--white-900, #fff);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: center;
+}
+
+.contactButton {
+  display: flex;
+  width: 100%;
+  height: 2.9375rem;
+  padding: 0.875rem 1rem;
+  border-radius: 37.5rem;
+  background: var(--white-900, #fff);
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 37.5rem;
+  background: var(--white-900, #fff);
+}
+
+.contactButtonText {
+  color: var(--white-500, #6f74a7);
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 1.4rem */
+}
+
+.heroImage {
+  mix-blend-mode: multiply;
 }
