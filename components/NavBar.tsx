@@ -26,16 +26,16 @@ export const NavBar = () => {
     <div className="bg-white800 dark:bg-black300">
       <NextUiNavBar
         maxWidth="full"
-        className="bg-white800 dark:bg-black300 lg:h-[6.25rem] lg:pl-[3.81rem] lg:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"
+        className="bg-white800 dark:bg-black300 xl:h-[6.25rem] xl:pl-[3.81rem] xl:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"
         onMenuOpenChange={setIsMenuOpen}
       >
         <NavbarContent>
           <NavbarBrand>
             {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
             <Link href="/" className="lg:drop-shadow-2xl">
-              <div className="logo lg:h-[45px] lg:w-[45px] lg:rounded-full lg:p-[12.5px]">
+              <div className="logo xl:h-[2.81rem] xl:w-[2.81rem] xl:rounded-full xl:p-[0.78rem]">
                 <span
-                  className={`logoText lg:h-[20px] lg:w-[20px] lg:text-[17.5px] lg:leading-[2.625rem] ${righteous.className}`}
+                  className={`logoText xl:h-5 xl:w-5 xl:text-[1.1rem] xl:leading-[2.625rem] ${righteous.className}`}
                 >
                   T
                 </span>
@@ -45,12 +45,12 @@ export const NavBar = () => {
         </NavbarContent>
         <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
           <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
-            <NavBarLinks isMobile="smallBold" />
+            <NavBarLinks isMobile="smallRegular" />
           </div>
           <NavbarItem>
             <DividerIcon />
           </NavbarItem>
-          <NavbarItem className="h-[24px]">
+          <NavbarItem className="h-6">
             <ThemeSwitch />
           </NavbarItem>
           <NavbarItem className="sm:hidden">
@@ -87,7 +87,7 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
           </Link>
         </NavbarItem>
       ))}
-      <NavbarMenuItem className="flex flex-row items-center gap-[3px]">
+      <NavbarMenuItem className="flex flex-row items-center gap-[0.1875rem]">
         <DownloadResumeIcon />
         <Link
           className={`text-black200 dark:text-white900 ${isMobile}`}

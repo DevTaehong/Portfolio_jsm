@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Tooltip } from "@nextui-org/react";
+
 import { IconSvgProps } from "@/types";
 
 export const MoonFilledIcon = ({
@@ -870,3 +873,1277 @@ export const HeroImage = () => (
     </defs>
   </svg>
 );
+
+export const JSIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="JavaScript"
+    >
+      <svg
+        viewBox="0 0 55 53"
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+          cx="26.5232"
+          cy="26.3863"
+          r="26.3863"
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+        />
+        <g clip-path="url(#clip0_3357_3898)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`fill-[#778295] ${isCircleHovered && "fill-[#F0DB4F]"}`}
+            d="M36.286 13.1931H17.8156C15.6297 13.1931 13.8577 14.9651 13.8577 17.1511V35.6215C13.8577 37.8074 15.6297 39.5794 17.8156 39.5794H36.286C38.4719 39.5794 40.244 37.8074 40.244 35.6215V17.1511C40.244 14.9651 38.4719 13.1931 36.286 13.1931Z"
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={` ${
+              isCircleHovered
+                ? "fill-[#323330] dark:fill-black300"
+                : "fill-[#F3F8FF] dark:fill-black300"
+            }`}
+            d="M30.5552 32.2613C31.0705 33.1374 31.792 33.7559 32.9773 33.7559C34.0081 33.7559 34.678 33.2405 34.678 32.519C34.678 31.6944 34.0081 31.3852 32.8743 30.8699L32.2558 30.6122C30.4521 29.8392 29.2668 28.9115 29.2668 26.9016C29.2668 25.0463 30.6582 23.6033 32.8743 23.6033C34.4719 23.6033 35.6057 24.1702 36.3787 25.6132L34.4719 26.8501C34.0596 26.077 33.5958 25.7678 32.8743 25.7678C32.1528 25.7678 31.6889 26.2317 31.6889 26.8501C31.6889 27.5716 32.1528 27.8808 33.235 28.3446L33.8534 28.6023C35.9664 29.5299 37.1517 30.4061 37.1517 32.519C37.1517 34.7351 35.3995 35.9719 33.0289 35.9719C30.7098 35.9719 29.2152 34.8897 28.4937 33.4467L30.5552 32.2613ZM21.7941 32.4675C22.2064 33.1374 22.5156 33.7559 23.3917 33.7559C24.2163 33.7559 24.7316 33.4467 24.7316 32.2098V23.6549H27.2053V32.1067C27.2053 34.6835 25.7108 35.8173 23.4948 35.8173C21.4849 35.8173 20.3511 34.7866 19.7842 33.5497L21.7941 32.4675Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3898">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.8577 13.1931)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const ReactIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="React.js"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+          cx="26.7047"
+          cy="26.3863"
+          r="26.3863"
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+        />
+        <g clip-path="url(#clip0_3357_3908)">
+          <path
+            className={`${
+              isCircleHovered ? "fill-[#53C1DE]" : "fill-[#778295]"
+            }`}
+            d="M29.8972 26.4796C29.8972 25.2694 28.8853 24.2881 27.6369 24.2881C26.3887 24.2881 25.3766 25.2694 25.3766 26.4796C25.3766 27.6901 26.3887 28.6713 27.6369 28.6713C28.8853 28.6713 29.8972 27.6901 29.8972 26.4796Z"
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+          />
+          <path
+            className={`${
+              isCircleHovered ? "fill-[#53C1DE]" : "fill-[#778295]"
+            }`}
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M35.7074 22.0052C36.2222 19.8681 36.8694 15.9049 34.5879 14.5612C32.317 13.2234 29.3619 15.7869 27.8015 17.3256C26.2456 15.8022 23.2074 13.2497 20.9278 14.5977C18.6578 15.9399 19.3579 19.8374 19.8842 21.988C17.7666 22.6023 14.1367 23.9255 14.1367 26.629C14.1367 29.3248 17.7629 30.7644 19.8678 31.3781C19.3396 33.5406 18.6746 37.3824 20.9475 38.7217C23.2357 40.0694 26.2643 37.5776 27.8392 36.0221C29.4097 37.5698 32.3364 40.0779 34.6078 38.7348C36.8862 37.3876 36.2928 33.4775 35.7665 31.3145C37.807 30.6994 41.4409 29.2911 41.4409 26.629C41.4409 23.9515 37.7915 22.6176 35.7074 22.0052ZM35.4487 30.1682C35.1031 29.0507 34.6367 27.8624 34.0661 26.6349C34.6108 25.4364 35.0591 24.2634 35.395 23.1532C36.9229 23.6056 40.2746 24.6398 40.2746 26.629C40.2746 28.6369 37.0582 29.6808 35.4487 30.1682ZM34.0233 37.7037C32.3286 38.7057 29.8112 36.3072 28.6514 35.1675C29.4209 34.3079 30.1898 33.3086 30.9402 32.1989C32.2602 32.0793 33.5072 31.8837 34.6382 31.6167C35.0086 33.1467 35.7254 36.6972 34.0233 37.7037ZM21.5303 37.6894C19.8355 36.6912 20.6102 33.2629 20.9988 31.67C22.1171 31.9227 23.3552 32.1045 24.6783 32.2141C25.4336 33.2999 26.2248 34.298 27.0221 35.1721C26.0371 36.1454 23.2331 38.6923 21.5303 37.6894ZM15.3031 26.629C15.3031 24.6136 18.6347 23.587 20.1974 23.1356C20.5391 24.2708 20.9873 25.4578 21.5282 26.658C20.9803 27.8761 20.5257 29.0819 20.1808 30.2305C18.6908 29.7948 15.3031 28.6456 15.3031 26.629ZM21.5122 15.6288C23.214 14.6226 25.8545 17.0731 26.9842 18.176C26.191 19.0461 25.4071 20.0366 24.6582 21.1162C23.3741 21.2378 22.1448 21.433 21.0147 21.6946C20.5907 19.96 19.8123 16.6339 21.5122 15.6288ZM31.7746 22.4112C32.6458 22.5235 33.4805 22.6729 34.2642 22.8556C34.0289 23.626 33.7357 24.4315 33.3903 25.2573C32.8896 24.2869 32.3522 23.336 31.7746 22.4112ZM27.8018 19.0275C28.3398 19.6228 28.8786 20.2876 29.4087 21.0088C28.3335 20.9568 27.2566 20.9567 26.1815 21.008C26.712 20.2935 27.2555 19.6297 27.8018 19.0275ZM22.1974 25.2564C21.8577 24.4335 21.5671 23.6244 21.3298 22.8431C22.1088 22.665 22.9396 22.5195 23.8051 22.409C23.2259 23.3318 22.6894 24.2823 22.1974 25.2564ZM23.83 30.934C22.9359 30.8321 22.0925 30.6939 21.3137 30.5207C21.5548 29.7257 21.8518 28.8991 22.1987 28.0585C22.6975 29.0428 23.2422 30.0025 23.83 30.934ZM27.8341 34.3147C27.2813 33.7053 26.7299 33.0314 26.1913 32.3065C27.2726 32.3498 28.3559 32.3499 29.4371 32.3006C28.9054 33.0387 28.3685 33.7137 27.8341 34.3147ZM33.4014 28.0157C33.7663 28.8655 34.074 29.6875 34.3183 30.4691C33.5266 30.6537 32.6719 30.8023 31.7713 30.9127C32.3532 29.9703 32.8992 29.0047 33.4014 28.0157ZM30.2892 31.0571C28.6353 31.1778 26.9711 31.1765 25.3167 31.067C24.3766 29.6643 23.5397 28.1891 22.8174 26.6576C23.5363 25.1293 24.367 23.657 25.3027 22.2566C26.9583 22.1287 28.6241 22.1284 30.2798 22.2573C31.2074 23.6577 32.0369 25.1262 32.7725 26.6407C32.0456 28.1682 31.2105 29.6435 30.2892 31.0571ZM34.0053 15.5934C35.7076 16.5963 34.9499 20.1581 34.578 21.7069C33.4452 21.4399 32.2151 21.2412 30.9272 21.1177C30.1769 20.0265 29.3996 19.0343 28.6192 18.1754C29.7634 17.0487 32.3196 14.6003 34.0053 15.5934Z"
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3908">
+            <rect
+              width="27"
+              height="27"
+              fill="white"
+              transform="translate(14.1367 13)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const ReduxIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="Redux Toolkit"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <path
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          className={`${isCircleHovered ? "fill-[#764ABC]" : "fill-[#778295]"}`}
+          d="M32.1855 30.9677C33.0984 30.8748 33.7909 30.1011 33.7595 29.1726C33.728 28.2442 32.941 27.5014 31.9966 27.5014H31.9337C30.9577 27.5323 30.2023 28.337 30.2338 29.2964C30.2653 29.7606 30.4542 30.1629 30.7375 30.4415C29.6672 32.5151 28.0302 34.0316 25.5749 35.3005C23.9065 36.1671 22.1752 36.4766 20.4439 36.26C19.0273 36.0743 17.9255 35.4554 17.2329 34.4339C16.2256 32.9174 16.1312 31.2771 16.9812 29.6369C17.5793 28.4608 18.5236 27.5942 19.1217 27.1608C18.9958 26.7585 18.8069 26.0777 18.7125 25.5825C14.148 28.8322 14.6202 33.227 16.0053 35.3005C17.0441 36.848 19.1532 37.8075 21.4826 37.8075C22.1122 37.8075 22.7418 37.7455 23.3714 37.5909C27.4008 36.8171 30.4542 34.4649 32.1855 30.9677ZM37.7259 27.13C35.3335 24.3755 31.8078 22.859 27.7784 22.859H27.2748C26.9915 22.302 26.3934 21.9305 25.7323 21.9305H25.6693C24.6935 21.9615 23.9381 22.7661 23.9696 23.7256C24.001 24.6541 24.7879 25.3968 25.7323 25.3968H25.7952C26.4878 25.3659 27.0859 24.9326 27.3378 24.3445H27.9043C30.2968 24.3445 32.5632 25.0254 34.6095 26.3562C36.1834 27.3775 37.3167 28.7084 37.9462 30.3177C38.4814 31.6176 38.4499 32.8865 37.8832 33.9697C37.0018 35.61 35.5224 36.5075 33.5706 36.5075C32.3114 36.5075 31.1153 36.1361 30.4857 35.8576C30.1394 36.1671 29.5098 36.6622 29.069 36.9718C30.4227 37.5908 31.8078 37.9312 33.1299 37.9312C36.1519 37.9312 38.3869 36.2908 39.2369 34.6506C40.1497 32.8555 40.0867 29.7606 37.7259 27.13ZM21.7345 31.4937C21.766 32.4222 22.5529 33.1649 23.4973 33.1649H23.5603C24.5361 33.134 25.2916 32.3293 25.2601 31.37C25.2287 30.4414 24.4416 29.6987 23.4973 29.6987H23.4344C23.3714 29.6987 23.2769 29.6987 23.2141 29.7295C21.9234 27.6251 21.3882 25.3349 21.5772 22.859C21.703 21.002 22.3326 19.3926 23.4344 18.0618C24.3472 16.9166 26.1101 16.3596 27.3063 16.3287C30.6431 16.2668 32.0595 20.352 32.154 21.9923C32.5632 22.0852 33.2558 22.3019 33.728 22.4567C33.3502 17.4429 30.2023 14.8432 27.1804 14.8432C24.3472 14.8432 21.7345 16.8549 20.6956 19.826C19.2476 23.7874 20.192 27.5942 21.9548 30.5963C21.7975 30.8129 21.703 31.1533 21.7345 31.4937Z"
+        />
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const NextJSIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <>
+      <Tooltip
+        classNames={{
+          base: "text-white500 dark:text-white900 dark:bg-black300",
+        }}
+        content="Next.js"
+      >
+        <svg
+          className={`h-[3.29831rem] w-[3.29831rem] dark:hidden sm:h-[6.25rem] sm:w-[6.25rem] ${
+            isCircleHovered && "drop-shadow-skill"
+          } lg:h-[6.25rem] lg:w-[6.25rem]`}
+          viewBox="0 0 103 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            cx="50.1408"
+            cy="50"
+            r="50"
+            className={`${
+              isCircleHovered ? "fill-white900" : "fill-[#F3F8FF]"
+            }`}
+          />
+          <g clip-path="url(#clip0_3718_256)" className="dark:hidden">
+            <mask
+              id="mask0_3718_256"
+              style={{ maskType: "alpha" }}
+              maskUnits="userSpaceOnUse"
+              x="26"
+              y="25"
+              width="50"
+              height="50"
+            >
+              <path
+                onMouseEnter={handleCircleHover}
+                onMouseLeave={handleCircleLeave}
+                d="M51 75C64.8071 75 76 63.8071 76 50C76 36.1929 64.8071 25 51 25C37.1929 25 26 36.1929 26 50C26 63.8071 37.1929 75 51 75Z"
+                fill="black"
+              />
+            </mask>
+            <g mask="url(#mask0_3718_256)">
+              <path
+                className={`${
+                  isCircleHovered
+                    ? "fill-[#192333] dark:fill-white900"
+                    : "fill-[#778295] "
+                }`}
+                onMouseEnter={handleCircleHover}
+                onMouseLeave={handleCircleLeave}
+                d="M51 75C64.8071 75 76 63.8071 76 50C76 36.1929 64.8071 25 51 25C37.1929 25 26 36.1929 26 50C26 63.8071 37.1929 75 51 75Z"
+              />
+              <path
+                onMouseEnter={handleCircleHover}
+                onMouseLeave={handleCircleLeave}
+                d="M67.53 68.7556L45.2061 40H41V59.9917H44.3649V44.2732L64.8886 70.7903C65.8147 70.1706 66.6969 69.4903 67.53 68.7556Z"
+                fill="url(#paint0_linear_3718_256)"
+              />
+              <path
+                onMouseEnter={handleCircleHover}
+                onMouseLeave={handleCircleLeave}
+                d="M61.2777 40H57.9444V60H61.2777V40Z"
+                fill="url(#paint1_linear_3718_256)"
+              />
+            </g>
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear_3718_256"
+              x1="56.2777"
+              y1="57.3611"
+              x2="66.1389"
+              y2="69.5833"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="white" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_3718_256"
+              x1="59.6111"
+              y1="40"
+              x2="59.5552"
+              y2="54.6875"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="white" />
+              <stop offset="1" stop-color="white" stop-opacity="0" />
+            </linearGradient>
+            <clipPath id="clip0_3718_256">
+              <rect
+                width="50"
+                height="50"
+                fill="white"
+                transform="translate(26.1408 25)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </Tooltip>
+      {/*  In Dark mode, it has different path */}
+      <Tooltip
+        classNames={{
+          base: "text-white500 dark:text-white900 dark:bg-black300",
+        }}
+        content="Next.js"
+      >
+        <svg
+          className={`hidden h-[3.29831rem] w-[3.29831rem] dark:block sm:h-[6.25rem] sm:w-[6.25rem] ${
+            isCircleHovered && "drop-shadow-skill"
+          } lg:h-[6.25rem] lg:w-[6.25rem]`}
+          viewBox="0 0 103 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            cx="50.1406"
+            cy="50"
+            r="50"
+            fill="#192333"
+          />
+          <g clip-path="url(#clip0_3313_11459)">
+            <path
+              onMouseEnter={handleCircleHover}
+              onMouseLeave={handleCircleLeave}
+              d="M49.5033 25.0135C49.3958 25.0232 49.0536 25.0574 48.7457 25.0819C41.644 25.7221 34.992 29.5534 30.7789 35.442C28.4329 38.7162 26.9324 42.4303 26.3655 46.3642C26.1651 47.7374 26.1406 48.143 26.1406 50.0049C26.1406 51.8668 26.1651 52.2724 26.3655 53.6456C27.7242 63.0333 34.4055 70.9207 43.4671 73.843C45.0898 74.3659 46.8004 74.7227 48.7457 74.9377C49.5033 75.0208 52.778 75.0208 53.5355 74.9377C56.8933 74.5663 59.7379 73.7355 62.5434 72.3037C62.9735 72.0838 63.0566 72.0251 62.9979 71.9762C62.9588 71.9469 61.126 69.4888 58.9266 66.5176L54.9285 61.1176L49.9187 53.7043C47.1621 49.6286 44.8943 46.2958 44.8747 46.2958C44.8552 46.2909 44.8356 49.5846 44.8259 53.6065C44.8112 60.6485 44.8063 60.9319 44.7183 61.0981C44.5913 61.3375 44.4935 61.4353 44.2882 61.5428C44.1318 61.621 43.995 61.6356 43.257 61.6356H42.4114L42.1866 61.4939C42.0399 61.4011 41.9324 61.2789 41.8591 61.1372L41.7565 60.9173L41.7662 51.1191L41.7809 41.316L41.9324 41.1255C42.0106 41.0228 42.1768 40.8909 42.2941 40.8274C42.4945 40.7296 42.5727 40.7198 43.4182 40.7198C44.4153 40.7198 44.5815 40.7589 44.8405 41.0424C44.9138 41.1206 47.6265 45.206 50.8718 50.1271C54.1172 55.0481 58.5551 61.7676 60.735 65.0662L64.6939 71.0624L64.8943 70.9305C66.6685 69.7772 68.5453 68.1352 70.0311 66.4248C73.1934 62.7938 75.2315 58.3663 75.9158 53.6456C76.1162 52.2724 76.1406 51.8668 76.1406 50.0049C76.1406 48.143 76.1162 47.7374 75.9158 46.3642C74.557 36.9765 67.8757 29.0891 58.8141 26.1668C57.2159 25.6487 55.515 25.292 53.6089 25.077C53.1396 25.0281 49.909 24.9744 49.5033 25.0135ZM59.7379 40.1334C59.9725 40.2507 60.1631 40.4755 60.2315 40.7101C60.2706 40.8371 60.2804 43.5542 60.2706 49.6775L60.256 58.4641L58.7066 56.089L57.1524 53.714V47.3269C57.1524 43.1975 57.1719 40.8762 57.2012 40.7638C57.2794 40.4902 57.4505 40.2751 57.6851 40.1481C57.8855 40.0455 57.9588 40.0357 58.7262 40.0357C59.4495 40.0357 59.5766 40.0455 59.7379 40.1334Z"
+              className={`fill-[#778295] ${
+                isCircleHovered && "dark:fill-white900"
+              }`}
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_3313_11459">
+              <rect
+                onMouseEnter={handleCircleHover}
+                onMouseLeave={handleCircleLeave}
+                width="50"
+                height="50"
+                fill="white"
+                transform="translate(26.1406 25)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </Tooltip>
+    </>
+  );
+};
+
+export const TypescriptIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="TypeScript"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3917)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`${
+              isCircleHovered ? "fill-[#3178C6]" : "fill-[#778295]"
+            }`}
+            d="M36.286 13.9658H17.8156C15.6297 13.9658 13.8577 15.7379 13.8577 17.9238V36.3942C13.8577 38.5801 15.6297 40.3521 17.8156 40.3521H36.286C38.4719 40.3521 40.244 38.5801 40.244 36.3942V17.9238C40.244 15.7379 38.4719 13.9658 36.286 13.9658Z"
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`  ${
+              isCircleHovered
+                ? "fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+            d="M25.8655 28.6019H29.1637V26.4889H19.9388V28.6019H23.2371V38.0329H25.8655V28.6019ZM30.1945 37.5176C30.6119 37.734 31.1221 37.8938 31.689 38.002C32.2559 38.1102 32.8743 38.1618 33.4927 38.1618C34.1112 38.1618 34.6781 38.1051 35.245 37.9866C35.8119 37.868 36.2757 37.6722 36.688 37.4197C37.1054 37.1465 37.461 36.8012 37.6671 36.3374C37.8733 35.8736 38.0331 35.3582 38.0331 34.6883C38.0331 34.2193 37.9609 33.8122 37.8218 33.4514C37.6826 33.0907 37.4816 32.7814 37.2033 32.5238C36.9405 32.2506 36.6364 32.0084 36.2757 31.8023C35.9149 31.5961 35.5026 31.3797 35.0388 31.1838C34.6987 31.0447 34.4204 30.9107 34.1112 30.7767C33.8432 30.6427 33.6113 30.5087 33.4412 30.3747C33.2505 30.2356 33.1062 30.0913 33.0032 29.9418C32.9001 29.7872 32.8486 29.6172 32.8486 29.4265C32.8486 29.2512 32.8944 29.0915 32.9877 28.9472C33.081 28.8029 33.2093 28.6844 33.3742 28.5813C33.5391 28.4782 33.7453 28.4009 33.9926 28.3442C34.2349 28.2875 34.5029 28.2618 34.8172 28.2618C35.0337 28.2618 35.2604 28.2777 35.4872 28.3102C35.7242 28.3427 35.9665 28.3927 36.2087 28.4597C36.4509 28.5267 36.688 28.6091 36.9302 28.7122C37.1569 28.8153 37.3682 28.9338 37.5486 29.0678V26.6456C37.1569 26.4961 36.724 26.3828 36.2602 26.3106C35.7964 26.2385 35.281 26.2024 34.6626 26.2024C34.0442 26.2024 33.4773 26.2694 32.9104 26.3982C32.3435 26.5271 31.8797 26.7332 31.4674 27.0167C31.05 27.295 30.7459 27.6351 30.4882 28.0989C30.246 28.5318 30.1275 29.0266 30.1275 29.645C30.1275 30.418 30.3491 31.088 30.7974 31.6033C31.2406 32.1702 31.9312 32.5825 32.8073 32.9948C33.1629 33.1391 33.4773 33.2834 33.7865 33.4226C34.0957 33.5617 34.3534 33.706 34.5595 33.8555C34.7811 34.0049 34.9564 34.1698 35.0749 34.345C35.2037 34.5203 35.2707 34.7264 35.2707 34.9635C35.2707 35.1284 35.2305 35.283 35.1522 35.4273C35.0739 35.5716 34.9512 35.6953 34.7863 35.7984C34.6214 35.9014 34.4204 35.9839 34.1679 36.0457C33.9257 36.1024 33.6525 36.1333 33.2918 36.1333C32.7249 36.1333 32.158 36.0354 31.6426 35.8396C31.0757 35.6437 30.5604 35.35 30.1945 35.0439V37.5176Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3917">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.8577 13.9658)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const HTMLIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="HTML"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3922)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M17.6983 37.6723L15.5853 13.9658H38.828L36.715 37.6723L27.1809 40.3521"
+            className={`fill-[#778295] ${isCircleHovered && "fill-[#E34F26]"}`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.2324 38.2906L34.9113 36.1777L36.715 15.8726H27.2324"
+            className={`fill-[#778295] ${isCircleHovered && "fill-[#EF652A]"}`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.2324 24.6853H23.3672L23.1095 21.6962H27.2324V18.8102H19.9143L20.6873 27.6228H27.2324V24.6853ZM27.1808 32.261L23.9341 31.3849L23.728 29.0658H20.842L21.2027 33.6525L27.1808 35.3016V32.261Z"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#EBEBEB] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.1809 24.6853V27.6228H30.7884L30.4277 31.3849L27.1809 32.261V35.3016L33.1591 33.6525L33.9836 24.6853H27.1809ZM27.1809 18.8102V21.6962H34.2413L34.499 18.8102H27.1809Z"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#FFFFFF] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3922">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(14.0393 13.9658)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const CSSIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="CSS"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3929)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M17.4038 37.6722L15.2393 13.9657H38.4819L36.3689 37.6722L26.8863 40.352"
+            className={` ${
+              isCircleHovered ? "fill-[#264DE4]" : "fill-[#778295]"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M26.8864 15.8726V38.2906L34.5652 36.1777L36.3689 15.8726"
+            className={` ${
+              isCircleHovered ? "fill-[#2965F1]" : "fill-[#778295]"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M19.5682 18.8101H26.8863V21.6961H19.8259M20.0836 24.6851H26.8863V27.6227H20.3413M20.4959 29.0657H23.3819L23.588 31.3848L26.8863 32.2609V35.3015L20.8566 33.6524"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#EBEBEB] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M26.8864 24.6851V27.6227H30.4423L30.0816 31.3848L26.8864 32.2609V35.3015L32.813 33.6524L34.1529 18.8101H26.8864V21.6961H31.0092L30.7258 24.6851H26.8864Z"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#FFFFFF] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3929">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.6931 13.9657)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const SASSIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="SASS"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3936)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M36.3032 13.9657H17.8328C15.6469 13.9657 13.8749 15.7377 13.8749 17.9236V36.3941C13.8749 38.58 15.6469 40.352 17.8328 40.352H36.3032C38.4892 40.352 40.2612 38.58 40.2612 36.3941V17.9236C40.2612 15.7377 38.4892 13.9657 36.3032 13.9657Z"
+            fill="#778295"
+            className={`fill-[#778295] ${isCircleHovered && "fill-[#CC6699]"}`}
+          />
+          <path
+            onMouseLeave={handleCircleLeave}
+            onMouseEnter={handleCircleHover}
+            d="M27.1712 18.5009C22.2238 20.2016 19.0285 23.6545 19.3378 25.7159C19.647 27.7773 22.7391 29.4265 24.1306 30.5087C22.3268 31.4364 20.0593 32.8278 20.1108 34.6316C20.2139 37.1053 22.8937 36.3322 24.0275 35.6107C25.1613 34.8892 26.2951 32.8794 25.5736 30.7664C27.1712 30.3541 28.5627 30.8695 28.9749 31.1787C30.5726 32.3125 29.748 33.6009 29.1811 33.807C28.6142 34.0131 28.9749 34.1162 29.3357 34.0131C29.6964 33.9101 30.4695 33.3947 30.4695 32.5186C30.4695 30.3026 28.0988 29.2718 25.1613 30.0449C23.4606 28.2411 21.1415 27.4166 21.2446 25.4582C21.2961 24.7367 21.5538 22.8814 26.1405 20.5623C30.7272 18.2432 33.9739 19.1708 33.5616 21.2838C32.9432 24.479 27.3773 26.6435 25.419 24.7882C25.3159 24.5821 24.9552 24.4275 25.1613 24.9944C26.192 27.5712 34.5408 26.3858 34.9016 20.9231C35.0046 18.0371 30.8302 17.264 27.1712 18.5009ZM22.7391 34.9923C21.4507 35.4046 21.5023 34.58 21.5538 34.2708C21.7084 33.3947 22.4299 32.3125 24.5944 31.2302C25.2128 33.1886 23.8214 34.6831 22.7391 34.9923Z"
+            fill="white"
+            className={` ${
+              isCircleHovered ? "dark:fill-[#FFFFFF]" : "dark:fill-black300"
+            }`}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3936">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.8749 13.9657)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const MUIIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="MUI"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3941)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M13.8575 27.8435V16.4182L23.7524 22.1308V25.9393L17.1558 22.1308V29.7477L13.8575 27.8435Z"
+            className={`${
+              isCircleHovered ? "fill-[#00B0FF]" : "fill-[#778295]"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M23.7523 22.1308L33.6472 16.4182V27.8435L27.0506 31.6519L23.7523 29.7477L30.3489 25.9393V22.1308L23.7523 25.9393V22.1308Z"
+            className={`${
+              isCircleHovered ? "fill-[#0081CB]" : "fill-[#778295]"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M23.7523 29.7477V33.5561L30.3489 37.3645V33.5561L23.7523 29.7477Z"
+            className={`${
+              isCircleHovered ? "fill-[#00B0FF]" : "fill-[#778295]"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`${
+              isCircleHovered ? "fill-[#0081CB]" : "fill-[#778295]"
+            }`}
+            d="M30.3489 37.3645L40.2437 31.6519V24.0351L36.9455 25.9393V29.7477L30.3489 33.5561V37.3645ZM36.9455 22.1308V18.3224L40.2437 16.4182V20.2266L36.9455 22.1308Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3941">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.8577 13.7384)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const TailwindIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="TailwindCSS"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <path
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          className={`${isCircleHovered ? "fill-[#44A8B3]" : "fill-[#778295]"}`}
+          d="M21.4604 25.0351C22.23 21.9567 24.154 20.4175 27.2324 20.4175C31.85 20.4175 32.4272 23.8807 34.736 24.4579C36.2752 24.8427 37.622 24.2655 38.7764 22.7263C38.0068 25.8047 36.0828 27.3439 33.0044 27.3439C28.3868 27.3439 27.8096 23.8807 25.5008 23.3035C23.9616 22.9187 22.6148 23.4959 21.4604 25.0351ZM15.6884 31.9615C16.458 28.8831 18.382 27.3439 21.4604 27.3439C26.078 27.3439 26.6552 30.8071 28.964 31.3843C30.5032 31.7691 31.85 31.1919 33.0044 29.6527C32.2348 32.7311 30.3108 34.2703 27.2324 34.2703C22.6148 34.2703 22.0376 30.8071 19.7288 30.2299C18.1896 29.8451 16.8428 30.4223 15.6884 31.9615Z"
+        />
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const FramerMotionIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="Framer motion"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3953)">
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`${
+              isCircleHovered ? "fill-[#59529D]" : "fill-[#778295]"
+            }`}
+            d="M40.6071 13.7384V26.9316L27.414 40.1247L20.8174 33.5281L27.414 26.9316L40.6071 13.7384Z"
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            className={`${
+              isCircleHovered ? "fill-[#5271B4]" : "fill-[#778295]"
+            }`}
+            d="M40.6071 26.9315V40.1247L34.0105 33.5281L40.6071 26.9315Z"
+          />
+          <path
+            className={`${
+              isCircleHovered ? "fill-[#BB4B96]" : "fill-[#778295]"
+            }`}
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.414 26.9316L14.2208 40.1247V13.7384L27.414 26.9316Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3953">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(14.2208 13.7384)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const GitIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="Git"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <path
+          className={`${isCircleHovered ? "fill-[#EE513B]" : "fill-[#778295]"}`}
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          d="M16.5343 28.0969C15.8907 27.4533 15.8907 26.4099 16.5343 25.7663L26.4304 15.8702C27.0739 15.2267 28.1174 15.2267 28.7609 15.8702L38.657 25.7663C39.3005 26.4099 39.3005 27.4533 38.657 28.0969L28.7609 37.9929C28.1174 38.6365 27.0739 38.6365 26.4304 37.9929L16.5343 28.0969Z"
+        />
+        <path
+          className={` ${
+            isCircleHovered
+              ? "fill-white900"
+              : "fill-white900 dark:fill-black300"
+          } `}
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          d="M24.4202 17.912L23.4181 18.9141L26.0063 21.5024C25.9016 21.727 25.8432 21.9775 25.8432 22.2417C25.8432 22.9917 26.3144 23.6317 26.9769 23.8816V30.2132C26.3144 30.4631 25.8432 31.1031 25.8432 31.8531C25.8432 32.8208 26.6277 33.6053 27.5954 33.6053C28.5631 33.6053 29.3476 32.8208 29.3476 31.8531C29.3476 31.1732 28.9603 30.5836 28.3942 30.2932V23.8903L30.8683 26.3644C30.7687 26.5845 30.7133 26.8288 30.7133 27.0861C30.7133 28.0538 31.4978 28.8383 32.4655 28.8383C33.4333 28.8383 34.2178 28.0538 34.2178 27.0861C34.2178 26.1184 33.4333 25.3339 32.4655 25.3339C32.2775 25.3339 32.0964 25.3635 31.9265 25.4183L29.2693 22.7611C29.3202 22.597 29.3476 22.4225 29.3476 22.2417C29.3476 21.274 28.5631 20.4895 27.5954 20.4895C27.4145 20.4895 27.2401 20.5169 27.076 20.5678L24.4202 17.912Z"
+        />
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const GitHubIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="GitHub"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3965)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M27.0499 13.7859C19.7648 13.7859 13.8575 19.7157 13.8575 27.0322C13.8575 32.8833 17.6374 37.8479 22.8808 39.5996C23.5405 39.7213 23.7813 39.3123 23.7813 38.9613C23.7813 38.6468 23.7697 37.814 23.7631 36.7088C20.0929 37.5093 19.3187 34.9331 19.3187 34.9331C18.7192 33.4032 17.8543 32.9959 17.8543 32.9959C16.6561 32.1739 17.9449 32.1904 17.9449 32.1904C19.2684 32.284 19.9651 33.5556 19.9651 33.5556C21.1426 35.5796 23.0532 34.9952 23.8052 34.6558C23.9248 33.7998 24.2661 33.2162 24.6429 32.885C21.7132 32.5506 18.6335 31.4148 18.6335 26.3393C18.6335 24.893 19.1472 23.7109 19.9915 22.7845C19.8555 22.4492 19.4028 21.1032 20.1202 19.2794C20.1202 19.2794 21.2284 18.9235 23.7483 20.6371C24.8013 20.3432 25.9293 20.1967 27.0515 20.1909C28.1721 20.1967 29.301 20.3432 30.3548 20.6371C32.873 18.9235 33.9788 19.2794 33.9788 19.2794C34.6986 21.1032 34.2459 22.4492 34.1099 22.7845C34.9559 23.7109 35.4663 24.893 35.4663 26.3393C35.4663 31.4272 32.3816 32.5472 29.4428 32.8751C29.9161 33.284 30.3383 34.092 30.3383 35.328C30.3383 37.0987 30.3218 38.5267 30.3218 38.9613C30.3218 39.3157 30.5593 39.7279 31.2288 39.598C36.4673 37.8429 40.2439 32.8817 40.2439 27.0322C40.2439 19.7157 34.3366 13.7859 27.0499 13.7859Z"
+            className={`${
+              isCircleHovered ? "fill-[#3E75C3]" : "fill-[#778295]"
+            }`}
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3965">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(13.8577 13.5111)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const NodeIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="Node.js"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3971)">
+          <path
+            className={`${
+              isCircleHovered ? "fill-[#539E43]" : "fill-[#778295]"
+            }`}
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.2324 39.8485C26.8695 39.8485 26.5308 39.7517 26.2162 39.5823L22.9981 37.6708C22.5142 37.4047 22.7562 37.3079 22.9014 37.2595C23.5547 37.0417 23.6756 36.9933 24.3531 36.6062C24.4257 36.5578 24.5225 36.582 24.5951 36.6304L27.0631 38.1063C27.1599 38.1547 27.2808 38.1547 27.3534 38.1063L37.0076 32.5171C37.1044 32.4687 37.1528 32.3719 37.1528 32.2509V21.0966C37.1528 20.9756 37.1044 20.8788 37.0076 20.8304L27.3534 15.2653C27.2566 15.2169 27.1357 15.2169 27.0631 15.2653L17.4089 20.8304C17.3121 20.8788 17.2637 20.9998 17.2637 21.0966V32.2509C17.2637 32.3477 17.3121 32.4687 17.4089 32.5171L20.0462 34.0414C21.4738 34.7673 22.3691 33.9204 22.3691 33.0736V22.0644C22.3691 21.9192 22.49 21.774 22.6594 21.774H23.8934C24.0386 21.774 24.1838 21.895 24.1838 22.0644V33.0736C24.1838 34.9851 23.1433 36.0981 21.3286 36.0981C20.7721 36.0981 20.3366 36.0981 19.1026 35.4932L16.562 34.0414C15.9329 33.6785 15.5458 33.001 15.5458 32.2751V21.1208C15.5458 20.3949 15.9329 19.7174 16.562 19.3544L26.2162 13.7652C26.8211 13.4264 27.6438 13.4264 28.2487 13.7652L37.9029 19.3544C38.532 19.7174 38.9191 20.3949 38.9191 21.1208V32.2751C38.9191 33.001 38.532 33.6785 37.9029 34.0414L28.2487 39.6307C27.9341 39.7759 27.5712 39.8485 27.2324 39.8485ZM30.2086 32.1783C25.9743 32.1783 25.1032 30.2426 25.1032 28.5973C25.1032 28.4521 25.2242 28.307 25.3936 28.307H26.6517C26.7969 28.307 26.9179 28.4037 26.9179 28.5489C27.1115 29.8313 27.668 30.4604 30.2328 30.4604C32.2652 30.4604 33.1363 30.0007 33.1363 28.9119C33.1363 28.2828 32.8943 27.823 29.7246 27.5085C27.0873 27.2423 25.4419 26.6616 25.4419 24.5566C25.4419 22.5967 27.0873 21.4353 29.8456 21.4353C32.9427 21.4353 34.4671 22.4999 34.6606 24.8227C34.6606 24.8953 34.6364 24.9679 34.588 25.0405C34.5396 25.0889 34.4671 25.1373 34.3945 25.1373H33.1363C33.0153 25.1373 32.8943 25.0405 32.8701 24.9195C32.5798 23.5887 31.8297 23.1532 29.8456 23.1532C27.6196 23.1532 27.3534 23.9275 27.3534 24.5082C27.3534 25.2099 27.668 25.4276 30.6683 25.8148C33.6444 26.2019 35.0478 26.7584 35.0478 28.8393C35.0236 30.9685 33.2814 32.1783 30.2086 32.1783Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3971">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(14.0393 13.5111)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const ExpressIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="Express.js"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          cx="26.8863"
+          cy="26.3863"
+          r="26.3863"
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+        />
+        <g clip-path="url(#clip0_3357_3971)">
+          <path
+            className={`${
+              isCircleHovered
+                ? "fill-[#000000] dark:fill-white900"
+                : "fill-[#778295]"
+            }`}
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M38.4963 33.2225C37.6517 33.4328 37.1292 33.2317 36.6605 32.5424L33.327 28.0256L32.8452 27.4002L28.9522 32.5573C28.5074 33.1777 28.0408 33.4477 27.2107 33.2282L32.1957 26.6746L27.5546 20.755C28.3528 20.6029 28.9043 20.6804 29.3941 21.3804L32.8517 25.9533L36.3347 21.4052C36.7809 20.7848 37.2606 20.5489 38.0617 20.7777L36.2621 23.1143L33.824 26.2234C33.5338 26.5787 33.5737 26.8217 33.8407 27.165L38.4963 33.2225ZM15.2822 26.5652L15.69 24.601C16.8002 20.7138 21.3498 19.0985 24.4874 21.5005C26.3211 22.9132 26.7768 24.9115 26.6861 27.1501H16.3503C16.195 31.1794 19.1563 33.6112 22.9317 32.3704C24.256 31.9348 25.036 30.9193 25.4264 29.6487C25.6245 29.0119 25.9525 28.9124 26.5634 29.0944C26.2514 30.6834 25.5476 32.0108 24.06 32.8416C21.8375 34.0852 18.665 33.683 16.9961 31.9547C16.002 30.952 15.5913 29.6814 15.407 28.3226C15.378 28.098 15.3199 27.8841 15.2764 27.6688C15.2802 27.3012 15.2822 26.9335 15.2822 26.5659V26.5652ZM16.3692 26.2952H25.7094C25.6484 23.3815 23.7959 21.3121 21.2642 21.2944C18.4851 21.2731 16.4896 23.2934 16.3692 26.2952Z"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3971">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(14.0393 13.5111)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const MongoDBIcon = () => {
+  const [isCircleHovered, setIsCircleHovered] = useState(false);
+
+  const handleCircleHover = () => {
+    setIsCircleHovered(true);
+  };
+
+  const handleCircleLeave = () => {
+    setIsCircleHovered(false);
+  };
+  return (
+    <Tooltip
+      classNames={{
+        base: "text-white500 dark:text-white900 dark:bg-black300",
+      }}
+      content="MongoDb"
+    >
+      <svg
+        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
+          isCircleHovered && "drop-shadow-skill"
+        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        viewBox="0 0 55 59"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          onMouseEnter={handleCircleHover}
+          onMouseLeave={handleCircleLeave}
+          className={`fill-[#F3F8FF] dark:fill-black300 ${
+            isCircleHovered && "fill-white900"
+          }`}
+          cx="27.068"
+          cy="31.9814"
+          r="26.3863"
+        />
+        <g clip-path="url(#clip0_3357_3980)">
+          <path
+            className={`${
+              isCircleHovered ? "fill-[#13AA52]" : "fill-[#778295]"
+            }`}
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M27.5957 45.1746C34.8821 45.1746 40.7889 39.2679 40.7889 31.9815C40.7889 24.6951 34.8821 18.7883 27.5957 18.7883C20.3094 18.7883 14.4026 24.6951 14.4026 31.9815C14.4026 39.2679 20.3094 45.1746 27.5957 45.1746Z"
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M31.1221 30.3695C30.2887 26.6917 28.3193 25.4824 28.1072 25.0203C27.8753 24.6944 27.6403 24.1146 27.6403 24.1146C27.6364 24.1048 27.6303 24.0875 27.623 24.0708C27.5991 24.3968 27.5867 24.5225 27.2785 24.8513C26.8013 25.2244 24.3528 27.2789 24.1537 31.4574C23.9679 35.3546 26.9688 37.6768 27.3746 37.9728L27.4208 38.0056V38.0027C27.4233 38.0223 27.5496 38.9304 27.6382 39.8925H27.9562C28.0308 39.2124 28.1427 38.5369 28.2912 37.869L28.317 37.8522C28.4985 37.7221 28.6716 37.5805 28.8352 37.4284L28.8537 37.4116C29.7164 36.6146 31.2674 34.7712 31.2522 31.8321C31.249 31.3418 31.2055 30.8526 31.1221 30.3695ZM27.6045 35.7725C27.6045 35.7725 27.6045 30.3066 27.7849 30.3077C27.9256 30.3077 28.1077 37.358 28.1077 37.358C27.8573 37.3279 27.6045 36.1977 27.6045 35.7725Z"
+            className={`fill-white900 ${
+              isCircleHovered ? "dark:fill-[#FFFFFF]" : "dark:fill-black300"
+            } `}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3357_3980">
+            <rect
+              width="26.3863"
+              height="26.3863"
+              fill="white"
+              transform="translate(14.4026 18.7883)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+    </Tooltip>
+  );
+};
+
+export const AnalyticsSEOIcon = ({ isHovered }: { isHovered: boolean }) => (
+  <svg
+    viewBox="0 0 25 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+  >
+    <path
+      d="M3.3213 17.3405V21.0905H7.0713L18.1313 10.0205L14.3813 6.27047L3.3213 17.3405ZM22.9313 18.4505L18.6813 22.7005L13.4813 17.5005L15.2513 15.7305L16.2513 16.7305L18.7213 14.2505L20.1413 15.6705L18.6813 17.0905L19.7413 18.0905L21.1613 16.6905L22.9313 18.4505ZM6.9313 10.9205L1.7113 5.73047L5.9613 1.48047L7.7213 3.25047L5.2513 5.73047L6.3213 6.79047L8.7813 4.31047L10.2013 5.73047L8.7813 7.14047L9.7813 8.14047L6.9313 10.9205ZM21.0313 7.09047C21.4213 6.70047 21.4213 6.09047 21.0313 5.68047L18.6913 3.38047C18.3213 2.99047 17.6713 2.99047 17.2813 3.38047L15.4413 5.21047L19.1913 8.96047L21.0313 7.09047Z"
+      className={`${
+        isHovered ? "fill-primaryLight dark:fill-primaryDark" : "fill-white900"
+      }`}
+    />
+  </svg>
+);
+
+export const FrontEndIcon = ({ isHovered }: { isHovered: boolean }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    viewBox="0 0 25 25"
+    fill="none"
+  >
+    <path
+      d="M21.7993 13.3005C21.8403 13.1098 21.8247 12.9113 21.7544 12.7293C21.684 12.5474 21.562 12.39 21.4033 12.2765L7.40327 2.27654C7.24573 2.16326 7.05861 2.09831 6.86476 2.08962C6.67092 2.08094 6.47874 2.12889 6.3117 2.22763C6.14466 2.32637 6.00999 2.47162 5.92414 2.64564C5.83829 2.81965 5.80498 3.01491 5.82827 3.20754L7.82827 20.2075C7.85129 20.4024 7.93115 20.5863 8.05789 20.7361C8.18464 20.8859 8.35267 20.9951 8.54105 21.0501C8.72943 21.1052 8.92984 21.1035 9.1173 21.0455C9.30476 20.9874 9.47098 20.8754 9.59527 20.7235L13.2073 16.3075L16.5843 21.7675L18.2853 20.7155L14.9283 15.2875L21.0173 14.0695C21.2086 14.0321 21.3848 13.9392 21.5238 13.8025C21.6628 13.6658 21.7586 13.4912 21.7993 13.3005Z"
+      className={`${
+        isHovered ? "fill-primaryLight dark:fill-primaryDark" : "fill-white900"
+      }`}
+    />
+  </svg>
+);
+
+export const BackEndIcon = ({ isHovered }: { isHovered: boolean }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    viewBox="0 0 25 25"
+    fill="none"
+  >
+    <g clip-path="url(#clip0_3357_4324)">
+      <path
+        d="M22.4751 2.09058H2.16744C1.67781 2.09058 1.20824 2.28213 0.862015 2.62311C0.515794 2.96408 0.321289 3.42655 0.321289 3.90876V20.2724C0.321289 20.7546 0.515794 21.2171 0.862015 21.558C1.20824 21.899 1.67781 22.0906 2.16744 22.0906H22.4751C22.9648 22.0906 23.4343 21.899 23.7806 21.558C24.1268 21.2171 24.3213 20.7546 24.3213 20.2724V3.90876C24.3213 3.42655 24.1268 2.96408 23.7806 2.62311C23.4343 2.28213 22.9648 2.09058 22.4751 2.09058ZM8.25975 14.0906C8.4556 14.2352 8.58508 14.4506 8.6197 14.6893C8.65433 14.928 8.59126 15.1704 8.44437 15.3633C8.29748 15.5562 8.0788 15.6837 7.83645 15.7178C7.59409 15.7519 7.34791 15.6898 7.15206 15.5451L3.45975 12.8178C3.34511 12.7332 3.25206 12.6234 3.18797 12.4971C3.12388 12.3709 3.09052 12.2317 3.09052 12.0906C3.09052 11.9494 3.12388 11.8103 3.18797 11.684C3.25206 11.5578 3.34511 11.448 3.45975 11.3633L7.15206 8.63603C7.34791 8.49137 7.59409 8.42925 7.83645 8.46335C8.0788 8.49745 8.29748 8.62496 8.44437 8.81785C8.59126 9.01073 8.65433 9.25319 8.6197 9.49187C8.58508 9.73055 8.4556 9.94591 8.25975 10.0906L5.55167 12.0906L8.25975 14.0906ZM15.0548 5.97694L11.3624 18.7042C11.331 18.821 11.2762 18.9305 11.2012 19.0262C11.1263 19.1219 11.0327 19.202 10.926 19.2616C10.8193 19.3213 10.7016 19.3594 10.5797 19.3738C10.4579 19.3881 10.3343 19.3784 10.2163 19.3451C10.0983 19.3119 9.98827 19.2558 9.89256 19.1802C9.79684 19.1045 9.71739 19.0109 9.65887 18.9046C9.60035 18.7984 9.56392 18.6817 9.55172 18.5615C9.53953 18.4412 9.5518 18.3197 9.58783 18.2042L13.2801 5.47694C13.3511 5.24937 13.5099 5.05829 13.7223 4.94476C13.9348 4.83124 14.184 4.80432 14.4164 4.8698C14.6488 4.93528 14.8459 5.08793 14.9652 5.29495C15.0846 5.50197 15.1167 5.74684 15.0548 5.97694ZM21.1828 12.8178L17.4905 15.5451C17.2947 15.6898 17.0485 15.7519 16.8061 15.7178C16.5638 15.6837 16.3451 15.5562 16.1982 15.3633C16.0513 15.1704 15.9883 14.928 16.0229 14.6893C16.0575 14.4506 16.187 14.2352 16.3828 14.0906L19.0909 12.0906L16.3828 10.0906C16.2859 10.0189 16.2042 9.92921 16.1424 9.82648C16.0806 9.72375 16.04 9.61005 16.0229 9.49187C16.0057 9.37368 16.0124 9.25333 16.0425 9.13768C16.0726 9.02204 16.1255 8.91336 16.1982 8.81785C16.2709 8.72234 16.3621 8.64188 16.4664 8.58105C16.5707 8.52023 16.6861 8.48023 16.8061 8.46335C16.9261 8.44647 17.0483 8.45303 17.1658 8.48265C17.2832 8.51228 17.3935 8.5644 17.4905 8.63603L21.1828 11.3633C21.2975 11.448 21.3905 11.5578 21.4546 11.684C21.5187 11.8103 21.5521 11.9494 21.5521 12.0906C21.5521 12.2317 21.5187 12.3709 21.4546 12.4971C21.3905 12.6234 21.2975 12.7332 21.1828 12.8178Z"
+        className={`${
+          isHovered
+            ? "fill-primaryLight dark:fill-primaryDark"
+            : "fill-white900"
+        }`}
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_3357_4324">
+        <rect
+          width="24"
+          height="24"
+          fill="white"
+          transform="translate(0.321289 0.0905762)"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const WebOptimizationIcon = ({ isHovered }: { isHovered: boolean }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-[1.87519rem]"
+    viewBox="0 0 31 25"
+    fill="none"
+  >
+    <path
+      d="M12.9963 17.3406C13.5963 17.9406 14.3713 18.2346 15.3213 18.2226C16.2713 18.2106 16.9713 17.8666 17.4213 17.1906L25.8213 4.59058L13.2213 12.9906C12.5463 13.4406 12.1903 14.1281 12.1533 15.0531C12.1163 15.9781 12.3973 16.7406 12.9963 17.3406ZM15.3213 0.0905781C16.7963 0.0905781 18.2153 0.297078 19.5783 0.710078C20.9413 1.12308 22.2223 1.74158 23.4213 2.56558L20.5713 4.36558C19.7463 3.94058 18.8903 3.62208 18.0033 3.41008C17.1163 3.19808 16.2223 3.09158 15.3213 3.09058C11.9963 3.09058 9.16479 4.25908 6.82679 6.59608C4.48879 8.93308 3.32029 11.7646 3.32129 15.0906C3.32129 16.1406 3.46529 17.1781 3.75329 18.2031C4.04129 19.2281 4.44729 20.1906 4.97129 21.0906H25.6713C26.2463 20.1406 26.6653 19.1531 26.9283 18.1281C27.1913 17.1031 27.3223 16.0406 27.3213 14.9406C27.3213 14.0406 27.2148 13.1656 27.0018 12.3156C26.7888 11.4656 26.4703 10.6406 26.0463 9.84058L27.8463 6.99058C28.5963 8.16558 29.1903 9.41558 29.6283 10.7406C30.0663 12.0656 30.2973 13.4406 30.3213 14.8656C30.3463 16.2906 30.1838 17.6531 29.8338 18.9531C29.4838 20.2531 28.9713 21.4906 28.2963 22.6656C28.0213 23.1156 27.6463 23.4656 27.1713 23.7156C26.6963 23.9656 26.1963 24.0906 25.6713 24.0906H4.97129C4.44629 24.0906 3.94629 23.9656 3.47129 23.7156C2.99629 23.4656 2.62129 23.1156 2.34629 22.6656C1.69629 21.5406 1.19629 20.3466 0.846289 19.0836C0.496289 17.8206 0.321289 16.4896 0.321289 15.0906C0.321289 13.0156 0.715289 11.0716 1.50329 9.25858C2.29129 7.44558 3.36629 5.85858 4.72829 4.49758C6.09029 3.13458 7.68329 2.05908 9.50729 1.27108C11.3313 0.483078 13.2693 0.0895781 15.3213 0.0905781Z"
+      className={`${
+        isHovered ? "fill-primaryLight dark:fill-primaryDark" : "fill-white900"
+      }`}
+    />
+  </svg>
+);
+
+export const serviceIcons = [
+  AnalyticsSEOIcon,
+  FrontEndIcon,
+  BackEndIcon,
+  WebOptimizationIcon,
+];
+
+export const techSkills = [
+  JSIcon,
+  ReactIcon,
+  ReduxIcon,
+  NextJSIcon,
+  TypescriptIcon,
+  HTMLIcon,
+  CSSIcon,
+  SASSIcon,
+  MUIIcon,
+  TailwindIcon,
+  FramerMotionIcon,
+  GitIcon,
+  GitHubIcon,
+  NodeIcon,
+  ExpressIcon,
+  MongoDBIcon,
+];

@@ -13,6 +13,13 @@ module.exports = {
       fontFamily: {
         righteous: ['var(--font-righteous)'],
         poppins: ['var(--font-poppins)'],
+      },
+      dropShadow: {
+        'skill': '0px 7px 10px rgba(0, 0, 0, 0.10)',
+      },
+      boxShadow: {
+        'darkServiceCard': '0px 1px 20px 0px #1F2E48',
+        'darkServiceCardHover': '32px 32px 71px 0px rgba(2, 82, 205, 0.28)'
       }
     },
     colors: {
