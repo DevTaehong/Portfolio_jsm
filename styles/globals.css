@@ -8,9 +8,40 @@
   }
 }
 
+.serviceCard {
+  width: 17.95988rem;
+  height: 16.5625rem;
+  border-radius: 0.625rem;
+  box-shadow: 0px 1px 20px 0px #e0ecff;
+  background: #f3f8ff;
+}
+
+.serviceCard:hover {
+  box-shadow: 32px 32px 71px 0px rgba(2, 82, 205, 0.28);
+  background: var(--accent-primary-light, #0252cd);
+}
+
+.serviceIcon {
+  width: 3.875rem;
+  height: 3.875rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  box-shadow: 10px 10px 26px 0px rgba(2, 82, 205, 0.28);
+}
+
+.mySkills {
+  color: var(--black-200, #151e2c);
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -0.0225rem;
+  text-align: center;
+}
+
 .paragraphBold {
   /* Paragraph/Semibold */
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
@@ -20,28 +51,28 @@
 .heading2 {
   text-align: center;
   /* Heading/H2 */
-  font-size: 48px;
+  font-size: 3rem;
   font-style: normal;
   font-weight: 700;
   line-height: 115%;
   /* 55.2px */
-  letter-spacing: -0.48px;
+  letter-spacing: -0.03rem;
 }
 
 .heading3 {
   text-align: center;
   /* Heading/H3 */
-  font-size: 32px;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: 105%;
   /* 33.6px */
-  letter-spacing: -0.16px;
+  letter-spacing: -0.01rem;
 }
 
 .baseRegular {
   /* Base/Regular */
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
@@ -50,7 +81,7 @@
 
 .baseBold {
   /* Base/Semibold */
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
@@ -59,7 +90,7 @@
 
 .paragraphRegular {
   /* Paragraph/Regular */
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -68,7 +99,7 @@
 
 .bodyRegular {
   /* Body/Regular */
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -77,7 +108,7 @@
 
 .bodyBold {
   /* Body/Semibold */
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   line-height: 160%;
@@ -86,7 +117,7 @@
 
 .smallRegular {
   /* Small/Regular */
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: 155%;
@@ -95,7 +126,7 @@
 
 .smallBold {
   /* Small/Bold */
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
   line-height: 145%;
@@ -122,14 +153,14 @@
 
 .logoText {
   display: flex;
-  width: 13.333px;
-  height: 13.333px;
+  width: 0.83rem;
+  height: 0.83rem;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   color: var(--white-900, #fff);
   text-align: center;
-  font-size: 11.667px;
+  font-size: 0.73rem;
   font-style: normal;
   font-weight: 400;
   line-height: 240%;
@@ -179,7 +210,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 600;
-  line-height: 160%; /* 1.4rem */
+  line-height: 160%;
+  /* 1.4rem */
 }
 
 .heroImage {

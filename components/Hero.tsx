@@ -17,7 +17,7 @@ const Hero = () => {
           Professional
           <br />
           <span className="relative inline-block">
-            <span className="absolute top-8 h-[1.1875rem] w-full shrink-0 bg-accentSecondary xl:top-14" />
+            <span className="absolute top-[1.88rem] h-[1.1875rem] w-full shrink-0 bg-accentSecondary xl:top-[3.3rem] xl:h-[1.757rem]" />
             <span className="relative">Web Developer</span>
           </span>
           <br />
