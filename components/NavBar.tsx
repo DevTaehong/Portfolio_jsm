@@ -23,7 +23,7 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white800 dark:bg-black300">
+    <div className="sticky top-0 z-50 bg-white800 dark:bg-black300">
       <NextUiNavBar
         maxWidth="full"
         className="bg-white800 dark:bg-black300 xl:h-[6.25rem] xl:pl-[3.81rem] xl:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"

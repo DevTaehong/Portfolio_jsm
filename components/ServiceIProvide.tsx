@@ -41,7 +41,7 @@ const ServiceIProvide = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center gap-10 bg-white900 py-12 dark:bg-black200 sm:bg-white800 xl:px-[5.31rem] xl:pb-[8.9375rem] xl:pt-[4.5rem]">
+    <section className="flex flex-col items-center gap-10 bg-white900 py-12 dark:bg-black300 sm:bg-white800 xl:px-[5.31rem] xl:pb-[8.9375rem] xl:pt-[4.5rem]">
       <h1 className="mySkills relative dark:text-white900 xl:text-[3rem] xl:tracking-[-0.03rem]">
         {"What "}
         <span className="relative inline-block">
