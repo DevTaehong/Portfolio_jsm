@@ -13,17 +13,17 @@ import {
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/navBar/theme-switch";
 import { righteous } from "@/config/fonts";
-import NavBarMenuButton from "@/components/NavBarMenuButton";
+import NavBarMenuButton from "@/components/navBar/NavBarMenuButton";
 import { siteConfig } from "@/config/site";
-import { DownloadResumeIcon, DividerIcon } from "./icons";
+import { DownloadResumeIcon, DividerIcon } from "../icons";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 bg-white800 dark:bg-black300">
+    <header className="sticky top-0 z-50 bg-white800 dark:bg-black300">
       <NextUiNavBar
         maxWidth="full"
         className="bg-white800 dark:bg-black300 xl:h-[6.25rem] xl:pl-[3.81rem] xl:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"
@@ -64,7 +64,7 @@ export const NavBar = () => {
           <NavBarLinks isMobile="paragraphRegular" />
         </NavbarMenu>
       </NextUiNavBar>
-    </div>
+    </header>
   );
 };
 

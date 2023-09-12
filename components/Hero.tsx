@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,8 +6,8 @@ import { HeroImage } from "./icons";
 
 const Hero = () => {
   return (
-    <div className="bg-white800 dark:bg-black300">
-      <section className="flex flex-col justify-start pb-8 md:flex-row xl:items-center xl:pb-0 2xl:mx-auto 2xl:max-w-[90rem]">
+    <section className="bg-white800 dark:bg-black300">
+      <div className="flex flex-col justify-start pb-8 md:flex-row xl:items-center xl:pb-0 2xl:mx-auto 2xl:max-w-[90rem]">
         <div className="w-full px-6 pt-12 xl:pl-[5.31rem] xl:pr-0 xl:pt-[6rem]">
           <p className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]">
             HI, I AM TAEHONG
@@ -53,8 +51,8 @@ const Hero = () => {
           </div>
         </div>
         <HeroImage />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

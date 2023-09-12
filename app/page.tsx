@@ -1,9 +1,9 @@
-import FeaturedProjects from "@/components/FeaturedProjects";
+import FeaturedProjects from "@/components/featuredProjects/FeaturedProjects";
 import Hero from "@/components/Hero";
-import MySkills from "@/components/MySkills";
-import ServiceIProvide from "@/components/ServiceIProvide";
-import Testimonials from "@/components/Testimonials";
-import WorkExperience from "@/components/WorkExperience";
+import MySkills from "@/components/mySkills/MySkills";
+import ServiceIProvide from "@/components/myServices/ServiceIProvide";
+import Testimonials from "@/components/testimonials/Testimonials";
+import WorkExperience from "@/components/workExperience/WorkExperience";
 
 export default function Home() {
   return (
