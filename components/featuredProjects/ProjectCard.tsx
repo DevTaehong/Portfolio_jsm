@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import { arrow } from "@/public";
 
-type projectProps = {
+type ProjectProps = {
   name: string;
   description: string;
   techStack: string[];
@@ -18,12 +18,11 @@ const ProjectCard = ({
   project,
   index,
 }: {
-  project: projectProps;
+  project: ProjectProps;
   index: number;
 }) => {
   return (
     <Card
-      key={project.name}
       className={`${
         project.color
       } flex flex-col justify-center pb-[2.99rem] pt-[2.88rem] 
@@ -47,12 +46,14 @@ const ProjectCard = ({
               {project.description}
             </h2>
             <div className="flex flex-row gap-1 truncate xl:gap-5">
-              <div className="smallRegular techStack flex items-start text-white900">
-                {project.techStack[0]}
-              </div>
-              <div className="smallRegular techStack flex items-start text-white900">
-                {project.techStack[1]}
-              </div>
+              {project.techStack.map((tech) => (
+                <div
+                  key={tech}
+                  className="smallRegular techStack flex items-start text-white900"
+                >
+                  {tech}
+                </div>
+              ))}
             </div>
           </div>
           <Link

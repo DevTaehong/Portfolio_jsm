@@ -6,7 +6,7 @@ const MySkills = () => {
       <div className="flex flex-col items-center gap-10  xl:px-[5.31rem] xl:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <span className="relative inline-block">
           <span className="absolute top-[1.6rem] h-[0.8125rem] w-full shrink-0 bg-accentSecondary xl:top-[2.3rem] xl:h-[0.9375rem]" />
-          <h1 className="mySkills relative dark:text-white900 xl:text-[3rem] xl:tracking-[-0.03rem]">
+          <h1 className="mobileHeading2 relative dark:text-white900 xl:text-[3rem] xl:tracking-[-0.03rem]">
             My Skills
           </h1>
         </span>

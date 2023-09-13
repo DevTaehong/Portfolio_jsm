@@ -1,4 +1,4 @@
-import CompanyCard from "./CompanyCard";
+import Companies from "./Companies";
 import SquareWorkExperienceCard from "./SquareWorkExperienceCard";
 
 const WorkExperience = () => {
@@ -10,7 +10,7 @@ const WorkExperience = () => {
       >
         <SquareWorkExperienceCard />
         <div className="grid w-full grow grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-[2.19rem] xl:mr-[1.87rem] xl:w-[37.9375rem] xl:grid-cols-1">
-          <CompanyCard />
+          <Companies />
         </div>
       </div>
     </section>
