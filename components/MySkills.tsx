@@ -2,7 +2,43 @@
 
 import { motion } from "framer-motion";
 
-import { techSkills } from "./icons";
+import {
+  HTMLIcon,
+  ExpressIcon,
+  FramerMotionIcon,
+  GitHubIcon,
+  JSIcon,
+  MongoDBIcon,
+  MUIIcon,
+  NextJSIcon,
+  NodeIcon,
+  ReactIcon,
+  ReduxIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  SASSIcon,
+  CSSIcon,
+  GitIcon,
+} from "@/components/skillIcons";
+
+const skillIcons = [
+  JSIcon,
+  ReactIcon,
+  ReduxIcon,
+  NextJSIcon,
+  TypeScriptIcon,
+  HTMLIcon,
+  CSSIcon,
+  SASSIcon,
+  MUIIcon,
+  TailwindIcon,
+  FramerMotionIcon,
+  GitIcon,
+  GitHubIcon,
+  NodeIcon,
+  ExpressIcon,
+  MongoDBIcon,
+];
 
 const MySkills = () => {
   return (
@@ -15,7 +51,7 @@ const MySkills = () => {
           </h1>
         </span>
         <div className="grid grid-cols-4 gap-[2.59rem] md:flex md:flex-wrap md:justify-center lg:gap-[4rem] xl:gap-[2.73rem]">
-          {techSkills.map((Skill) => (
+          {skillIcons.map((Skill) => (
             <motion.div whileHover={{ scale: 1.1 }} key={Skill.name}>
               <Skill />
             </motion.div>
