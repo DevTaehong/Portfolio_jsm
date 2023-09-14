@@ -9,7 +9,6 @@ type ProjectProps = {
   description: string;
   techStack: string[];
   image: string;
-  color: string;
 };
 
 const ProjectCard = ({
@@ -19,10 +18,16 @@ const ProjectCard = ({
   project: ProjectProps;
   index: number;
 }) => {
+  const colorVariants: { [key: string]: string } = {
+    morrent: "bg-morrent",
+    jobit: "bg-jobit",
+    hipnode: "bg-hipnode",
+  };
+
   return (
     <Card
       className={`${
-        project.color
+        colorVariants[project.name.toLowerCase()]
       } flex flex-col justify-center pb-[2.99rem] pt-[2.88rem] 
                 xl:pb-[5.81rem] xl:pt-[6.06rem] ${
                   (index + 1) % 2 === 0 ? "xl:pr-[4.38rem]" : "xl:pl-[6.75rem]"
