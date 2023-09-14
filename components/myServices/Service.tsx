@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardHeader } from "@nextui-org/react";
+import { Card, CardHeader } from "@nextui-org/card";
 import { useState } from "react";
 import { motion } from "framer-motion";
 

@@ -1,8 +1,6 @@
-"use client";
-
-import { Card } from "@nextui-org/react";
+import { Card } from "@nextui-org/card";
+import { Link } from "@nextui-org/link";
 import Image from "next/image";
-import Link from "next/link";
 
 import { arrow } from "@/public";
 
