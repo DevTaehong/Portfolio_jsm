@@ -48,21 +48,18 @@ export const projects = [
     description: `A Car Rental Application`,
     techStack: ["ReactJS, Next.js", "Tailwind, MongoDB"],
     image: morrent,
-    color: "bg-morrent",
   },
   {
     name: "JobIT",
     description: "A Job Finding Application",
     techStack: ["ReactJS, Next.js", "Redux Toolkit, Tailwind"],
     image: jobit,
-    color: "bg-jobit",
   },
   {
     name: "Hipnode",
     description: "A Social Media Application",
     techStack: ["ReactJS, Next.js", "Node.js, MongoDB"],
     image: hipnode,
-    color: "bg-hipnode",
   },
 ];
 
