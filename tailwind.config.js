@@ -23,6 +23,10 @@ module.exports = {
       }
     },
     colors: {
+      jobit: "#0BAB7C",
+      hipnode: "#FF6934",
+      morrentLight: "#5CAFFC",
+      filmpire: "#DB202C",
       primaryLight: "#0252CD",
       primaryDark: "#428DFF",
       accentSecondary: "#FFBE62",

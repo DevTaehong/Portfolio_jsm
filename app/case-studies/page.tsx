@@ -1,5 +1,13 @@
+import CaseStudiesHero from "@/components/CaseStudiesHero";
+import CaseStudiesProjects from "@/components/CaseStudiesProjects";
+
 const CaseStudiesPage = () => {
-  return <div>CaseStudiesPage</div>;
+  return (
+    <main>
+      <CaseStudiesHero />
+      <CaseStudiesProjects />
+    </main>
+  );
 };
 
 export default CaseStudiesPage;
