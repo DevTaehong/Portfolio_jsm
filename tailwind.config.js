@@ -19,7 +19,8 @@ module.exports = {
       },
       boxShadow: {
         'darkServiceCard': '0px 1px 20px 0px #1F2E48',
-        'darkServiceCardHover': '32px 32px 71px 0px rgba(2, 82, 205, 0.28)'
+        'darkServiceCardHover': '32px 32px 71px 0px rgba(2, 82, 205, 0.28)',
+        'jobCardHover': '-25px 47px 66px 0px rgba(0, 0, 0, 0.08)'
       }
     },
     colors: {
@@ -29,6 +30,9 @@ module.exports = {
       filmpire: "#DB202C",
       primaryLight: "#0252CD",
       primaryDark: "#428DFF",
+      morrent: "#416CEA",
+      jobit: "#0BAB7C",
+      hipnode: "#FF6934",
       accentSecondary: "#FFBE62",
       white900: "#FFFFFF",
       white800: "#F3F8FF",

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import "@/styles/globals.css";
-import { NavBar } from "@/components/NavBar";
+import { NavBar } from "@/components/navBar/NavBar";
 import { poppins } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Providers } from "./providers";
