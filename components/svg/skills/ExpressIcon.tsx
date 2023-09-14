@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/react";
 
-export const ExpressIcon = () => {
+export const ExpressIcon = ({
+  isCaseDetailPage,
+}: {
+  isCaseDetailPage?: boolean;
+}) => {
   const [isCircleHovered, setIsCircleHovered] = useState(false);
 
   const handleCircleHover = () => {
@@ -21,9 +25,11 @@ export const ExpressIcon = () => {
       content="Express.js"
     >
       <svg
-        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
-          isCircleHovered && "drop-shadow-skill"
-        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        className={`${
+          isCaseDetailPage
+            ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
+            : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
+        } `}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

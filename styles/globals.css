@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.caseStudyDetailTechStack {
+  color: var(--black-200, #151E2C);
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%;
+  letter-spacing: -0.00875rem;
+}
+
+.technologiesUsed {
+  color: var(--accent-primary-light, #0252CD);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+}
+
 .mobileHeading1 {
   color: var(--black-200, #151E2C);
   font-size: 2.625rem;

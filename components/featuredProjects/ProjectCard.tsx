@@ -19,7 +19,7 @@ const ProjectCard = ({
   index: number;
 }) => {
   const colorVariants: { [key: string]: string } = {
-    morrent: "bg-morrent",
+    morrent: "bg-morrentDark",
     jobit: "bg-jobit",
     hipnode: "bg-hipnode",
   };

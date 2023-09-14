@@ -1,4 +1,14 @@
-import { adrian, test, test2, morrent, jobit, hipnode } from "@/public";
+import {
+  adrian,
+  test,
+  test2,
+  morrent,
+  jobit,
+  hipnode,
+  filmpire,
+  morrentProblemStatementImage,
+  morrentFigmaDesign,
+} from "@/public";
 import {
   AnalyticsSEOIcon,
   BackEndIcon,
@@ -29,6 +39,188 @@ import {
   DigitalOcean,
   Mailchimp,
 } from "@/components/svg/workExperience";
+
+export const projectDetails: {
+  [key: string]: {
+    type: string;
+    name: string;
+    description: string;
+    image: string;
+    myRole: string;
+    startDate: string;
+    endDate: string;
+    techStack: React.FC<{ isCaseDetailPage: boolean }>[];
+    demoSite: string;
+    sourceCode: string;
+    learnings: string[];
+    detail: string;
+    problemStatement: string;
+    problemStatementImage: string;
+    figmaDesignImage: string;
+    challenges: string[];
+  };
+} = {
+  morrent: {
+    type: "WEB DEV PROJECT",
+    name: "Morrent",
+    description: `A Car Rental Website`,
+    image: morrent,
+    myRole: "Software Developer",
+    startDate: "08/08/2023",
+    endDate: "03/09/2023",
+    techStack: [
+      ReactIcon,
+      NextJSIcon,
+      TailwindIcon,
+      MongoDBIcon,
+      TypeScriptIcon,
+      HTMLIcon,
+      CSSIcon,
+      GitIcon,
+      GitHubIcon,
+      FramerMotionIcon,
+    ],
+    demoSite: "https://morrent.vercel.app/",
+    sourceCode: "https://github.com/DevTaehong",
+    detail:
+      "Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.  My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles. Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.",
+    problemStatement:
+      "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
+    problemStatementImage: morrentProblemStatementImage,
+    figmaDesignImage: morrentFigmaDesign,
+    challenges: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
+      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
+    ],
+    learnings: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
+      "Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.",
+      "Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.",
+    ],
+  },
+  jobit: {
+    type: "WEB DEV PROJECT",
+    name: "Jobit",
+    description: `Job Finding Application`,
+    image: jobit,
+    myRole: "Software Developer",
+    startDate: "08/08/2023",
+    endDate: "03/09/2023",
+    techStack: [
+      ReactIcon,
+      NextJSIcon,
+      TailwindIcon,
+      MongoDBIcon,
+      TypeScriptIcon,
+      HTMLIcon,
+      CSSIcon,
+      GitIcon,
+      GitHubIcon,
+      FramerMotionIcon,
+    ],
+    demoSite: "https://morrent.vercel.app/",
+    sourceCode: "https://github.com/DevTaehong",
+    detail:
+      "Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.  My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles. Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.",
+    problemStatement:
+      "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
+    problemStatementImage: morrentProblemStatementImage,
+    figmaDesignImage: morrentFigmaDesign,
+    challenges: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
+      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
+    ],
+    learnings: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
+      "Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.",
+      "Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.",
+    ],
+  },
+  hipnode: {
+    type: "WEB DEV PROJECT",
+    name: "HipNode",
+    description: `Social Platform for Developers`,
+    image: hipnode,
+    myRole: "Software Developer",
+    startDate: "08/08/2023",
+    endDate: "03/09/2023",
+    techStack: [
+      ReactIcon,
+      NextJSIcon,
+      TailwindIcon,
+      MongoDBIcon,
+      TypeScriptIcon,
+      HTMLIcon,
+      CSSIcon,
+      GitIcon,
+      GitHubIcon,
+      FramerMotionIcon,
+    ],
+    demoSite: "https://morrent.vercel.app/",
+    sourceCode: "https://github.com/DevTaehong",
+    detail:
+      "Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.  My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles. Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.",
+    problemStatement:
+      "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
+    problemStatementImage: morrentProblemStatementImage,
+    figmaDesignImage: morrentFigmaDesign,
+    challenges: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
+      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
+    ],
+    learnings: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
+      "Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.",
+      "Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.",
+    ],
+  },
+  filmpire: {
+    type: "WEB DEV PROJECT",
+    name: "Morrent",
+    description: `A Car Rental Website`,
+    image: filmpire,
+    myRole: "Software Developer",
+    startDate: "08/08/2023",
+    endDate: "03/09/2023",
+    techStack: [
+      ReactIcon,
+      NextJSIcon,
+      TailwindIcon,
+      MongoDBIcon,
+      TypeScriptIcon,
+      HTMLIcon,
+      CSSIcon,
+      GitIcon,
+      GitHubIcon,
+      FramerMotionIcon,
+    ],
+    demoSite: "https://morrent.vercel.app/",
+    sourceCode: "https://github.com/DevTaehong",
+    detail:
+      "Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.  My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles. Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.",
+    problemStatement:
+      "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
+    problemStatementImage: morrentProblemStatementImage,
+    figmaDesignImage: morrentFigmaDesign,
+    challenges: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
+      "However, we collaborated effectively to overcome these obstacles and ultimately delivered a high-quality product within the given timeline.",
+    ],
+    learnings: [
+      "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
+      "Sharpened my backend skills, specifically in optimizing database queries, improving performance, and handling server-side logic.",
+      "Learned how to properly handle files, including file upload, storage, and retrieval, ensuring that the app's data is organized & easily accessible while keeping it secure.",
+      "Acquired proficiency in NextJS and implemented various features utilizing industry-standard best practices.",
+    ],
+  },
+};
 
 export const companies = [Slack, Firefox, DigitalOcean, Mailchimp];
 
@@ -114,7 +306,7 @@ export const projects = [
     image: jobit,
   },
   {
-    name: "Hipnode",
+    name: "HipNode",
     description: "A Social Media Application",
     techStack: ["ReactJS, Next.js", "Node.js, MongoDB"],
     image: hipnode,

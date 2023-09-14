@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/react";
 
-const ReactIcon = () => {
+const ReactIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
   const [isCircleHovered, setIsCircleHovered] = useState(false);
 
   const handleCircleHover = () => {
@@ -21,9 +21,11 @@ const ReactIcon = () => {
       content="React.js"
     >
       <svg
-        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
-          isCircleHovered && "drop-shadow-skill"
-        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        className={`${
+          isCaseDetailPage
+            ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
+            : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
+        } `}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +43,9 @@ const ReactIcon = () => {
         <g clip-path="url(#clip0_3357_3908)">
           <path
             className={`${
-              isCircleHovered ? "fill-[#53C1DE]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#53C1DE]"
+                : "fill-[#778295]"
             }`}
             d="M29.8972 26.4796C29.8972 25.2694 28.8853 24.2881 27.6369 24.2881C26.3887 24.2881 25.3766 25.2694 25.3766 26.4796C25.3766 27.6901 26.3887 28.6713 27.6369 28.6713C28.8853 28.6713 29.8972 27.6901 29.8972 26.4796Z"
             onMouseEnter={handleCircleHover}
@@ -49,7 +53,9 @@ const ReactIcon = () => {
           />
           <path
             className={`${
-              isCircleHovered ? "fill-[#53C1DE]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#53C1DE]"
+                : "fill-[#778295]"
             }`}
             fill-rule="evenodd"
             clip-rule="evenodd"

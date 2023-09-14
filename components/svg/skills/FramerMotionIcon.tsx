@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/react";
 
-const FramerMotionIcon = () => {
+const FramerMotionIcon = ({
+  isCaseDetailPage,
+}: {
+  isCaseDetailPage?: boolean;
+}) => {
   const [isCircleHovered, setIsCircleHovered] = useState(false);
 
   const handleCircleHover = () => {
@@ -21,9 +25,11 @@ const FramerMotionIcon = () => {
       content="Framer motion"
     >
       <svg
-        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
-          isCircleHovered && "drop-shadow-skill"
-        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        className={`${
+          isCaseDetailPage
+            ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
+            : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
+        } `}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +49,9 @@ const FramerMotionIcon = () => {
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
             className={`${
-              isCircleHovered ? "fill-[#59529D]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#59529D]"
+                : "fill-[#778295]"
             }`}
             d="M40.6071 13.7384V26.9316L27.414 40.1247L20.8174 33.5281L27.414 26.9316L40.6071 13.7384Z"
           />
@@ -51,13 +59,17 @@ const FramerMotionIcon = () => {
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
             className={`${
-              isCircleHovered ? "fill-[#5271B4]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#5271B4]"
+                : "fill-[#778295]"
             }`}
             d="M40.6071 26.9315V40.1247L34.0105 33.5281L40.6071 26.9315Z"
           />
           <path
             className={`${
-              isCircleHovered ? "fill-[#BB4B96]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#BB4B96]"
+                : "fill-[#778295]"
             }`}
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
