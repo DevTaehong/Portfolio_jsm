@@ -19,7 +19,7 @@ import {
   SASSIcon,
   CSSIcon,
   GitIcon,
-} from "@/components/skillIcons";
+} from "@/components/svg/skills";
 
 const skillIcons = [
   JSIcon,
@@ -40,7 +40,7 @@ const skillIcons = [
   MongoDBIcon,
 ];
 
-const MySkills = () => {
+function MySkills() {
   return (
     <div className="bg-white900 py-12 dark:bg-black200">
       <section className="flex flex-col items-center gap-10  xl:px-[5.31rem] xl:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -60,6 +60,6 @@ const MySkills = () => {
       </section>
     </div>
   );
-};
+}
 
 export default MySkills;

@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import { Tooltip } from "@nextui-org/react";
 
-const FramerMotionIcon = () => {
+const CSSIcon = () => {
   const [isCircleHovered, setIsCircleHovered] = useState(false);
 
   const handleCircleHover = () => {
@@ -16,7 +18,7 @@ const FramerMotionIcon = () => {
       classNames={{
         base: "text-white500 dark:text-white900 dark:bg-black300",
       }}
-      content="Framer motion"
+      content="CSS"
     >
       <svg
         className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
@@ -36,39 +38,51 @@ const FramerMotionIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3953)">
+        <g clip-path="url(#clip0_3357_3929)">
           <path
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
-            className={`${
-              isCircleHovered ? "fill-[#59529D]" : "fill-[#778295]"
+            d="M17.4038 37.6722L15.2393 13.9657H38.4819L36.3689 37.6722L26.8863 40.352"
+            className={` ${
+              isCircleHovered ? "fill-[#264DE4]" : "fill-[#778295]"
             }`}
-            d="M40.6071 13.7384V26.9316L27.414 40.1247L20.8174 33.5281L27.414 26.9316L40.6071 13.7384Z"
           />
           <path
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
-            className={`${
-              isCircleHovered ? "fill-[#5271B4]" : "fill-[#778295]"
+            d="M26.8864 15.8726V38.2906L34.5652 36.1777L36.3689 15.8726"
+            className={` ${
+              isCircleHovered ? "fill-[#2965F1]" : "fill-[#778295]"
             }`}
-            d="M40.6071 26.9315V40.1247L34.0105 33.5281L40.6071 26.9315Z"
           />
           <path
-            className={`${
-              isCircleHovered ? "fill-[#BB4B96]" : "fill-[#778295]"
-            }`}
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
-            d="M27.414 26.9316L14.2208 40.1247V13.7384L27.414 26.9316Z"
+            d="M19.5682 18.8101H26.8863V21.6961H19.8259M20.0836 24.6851H26.8863V27.6227H20.3413M20.4959 29.0657H23.3819L23.588 31.3848L26.8863 32.2609V35.3015L20.8566 33.6524"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#EBEBEB] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
+          />
+          <path
+            onMouseEnter={handleCircleHover}
+            onMouseLeave={handleCircleLeave}
+            d="M26.8864 24.6851V27.6227H30.4423L30.0816 31.3848L26.8864 32.2609V35.3015L32.813 33.6524L34.1529 18.8101H26.8864V21.6961H31.0092L30.7258 24.6851H26.8864Z"
+            className={` ${
+              isCircleHovered
+                ? "fill-[#FFFFFF] dark:fill-[#FFFFFF]"
+                : "fill-white900 dark:fill-black300"
+            }`}
           />
         </g>
         <defs>
-          <clipPath id="clip0_3357_3953">
+          <clipPath id="clip0_3357_3929">
             <rect
               width="26.3863"
               height="26.3863"
               fill="white"
-              transform="translate(14.2208 13.7384)"
+              transform="translate(13.6931 13.9657)"
             />
           </clipPath>
         </defs>
@@ -77,4 +91,4 @@ const FramerMotionIcon = () => {
   );
 };
 
-export default FramerMotionIcon;
+export default CSSIcon;

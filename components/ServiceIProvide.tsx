@@ -4,9 +4,21 @@ import { Card, CardHeader } from "@nextui-org/react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import { serviceIcons } from "@/components/icons";
+import {
+  AnalyticsSEOIcon,
+  FrontEndIcon,
+  BackEndIcon,
+  WebOptimizationIcon,
+} from "@/components/svg/serviceIProvide";
 
-const ServiceIProvide = () => {
+export const serviceIcons = [
+  AnalyticsSEOIcon,
+  FrontEndIcon,
+  BackEndIcon,
+  WebOptimizationIcon,
+];
+
+function ServiceIProvide() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const handleCardHovered = (index: number) => {
@@ -92,6 +104,6 @@ const ServiceIProvide = () => {
       </div>
     </section>
   );
-};
+}
 
 export default ServiceIProvide;

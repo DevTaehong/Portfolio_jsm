@@ -13,13 +13,13 @@ import {
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 import { righteous } from "@/config/fonts";
 import NavBarMenuButton from "@/components/NavBarMenuButton";
 import { siteConfig } from "@/config/site";
-import { DownloadResumeIcon, DividerIcon } from "./icons";
+import { DownloadResumeIcon, DividerIcon } from "@/components/svg/navBar";
 
-export const NavBar = () => {
+export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -45,7 +45,7 @@ export const NavBar = () => {
         </NavbarContent>
         <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
           <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
-            <NavBarLinks isMobile="smallRegular" />
+            <NavBarLinks isMobile="navBarLinkDestTop" />
           </div>
           <NavbarItem>
             <DividerIcon />
@@ -61,12 +61,12 @@ export const NavBar = () => {
           </NavbarItem>
         </NavbarContent>
         <NavbarMenu className="items-center gap-6 pt-12">
-          <NavBarLinks isMobile="paragraphRegular" />
+          <NavBarLinks isMobile="navBarLinkMobile" />
         </NavbarMenu>
       </NextUiNavBar>
     </div>
   );
-};
+}
 
 const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
   const pathname = usePathname();
@@ -77,8 +77,8 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
           <Link
             className={`${isMobile} w-full ${
               item.href === pathname
-                ? "text-primaryLight dark:text-primaryDark"
-                : "text-white500 dark:text-white800"
+                ? "font-semibold text-primaryLight dark:text-primaryDark"
+                : "font-normal text-white500 dark:text-white800"
             }`}
             href={item.href}
             size="lg"
