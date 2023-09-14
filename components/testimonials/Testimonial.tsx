@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import Image from "next/image";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svg/testimonial";
 import { stars } from "@/public";
 import { testimonialsData } from "@/constants";
 

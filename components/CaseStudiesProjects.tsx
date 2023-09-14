@@ -1,29 +1,34 @@
 import CaseStudiesProject from "./CaseStudiesProject";
-import { morrent, jobit, hipnode, filmpire } from "@/public";
+import {
+  morrentLaptop,
+  jobitLaptop,
+  hipnodeLaptop,
+  filmpireLaptop,
+} from "@/public";
 
 const projects = [
   {
     name: "Morrent",
     description: "Car Rental Application",
-    image: morrent,
+    image: morrentLaptop,
     color: "bg-morrentLight",
   },
   {
     name: "Jobit",
     description: "Job Finding Application",
-    image: jobit,
+    image: jobitLaptop,
     color: "bg-jobit",
   },
   {
     name: "HipNode",
     description: "Social Platform for Developers",
-    image: hipnode,
+    image: hipnodeLaptop,
     color: "bg-hipnode",
   },
   {
     name: "Filmpire",
     description: "AI-Powered Movie Application",
-    image: filmpire,
+    image: filmpireLaptop,
     color: "bg-filmpire",
   },
 ];

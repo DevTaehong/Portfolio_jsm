@@ -1,4 +1,62 @@
 import { adrian, test, test2, morrent, jobit, hipnode } from "@/public";
+import {
+  AnalyticsSEOIcon,
+  BackEndIcon,
+  FrontEndIcon,
+  WebOptimizationIcon,
+} from "@/components/svg/serviceIProvide";
+import {
+  HTMLIcon,
+  ExpressIcon,
+  FramerMotionIcon,
+  GitHubIcon,
+  JSIcon,
+  MongoDBIcon,
+  MUIIcon,
+  NextJSIcon,
+  NodeIcon,
+  ReactIcon,
+  ReduxIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  SASSIcon,
+  CSSIcon,
+  GitIcon,
+} from "@/components/svg/skills";
+import {
+  Slack,
+  Firefox,
+  DigitalOcean,
+  Mailchimp,
+} from "@/components/svg/workExperience";
+
+export const companies = [Slack, Firefox, DigitalOcean, Mailchimp];
+
+export const serviceIcons = [
+  AnalyticsSEOIcon,
+  FrontEndIcon,
+  BackEndIcon,
+  WebOptimizationIcon,
+];
+
+export const techSkills = [
+  JSIcon,
+  ReactIcon,
+  ReduxIcon,
+  NextJSIcon,
+  TypeScriptIcon,
+  HTMLIcon,
+  CSSIcon,
+  SASSIcon,
+  MUIIcon,
+  TailwindIcon,
+  FramerMotionIcon,
+  GitIcon,
+  GitHubIcon,
+  NodeIcon,
+  ExpressIcon,
+  MongoDBIcon,
+];
 
 export const jobs = [
   {
@@ -48,7 +106,7 @@ export const projects = [
     description: `A Car Rental Application`,
     techStack: ["ReactJS, Next.js", "Tailwind, MongoDB"],
     image: morrent,
-    color: "bg-morrent",
+    color: "bg-morrentDark",
   },
   {
     name: "JobIT",

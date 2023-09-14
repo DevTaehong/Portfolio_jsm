@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { techSkills } from "../icons";
+import { techSkills } from "@/constants";
 
 const Skill = () => {
   return (

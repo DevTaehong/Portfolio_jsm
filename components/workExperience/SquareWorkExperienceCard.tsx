@@ -1,8 +1,6 @@
-"use client";
+import { Card } from "@nextui-org/card";
 
-import { Card } from "@nextui-org/react";
-
-import { LineDecoration } from "../icons";
+import LineDecoration from "../svg/workExperience/LineDecoration";
 
 const SquareWorkExperienceCard = () => {
   return (

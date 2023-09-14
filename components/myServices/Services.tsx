@@ -1,6 +1,6 @@
 "use client"; // NOTE - serviceIcons is a client-side svg component
 
-import { serviceIcons } from "@/components/icons";
+import { serviceIcons } from "@/constants";
 import Service from "./Service";
 
 const Services = () => {
