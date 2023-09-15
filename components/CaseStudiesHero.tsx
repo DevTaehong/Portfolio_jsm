@@ -1,0 +1,21 @@
+import { heroText, projects } from "@/constants";
+import CaseStudiesHeading from "./CaseStudiesHeading";
+
+function CaseStudiesHero() {
+  return (
+    <section className="flex flex-col items-center gap-5 bg-white800 px-6 py-12 text-center dark:bg-black300 lg:gap-[1.8rem]">
+      <h1 className="mobileHeading1 max-w-[21rem] dark:text-white800 sm:max-w-[41.125rem] lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.04rem]">
+        Recent{" "}
+        {heroText.map((text, i) => (
+          <CaseStudiesHeading text={text} key={projects[i].name} />
+        ))}
+      </h1>
+      <p className="smallRegular max-w-[21.125rem] text-white500 dark:text-white800 lg:max-w-[44rem] lg:text-[1.25rem] lg:leading-[1.875rem]">
+        {`Dive into my recent success stories and discover how I've helped clients
+        overcome challenges, innovate, and achieve their goals`}
+      </p>
+    </section>
+  );
+}
+
+export default CaseStudiesHero;

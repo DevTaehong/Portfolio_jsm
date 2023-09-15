@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Portfolio_JSM",
+  name: "Taehong Min | Software Developer",
   description:
     "A portfolio page that showcases my development projects and skills.",
   navItems: [

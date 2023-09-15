@@ -25,7 +25,7 @@ const Company = ({ CompanyLogo, index }: CompanyProps) => {
     <motion.div
       transition={{ type: "spring" }}
       whileHover={{ x: 30 }}
-      className="job flex flex-col justify-center gap-[1.12rem] pl-9 dark:bg-black200 xl:h-[7.625rem] 
+      className="job flex flex-col justify-center gap-[1.12rem] pl-9 dark:bg-black200 sm:w-[37.9375rem] xl:h-[7.625rem]
     xl:flex-row xl:items-center xl:justify-start xl:border xl:border-white800 xl:pl-8 xl:shadow-none xl:hover:border-none xl:hover:shadow-jobCardHover dark:xl:border-black200 dark:xl:hover:bg-black300"
       onMouseEnter={() => handleCardHovered(index)}
       onMouseLeave={handleCardLeave}

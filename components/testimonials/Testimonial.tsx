@@ -1,10 +1,10 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import Image from "next/image";
 
-import { ArrowLeftIcon, ArrowRightIcon } from "../icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svg/testimonial";
 import { stars } from "@/public";
 import { testimonialsData } from "@/constants";
 

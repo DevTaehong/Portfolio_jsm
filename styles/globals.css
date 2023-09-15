@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .heading1 {
-    @apply text-black200 dark:text-white900 text-[2.625rem] tracking-[-0.02625rem] leading-[3.018rem] xl:text-[4rem] not-italic font-bold xl:leading-[5.2rem] xl:tracking-[-0.04rem];
-  }
+.mobileHeading1 {
+  color: var(--black-200, #151E2C);
+  font-size: 2.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: -0.02625rem;
 }
 
 .testimonialButton {
@@ -197,6 +200,18 @@
   /* 21.7px */
 }
 
+.navBarLinkDestTop {
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 155%;
+}
+
+.navBarLinkMobile {
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: 150%;
+}
+
 .smallBold {
   /* Small/Bold */
   font-size: 0.875rem;
@@ -212,11 +227,9 @@
   height: 1.875rem;
   padding: 0.52081rem;
   border-radius: 468.75rem;
-  background: conic-gradient(
-    from 180deg at 50% 75.56%,
-    #0252cd 0deg,
-    rgba(2, 82, 205, 0.33) 360deg
-  );
+  background: conic-gradient(from 180deg at 50% 75.56%,
+      #0252cd 0deg,
+      rgba(2, 82, 205, 0.33) 360deg);
   flex-direction: column;
   align-items: flex-start;
   gap: 0.52081rem;
@@ -289,4 +302,18 @@
 
 .heroImage {
   mix-blend-mode: multiply;
+}
+
+.footerCard {
+  mask-type: alpha
+}
+
+.footer-text {
+  color: var(--black-200, #151E2C);
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105%;
+  /* 1.96875rem */
+  letter-spacing: -0.00938rem;
 }

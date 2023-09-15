@@ -1,6 +1,6 @@
 "use client"; // NOTE - companies is a client-side svg component
 
-import { companies } from "../icons";
+import { companies } from "@/constants";
 import Company from "./Company";
 
 const Companies = () => {

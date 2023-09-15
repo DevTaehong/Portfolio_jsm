@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { contactIcon } from "@/public";
-import { HeroImage } from "./icons";
+import { HeroImage } from "@/components/svg/HeroImage";
 
-const Hero = () => {
+function Hero() {
   return (
     <section className="bg-white800 dark:bg-black300">
       <div className="flex flex-col justify-start pb-8 md:flex-row xl:items-center xl:pb-0 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -12,7 +12,7 @@ const Hero = () => {
           <p className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]">
             HI, I AM TAEHONG
           </p>
-          <h1 className="heading1 pt-5 xl:pt-[1.69rem]">
+          <h1 className="mobileHeading1 pt-5 dark:text-white900  xl:pt-[1.69rem] xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]">
             Professional
             <br />
             <span className="relative inline-block">
@@ -54,6 +54,6 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Hero;

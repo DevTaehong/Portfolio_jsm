@@ -5,6 +5,7 @@ import { NavBar } from "@/components/navBar/NavBar";
 import { poppins } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Providers } from "./providers";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <NavBar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,4 +1,64 @@
 import { adrian, test, test2, morrent, jobit, hipnode } from "@/public";
+import {
+  AnalyticsSEOIcon,
+  BackEndIcon,
+  FrontEndIcon,
+  WebOptimizationIcon,
+} from "@/components/svg/serviceIProvide";
+import {
+  HTMLIcon,
+  ExpressIcon,
+  FramerMotionIcon,
+  GitHubIcon,
+  JSIcon,
+  MongoDBIcon,
+  MUIIcon,
+  NextJSIcon,
+  NodeIcon,
+  ReactIcon,
+  ReduxIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  SASSIcon,
+  CSSIcon,
+  GitIcon,
+} from "@/components/svg/skills";
+import {
+  Slack,
+  Firefox,
+  DigitalOcean,
+  Mailchimp,
+} from "@/components/svg/workExperience";
+
+import { FooterGitHubIcon, LinkedInIcon } from "@/components/svg/footer";
+
+export const companies = [Slack, Firefox, DigitalOcean, Mailchimp];
+
+export const serviceIcons = [
+  AnalyticsSEOIcon,
+  FrontEndIcon,
+  BackEndIcon,
+  WebOptimizationIcon,
+];
+
+export const techSkills = [
+  JSIcon,
+  ReactIcon,
+  ReduxIcon,
+  NextJSIcon,
+  TypeScriptIcon,
+  HTMLIcon,
+  CSSIcon,
+  SASSIcon,
+  MUIIcon,
+  TailwindIcon,
+  FramerMotionIcon,
+  GitIcon,
+  GitHubIcon,
+  NodeIcon,
+  ExpressIcon,
+  MongoDBIcon,
+];
 
 export const jobs = [
   {
@@ -83,5 +143,18 @@ export const services = [
     service: "Web Optimization",
     description:
       "Web optimization focuses on improving website performance for a smoother user experience",
+  },
+];
+
+export const heroText = ["Case", "Studies"];
+
+export const links = [
+  {
+    link: "https://www.linkedin.com/in/taehong/",
+    icon: LinkedInIcon,
+  },
+  {
+    link: "https://github.com/DevTaehong",
+    icon: FooterGitHubIcon,
   },
 ];
