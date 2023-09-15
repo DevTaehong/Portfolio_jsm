@@ -24,6 +24,7 @@ module.exports = {
       }
     },
     colors: {
+      myProcess: "#333C4A",
       jobit: "#0BAB7C",
       hipnode: "#FF6934",
       morrentLight: "#5CAFFC",
