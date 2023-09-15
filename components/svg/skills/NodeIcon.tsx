@@ -30,7 +30,7 @@ const NodeIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3971)">
+        <g clipPath="url(#clip0_3357_3971)">
           <path
             className={`${
               isCircleHovered ? "fill-[#539E43]" : "fill-[#778295]"

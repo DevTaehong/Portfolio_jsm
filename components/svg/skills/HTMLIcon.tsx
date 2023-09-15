@@ -30,7 +30,7 @@ const HTMLIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3922)">
+        <g clipPath="url(#clip0_3357_3922)">
           <path
             d="M17.6983 37.6723L15.5853 13.9658H38.828L36.715 37.6723L27.1809 40.3521"
             className={`fill-[#778295] ${isCircleHovered && "fill-[#E34F26]"}`}

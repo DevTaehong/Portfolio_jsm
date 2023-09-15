@@ -30,7 +30,7 @@ const FramerMotionIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3953)">
+        <g clipPath="url(#clip0_3357_3953)">
           <path
             className={`${
               isCircleHovered ? "fill-[#59529D]" : "fill-[#778295]"

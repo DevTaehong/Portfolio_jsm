@@ -7,7 +7,7 @@ const MobileFooterCard = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_3357_11943)">
+    <g clipPath="url(#clip0_3357_11943)">
       <rect y="0.0908203" width="345" height="311" rx="20" fill="#FFBE62" />
       <mask
         id="mask0_3357_11943"

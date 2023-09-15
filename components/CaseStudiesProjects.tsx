@@ -41,12 +41,7 @@ const CaseStudiesProjects = () => {
         xl:flex xl:flex-row xl:flex-wrap xl:px-[5.31rem] 2xl:mx-auto 2xl:max-w-[90rem]"
       >
         {projects.map((project) => (
-          <div
-            key={project.name}
-            className="max-w-[21.5625rem] lg:max-w-[34.375rem]"
-          >
-            <CaseStudiesProject project={project} />
-          </div>
+          <CaseStudiesProject project={project} key={project.name} />
         ))}
       </div>
     </section>

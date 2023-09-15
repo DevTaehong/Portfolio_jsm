@@ -30,7 +30,7 @@ const MongoDBIcon = () => {
           cy="31.9814"
           r="26.3863"
         />
-        <g clip-path="url(#clip0_3357_3980)">
+        <g clipPath="url(#clip0_3357_3980)">
           <path
             className={`${
               isCircleHovered ? "fill-[#13AA52]" : "fill-[#778295]"

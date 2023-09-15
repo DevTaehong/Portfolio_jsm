@@ -30,7 +30,7 @@ const TypescriptIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3917)">
+        <g clipPath="url(#clip0_3357_3917)">
           <path
             className={`${
               isCircleHovered ? "fill-[#3178C6]" : "fill-[#778295]"

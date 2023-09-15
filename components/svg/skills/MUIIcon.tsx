@@ -30,7 +30,7 @@ const MUIIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3941)">
+        <g clipPath="url(#clip0_3357_3941)">
           <path
             d="M13.8575 27.8435V16.4182L23.7524 22.1308V25.9393L17.1558 22.1308V29.7477L13.8575 27.8435Z"
             className={`${

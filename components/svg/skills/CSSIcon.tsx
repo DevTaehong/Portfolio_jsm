@@ -30,7 +30,7 @@ const CSSIcon = () => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3929)">
+        <g clipPath="url(#clip0_3357_3929)">
           <path
             d="M17.4038 37.6722L15.2393 13.9657H38.4819L36.3689 37.6722L26.8863 40.352"
             className={` ${
