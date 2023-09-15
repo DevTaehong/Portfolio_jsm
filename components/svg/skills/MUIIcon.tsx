@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const MUIIcon = () => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -27,10 +19,10 @@ const MUIIcon = () => {
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -40,32 +32,24 @@ const MUIIcon = () => {
         />
         <g clip-path="url(#clip0_3357_3941)">
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M13.8575 27.8435V16.4182L23.7524 22.1308V25.9393L17.1558 22.1308V29.7477L13.8575 27.8435Z"
             className={`${
               isCircleHovered ? "fill-[#00B0FF]" : "fill-[#778295]"
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M23.7523 22.1308L33.6472 16.4182V27.8435L27.0506 31.6519L23.7523 29.7477L30.3489 25.9393V22.1308L23.7523 25.9393V22.1308Z"
             className={`${
               isCircleHovered ? "fill-[#0081CB]" : "fill-[#778295]"
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M23.7523 29.7477V33.5561L30.3489 37.3645V33.5561L23.7523 29.7477Z"
             className={`${
               isCircleHovered ? "fill-[#00B0FF]" : "fill-[#778295]"
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             className={`${
               isCircleHovered ? "fill-[#0081CB]" : "fill-[#778295]"
             }`}

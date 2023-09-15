@@ -16,7 +16,6 @@ function CaseStudiesHero() {
               />
               <span className="relative">{text}</span>
             </span>{" "}
-            {text !== "Studies" && <br className="block sm:hidden" />}
           </>
         ))}
       </h1>

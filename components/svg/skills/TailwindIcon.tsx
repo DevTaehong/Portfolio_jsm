@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const TailwindIcon = () => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -27,10 +19,10 @@ const TailwindIcon = () => {
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -39,8 +31,6 @@ const TailwindIcon = () => {
           }`}
         />
         <path
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           className={`${isCircleHovered ? "fill-[#44A8B3]" : "fill-[#778295]"}`}
           d="M21.4604 25.0351C22.23 21.9567 24.154 20.4175 27.2324 20.4175C31.85 20.4175 32.4272 23.8807 34.736 24.4579C36.2752 24.8427 37.622 24.2655 38.7764 22.7263C38.0068 25.8047 36.0828 27.3439 33.0044 27.3439C28.3868 27.3439 27.8096 23.8807 25.5008 23.3035C23.9616 22.9187 22.6148 23.4959 21.4604 25.0351ZM15.6884 31.9615C16.458 28.8831 18.382 27.3439 21.4604 27.3439C26.078 27.3439 26.6552 30.8071 28.964 31.3843C30.5032 31.7691 31.85 31.1919 33.0044 29.6527C32.2348 32.7311 30.3108 34.2703 27.2324 34.2703C22.6148 34.2703 22.0376 30.8071 19.7288 30.2299C18.1896 29.8451 16.8428 30.4223 15.6884 31.9615Z"
         />
