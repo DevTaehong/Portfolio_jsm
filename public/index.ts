@@ -15,3 +15,5 @@ export { default as hipnodeLaptop } from "./images/hipnode-laptop.svg";
 export { default as filmpireLaptop } from "./images/filmpire-laptop.svg";
 export { default as morrentProblemStatementImage } from "./images/morrentProblemStatementImage.svg";
 export { default as morrentFigmaDesign } from "./images/morrentFigmaDesign.svg";
+export { default as tick } from "./images/tick.svg";
+export { default as challengeImage } from "./images/challenge.svg";
