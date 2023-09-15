@@ -25,7 +25,7 @@ const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
           isCaseDetailPage
             ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
             : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
-        } `}
+        } ${isCircleHovered && "drop-shadow-skill"}`}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -46,15 +46,15 @@ const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             onMouseLeave={handleCircleLeave}
             d="M17.6983 37.6723L15.5853 13.9658H38.828L36.715 37.6723L27.1809 40.3521"
             className={`fill-[#778295] ${
-              isCircleHovered || (isCaseDetailPage && "fill-[#E34F26]")
-            }`}
+              (isCaseDetailPage || isCircleHovered) && "fill-[#E34F26]"
+            } `}
           />
           <path
             onMouseEnter={handleCircleHover}
             onMouseLeave={handleCircleLeave}
             d="M27.2324 38.2906L34.9113 36.1777L36.715 15.8726H27.2324"
             className={`fill-[#778295] ${
-              isCircleHovered || (isCaseDetailPage && "fill-[#EF652A]")
+              (isCaseDetailPage || isCircleHovered) && "fill-[#EF652A]"
             }`}
           />
           <path

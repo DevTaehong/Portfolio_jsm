@@ -24,7 +24,7 @@ const NextJSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         <svg
           className={`h-[3.29831rem] w-[3.29831rem] dark:hidden sm:h-[6.25rem] sm:w-[6.25rem] ${
             isCircleHovered && "drop-shadow-skill"
-          } `}
+          }`}
           viewBox="0 0 103 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
