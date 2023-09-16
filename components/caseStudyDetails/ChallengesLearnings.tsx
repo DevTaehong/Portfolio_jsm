@@ -5,6 +5,15 @@ import ChallengeLearning from "./ChallengeLearning";
 const ChallengesLearnings = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
 
+  const challengesOrLearnings = [
+    {
+      text: "CHALLENGES",
+      value: projectDetail.challenges,
+      icon: challengeImage,
+    },
+    { text: "LEARNINGS", value: projectDetail.learnings, icon: tick },
+  ];
+
   return (
     <section className="bg-white900 dark:bg-black200">
       <div className="flex flex-col gap-6 px-6 py-9 sm:gap-[1.88rem] xl:px-[17.5rem] xl:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -18,16 +27,14 @@ const ChallengesLearnings = ({ project }: { project: string }) => {
             </h6>
           </div>
         </div>
-        <ChallengeLearning
-          challengesOrLearnings={"CHALLENGES"}
-          bulletPoints={projectDetail.challenges}
-          icon={challengeImage}
-        />
-        <ChallengeLearning
-          challengesOrLearnings={"LEARNINGS"}
-          bulletPoints={projectDetail.learnings}
-          icon={tick}
-        />
+        {challengesOrLearnings.map(({ text, value, icon }) => (
+          <ChallengeLearning
+            key={text}
+            challengesOrLearnings={text}
+            bulletPoints={value}
+            icon={icon}
+          />
+        ))}
       </div>
     </section>
   );

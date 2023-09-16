@@ -1,12 +1,4 @@
-import {
-  Definition,
-  Design,
-  Planning,
-  Development,
-  Deployment,
-} from "../svg/myProcess";
-
-const myProcess = [Definition, Design, Planning, Development, Deployment];
+import { myProcess } from "@/constants";
 
 const MyProcess = () => {
   return (
@@ -24,19 +16,25 @@ const MyProcess = () => {
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-x-[3.12rem] gap-y-[1.88rem] sm:justify-between">
           {myProcess.map((Process) => (
-            <div
-              key={Process.name}
-              className="flex flex-col items-center gap-[0.88rem]"
-            >
-              <Process />
-              <p className="smallBold text-black300 dark:text-white900 sm:text-[1.25rem] sm:leading-[1.625rem]">
-                {Process.name}
-              </p>
-            </div>
+            <ProcessIcons key={Process.name} Process={Process} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const ProcessIcons = ({ Process }: { Process: React.FC }) => {
+  return (
+    <div
+      key={Process.name}
+      className="flex flex-col items-center gap-[0.88rem]"
+    >
+      <Process />
+      <p className="smallBold text-black300 dark:text-white900 sm:text-[1.25rem] sm:leading-[1.625rem]">
+        {Process.name}
+      </p>
+    </div>
   );
 };
 

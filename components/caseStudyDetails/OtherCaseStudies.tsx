@@ -32,20 +32,21 @@ const OtherCaseStudies = ({ project }: { project: string }) => {
 };
 
 const CaseStudyCard = ({ otherProject }: { otherProject: string }) => {
+  const projectDetail = projectDetails[otherProject];
   return (
     <Card className="otherCaseStudies max-w-[21.5625rem] dark:bg-black300 dark:shadow-caseStudyCard lg:max-w-[26.875rem]">
       <Image
         className="lg:w-[30rem] xl:w-[26.86575rem]"
-        src={projectDetails[otherProject].figmaDesignImage}
+        src={projectDetail.figmaDesignImage}
         alt="Project Image"
       />
       <div className="flex flex-col gap-[0.97rem] px-[1.19rem] pb-[1.49rem] pt-[1.2rem]">
         <div className="flex flex-col gap-[0.4rem]">
           <p className="paragraphBold text-primaryLight dark:text-primaryDark">
-            {projectDetails[otherProject].name}
+            {projectDetail.name}
           </p>
           <p className="smallRegular line-clamp-3 text-white500 dark:text-white800">
-            {projectDetails[otherProject].detail}
+            {projectDetail.detail}
           </p>
         </div>
         <Button

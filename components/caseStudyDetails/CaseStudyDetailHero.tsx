@@ -11,6 +11,15 @@ import {
 const CaseStudyDetailHero = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
 
+  const HeroLinks = [
+    { text: "Demo Site", href: projectDetail.demoSite, Icon: DemoSiteIcon },
+    {
+      text: "Source Code",
+      href: projectDetail.sourceCode,
+      Icon: CaseStudyGitHubIcon,
+    },
+  ];
+
   return (
     <section className="bg-white800 px-6 py-12 dark:bg-black300">
       <div className="flex flex-col items-center gap-6 text-center sm:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -35,16 +44,9 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
           alt={`An image of ${projectDetail.name}`}
         />
         <div className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]">
-          <HeroLink
-            Icon={DemoSiteIcon}
-            href={projectDetail.demoSite}
-            text="Demo Site"
-          />
-          <HeroLink
-            Icon={CaseStudyGitHubIcon}
-            href={projectDetail.sourceCode}
-            text="Source Code"
-          />
+          {HeroLinks.map(({ text, href, Icon }) => (
+            <HeroLink key={text} Icon={Icon} href={href} text={text} />
+          ))}
         </div>
       </div>
     </section>

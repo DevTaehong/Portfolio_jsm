@@ -4,22 +4,23 @@ import CaseStudyDetailSkill from "./CaseStudyDetailSkill";
 const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
 
+  const myRoleOrDates = [
+    { text: "My Role", value: projectDetail.myRole },
+    { text: "Start Date", value: projectDetail.startDate },
+    { text: "End Date", value: projectDetail.endDate },
+  ];
+
   return (
     <section className="bg-white900 dark:bg-black200">
       <div className="flex flex-col px-6 xl:px-[17.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <div className="flex flex-col gap-9 py-10 sm:flex-row sm:justify-between xl:pb-[2.69rem] xl:pt-[3.31rem]">
-          <MyRoleOrDates
-            text={"My Role"}
-            myRoleOrDates={projectDetail.myRole}
-          />
-          <MyRoleOrDates
-            text={"Start Date"}
-            myRoleOrDates={projectDetail.startDate}
-          />
-          <MyRoleOrDates
-            text={"End Date"}
-            myRoleOrDates={projectDetail.endDate}
-          />
+          {myRoleOrDates.map((myRoleOrDate) => (
+            <MyRoleOrDates
+              key={myRoleOrDate.text}
+              text={"My Role"}
+              myRoleOrDates={myRoleOrDate.value}
+            />
+          ))}
         </div>
         <div className="flex flex-col gap-6 py-[2.62rem] sm:gap-[2.75rem] xl:py-[4.5rem]">
           <div className="flex flex-col gap-6">

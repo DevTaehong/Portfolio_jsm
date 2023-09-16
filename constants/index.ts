@@ -42,8 +42,22 @@ import {
   DigitalOcean,
   Mailchimp,
 } from "@/components/svg/workExperience";
-
+import {
+  Definition,
+  Design,
+  Planning,
+  Development,
+  Deployment,
+} from "@/components/svg/myProcess";
 import { FooterGitHubIcon, LinkedInIcon } from "@/components/svg/footer";
+
+export const myProcess = [
+  Definition,
+  Design,
+  Planning,
+  Development,
+  Deployment,
+];
 
 export const projectDetails: {
   [key: string]: {
