@@ -11,7 +11,7 @@ const ChallengeLearning = ({
   icon: string;
 }) => {
   return (
-    <Card className="challengesLearnings border-0 shadow-none sm:gap-[1.88rem] sm:px-10 sm:py-9">
+    <Card className="challengesLearnings border-0 shadow-none dark:bg-black300 sm:gap-[1.88rem] sm:px-10 sm:py-9">
       <h6
         className={`bodyBold ${
           challengesOrLearnings === "CHALLENGES"
@@ -34,7 +34,7 @@ const ChallengeLearning = ({
               width={20}
               height={20}
             />
-            <p className="smallRegular text-white500 sm:text-[1.125rem] sm:leading-[1.8rem]">
+            <p className="smallRegular text-white500 dark:text-white800 sm:text-[1.125rem] sm:leading-[1.8rem]">
               {bulletPoint}
             </p>
           </div>

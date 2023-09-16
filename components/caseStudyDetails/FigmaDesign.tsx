@@ -6,7 +6,7 @@ const FigmaDesign = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
 
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col dark:bg-black200">
       <div className="figmaDesign figmaDesignText h-[2.47812rem] dark:bg-primaryDark sm:text-[2rem] sm:leading-[2.1rem] sm:tracking-[-0.01rem] md:h-[6.625rem]">
         High-Fidelity Figma Design
       </div>
