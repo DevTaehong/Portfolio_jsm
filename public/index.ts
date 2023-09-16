@@ -8,6 +8,8 @@ export { default as stars } from "./images/stars.svg";
 export { default as adrian } from "./images/adrian.png";
 export { default as test } from "./images/test.jpg";
 export { default as test2 } from "./images/test2.jpeg";
+export { default as hipNodeFigmaDesign } from "./images/hipNodeFigmaDesign.svg";
+export { default as jobitFigmaDesign } from "./images/jobitFigmaDesign.svg";
 
 export { default as morrentLaptop } from "./images/morrent-laptop.svg";
 export { default as jobitLaptop } from "./images/jobit-laptop.svg";

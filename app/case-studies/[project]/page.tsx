@@ -4,6 +4,7 @@ import CaseStudyDetailRoleTechStack from "@/components/caseStudyDetails/CaseStud
 import ChallengesLearnings from "@/components/caseStudyDetails/ChallengesLearnings";
 import FigmaDesign from "@/components/caseStudyDetails/FigmaDesign";
 import MyProcess from "@/components/caseStudyDetails/MyProcess";
+import OtherCaseStudies from "@/components/caseStudyDetails/OtherCaseStudies";
 import ProblemStatement from "@/components/caseStudyDetails/ProblemStatement";
 
 const ProjectPage = ({ params }: { params: { project: string } }) => {
@@ -17,6 +18,7 @@ const ProjectPage = ({ params }: { params: { project: string } }) => {
       <FigmaDesign project={project} />
       <MyProcess />
       <ChallengesLearnings project={project} />
+      <OtherCaseStudies project={project} />
     </main>
   );
 };

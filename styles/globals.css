@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.seeCaseStudyButton {
+  display: flex;
+  overflow: hidden;
+  padding: 0.75rem 6.25rem;
+  border-radius: 1.75506rem;
+  border: 0.802px solid var(--accent-primary-light, #0252CD);
+  background: var(--accent-primary-light, #0252CD);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5625rem;
+  color: var(--white-900, #FFF);
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+}
+
+.otherCaseStudies {
+  border-radius: 1.00294rem;
+  background: var(--white-900, #FFF);
+  box-shadow: 0px 0.80233px 16.04651px 0px #E0ECFF;
+}
+
 .challengesLearnings {
   display: flex;
   overflow: hidden;
