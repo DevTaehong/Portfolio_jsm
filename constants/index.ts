@@ -40,6 +40,8 @@ import {
   Mailchimp,
 } from "@/components/svg/workExperience";
 
+import { FooterGitHubIcon, LinkedInIcon } from "@/components/svg/footer";
+
 export const projectDetails: {
   [key: string]: {
     type: string;
@@ -342,5 +344,18 @@ export const services = [
     service: "Web Optimization",
     description:
       "Web optimization focuses on improving website performance for a smoother user experience",
+  },
+];
+
+export const heroText = ["Case", "Studies"];
+
+export const links = [
+  {
+    link: "https://www.linkedin.com/in/taehong/",
+    icon: LinkedInIcon,
+  },
+  {
+    link: "https://github.com/DevTaehong",
+    icon: FooterGitHubIcon,
   },
 ];

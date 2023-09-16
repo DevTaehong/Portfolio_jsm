@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const JSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -28,6 +20,8 @@ const JSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
         } ${isCircleHovered && "drop-shadow-skill"}`}
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
           className={`fill-[#F3F8FF] dark:fill-black300 ${
@@ -36,19 +30,13 @@ const JSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
           cx="26.5232"
           cy="26.3863"
           r="26.3863"
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
         />
-        <g clip-path="url(#clip0_3357_3898)">
+        <g clipPath="url(#clip0_3357_3898)">
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             className={`fill-[#778295] ${isCircleHovered && "fill-[#F0DB4F]"}`}
             d="M36.286 13.1931H17.8156C15.6297 13.1931 13.8577 14.9651 13.8577 17.1511V35.6215C13.8577 37.8074 15.6297 39.5794 17.8156 39.5794H36.286C38.4719 39.5794 40.244 37.8074 40.244 35.6215V17.1511C40.244 14.9651 38.4719 13.1931 36.286 13.1931Z"
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             className={` ${
               isCircleHovered
                 ? "fill-[#323330] dark:fill-black300"

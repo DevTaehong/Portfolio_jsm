@@ -1,29 +1,14 @@
 import { Link } from "@nextui-org/link";
 
-import {
-  FooterCard,
-  MobileFooterCard,
-  FooterGitHubIcon,
-  LinkedInIcon,
-} from "@/components/svg/footer";
-
-const links = [
-  {
-    link: "https://www.linkedin.com/in/taehong/",
-    icon: LinkedInIcon,
-  },
-  {
-    link: "https://github.com/DevTaehong",
-    icon: FooterGitHubIcon,
-  },
-];
+import { FooterCard, MobileFooterCard } from "@/components/svg/footer";
+import { links } from "@/constants";
 
 function Footer() {
   return (
     <footer className="bg-white900 dark:bg-black200">
       <div
         className="flex flex-col items-center gap-[6rem] px-6 py-12 md:items-stretch xl:px-[5.31rem]
-        xl:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]"
+        xl:pb-14 xl:pt-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]"
       >
         <MobileFooterCard />
         <FooterCard />

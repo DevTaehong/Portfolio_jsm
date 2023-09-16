@@ -11,7 +11,7 @@ const DividerIcon = () => (
       id="Line 5"
       d="M1 0.5L0.999999 24.5"
       stroke="#6F74A7"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );

@@ -4,15 +4,15 @@ const LineDecoration = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_3309_13)">
-      <g clip-path="url(#clip1_3309_13)">
+    <g clipPath="url(#clip0_3309_13)">
+      <g clipPath="url(#clip1_3309_13)">
         <line
           x1="-4.37114e-08"
           y1="29.1367"
           x2="211"
           y2="29.1367"
           stroke="white"
-          stroke-opacity="0.5"
+          strokeOpacity="0.5"
           className="dark:stroke-black200"
         />
         <circle
@@ -20,7 +20,7 @@ const LineDecoration = () => (
           cy="29.8184"
           r="28.5"
           stroke="white"
-          stroke-opacity="0.5"
+          strokeOpacity="0.5"
           className="dark:stroke-black200"
         />
         <circle

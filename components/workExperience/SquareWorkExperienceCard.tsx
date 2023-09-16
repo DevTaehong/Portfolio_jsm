@@ -3,10 +3,11 @@ import { Card } from "@nextui-org/card";
 import LineDecoration from "../svg/workExperience/LineDecoration";
 
 const SquareWorkExperienceCard = () => {
+  // max-w-[21.5625rem]
   return (
     <Card
-      className="mainWorkExperienceCard flex flex-none grow flex-col justify-center gap-[0.86rem] dark:bg-white800 
-              xl:w-[37.9375rem] xl:pb-[6.56rem] xl:pl-[6.56rem] xl:pr-[8.94rem] xl:pt-[9.5rem]"
+      className="mainWorkExperienceCard flex max-w-[37.9375rem] flex-none grow flex-col items-center justify-center gap-[0.86rem] dark:bg-white800 sm:px-[4rem] sm:pb-[3.5rem] 
+              sm:pt-[4.5rem] xl:min-h-[37.0625rem] xl:pb-[6.56rem] xl:pl-[6.56rem] xl:pr-[8.94rem] xl:pt-[9.5rem]"
     >
       <div className="flex flex-col gap-[1.49rem]">
         <h2 className="ExperienceCardHeader dark:text-black200 xl:text-[3rem] xl:tracking-[-0.03rem]">

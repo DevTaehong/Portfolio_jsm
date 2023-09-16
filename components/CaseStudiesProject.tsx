@@ -8,7 +8,7 @@ const CaseStudiesProject = ({
   project: { name: string; description: string; image: string; color: string };
 }) => {
   return (
-    <>
+    <div className="max-w-[21.5625rem] lg:max-w-[34.375rem]">
       <Card
         as={Link}
         href={`/case-studies/${project.name.toLowerCase()}`}
@@ -17,8 +17,6 @@ const CaseStudiesProject = ({
         <Image
           className="lg:h-[15.8rem] lg:w-[26.8rem]"
           src={project.image}
-          width={278.486}
-          height={165.054}
           alt={project.description}
         />
       </Card>
@@ -33,7 +31,7 @@ const CaseStudiesProject = ({
           {project.description}
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

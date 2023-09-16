@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
-const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+const CSSIcon = () => {
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -29,10 +21,10 @@ const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -40,10 +32,8 @@ const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3929)">
+        <g clipPath="url(#clip0_3357_3929)">
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M17.4038 37.6722L15.2393 13.9657H38.4819L36.3689 37.6722L26.8863 40.352"
             className={` ${
               isCircleHovered || isCaseDetailPage
@@ -52,8 +42,6 @@ const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M26.8864 15.8726V38.2906L34.5652 36.1777L36.3689 15.8726"
             className={` ${
               isCircleHovered || isCaseDetailPage
@@ -62,8 +50,6 @@ const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M19.5682 18.8101H26.8863V21.6961H19.8259M20.0836 24.6851H26.8863V27.6227H20.3413M20.4959 29.0657H23.3819L23.588 31.3848L26.8863 32.2609V35.3015L20.8566 33.6524"
             className={` ${
               isCircleHovered || isCaseDetailPage
@@ -72,8 +58,6 @@ const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M26.8864 24.6851V27.6227H30.4423L30.0816 31.3848L26.8864 32.2609V35.3015L32.813 33.6524L34.1529 18.8101H26.8864V21.6961H31.0092L30.7258 24.6851H26.8864Z"
             className={` ${
               isCircleHovered || isCaseDetailPage

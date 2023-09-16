@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const FramerMotionIcon = ({
@@ -8,15 +8,7 @@ const FramerMotionIcon = ({
 }: {
   isCaseDetailPage?: boolean;
 }) => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -33,10 +25,10 @@ const FramerMotionIcon = ({
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -44,10 +36,8 @@ const FramerMotionIcon = ({
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3953)">
+        <g clipPath="url(#clip0_3357_3953)">
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             className={`${
               isCircleHovered || isCaseDetailPage
                 ? "fill-[#59529D]"
@@ -56,8 +46,6 @@ const FramerMotionIcon = ({
             d="M40.6071 13.7384V26.9316L27.414 40.1247L20.8174 33.5281L27.414 26.9316L40.6071 13.7384Z"
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             className={`${
               isCircleHovered || isCaseDetailPage
                 ? "fill-[#5271B4]"
@@ -71,8 +59,6 @@ const FramerMotionIcon = ({
                 ? "fill-[#BB4B96]"
                 : "fill-[#778295]"
             }`}
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M27.414 26.9316L14.2208 40.1247V13.7384L27.414 26.9316Z"
           />
         </g>

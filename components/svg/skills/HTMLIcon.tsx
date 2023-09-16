@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -29,10 +21,10 @@ const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -40,26 +32,20 @@ const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             isCircleHovered && "fill-white900"
           }`}
         />
-        <g clip-path="url(#clip0_3357_3922)">
+        <g clipPath="url(#clip0_3357_3922)">
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M17.6983 37.6723L15.5853 13.9658H38.828L36.715 37.6723L27.1809 40.3521"
             className={`fill-[#778295] ${
               (isCaseDetailPage || isCircleHovered) && "fill-[#E34F26]"
             } `}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M27.2324 38.2906L34.9113 36.1777L36.715 15.8726H27.2324"
             className={`fill-[#778295] ${
               (isCaseDetailPage || isCircleHovered) && "fill-[#EF652A]"
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M27.2324 24.6853H23.3672L23.1095 21.6962H27.2324V18.8102H19.9143L20.6873 27.6228H27.2324V24.6853ZM27.1808 32.261L23.9341 31.3849L23.728 29.0658H20.842L21.2027 33.6525L27.1808 35.3016V32.261Z"
             className={` ${
               isCircleHovered || isCaseDetailPage
@@ -68,8 +54,6 @@ const HTMLIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
             }`}
           />
           <path
-            onMouseEnter={handleCircleHover}
-            onMouseLeave={handleCircleLeave}
             d="M27.1809 24.6853V27.6228H30.7884L30.4277 31.3849L27.1809 32.261V35.3016L33.1591 33.6525L33.9836 24.6853H27.1809ZM27.1809 18.8102V21.6962H34.2413L34.499 18.8102H27.1809Z"
             className={` ${
               isCircleHovered || isCaseDetailPage

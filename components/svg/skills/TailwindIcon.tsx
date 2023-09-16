@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
 const TailwindIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
-  const [isCircleHovered, setIsCircleHovered] = useState(false);
-
-  const handleCircleHover = () => {
-    setIsCircleHovered(true);
-  };
-
-  const handleCircleLeave = () => {
-    setIsCircleHovered(false);
-  };
+  const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
       classNames={{
@@ -29,10 +21,10 @@ const TailwindIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        onMouseEnter={handleCircleHover}
+        onMouseLeave={handleCircleLeave}
       >
         <circle
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           cx="26.8863"
           cy="26.3863"
           r="26.3863"
@@ -41,8 +33,6 @@ const TailwindIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
           }`}
         />
         <path
-          onMouseEnter={handleCircleHover}
-          onMouseLeave={handleCircleLeave}
           className={`${
             isCircleHovered || isCaseDetailPage
               ? "fill-[#44A8B3]"

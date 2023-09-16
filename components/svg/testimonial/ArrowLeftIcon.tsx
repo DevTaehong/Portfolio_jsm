@@ -9,9 +9,9 @@ const ArrowLeftIcon = () => (
     <path
       className="stroke-[#151E2C] dark:stroke-white800"
       d="M15.8333 10.0907H4.16663M4.16663 10.0907L9.99996 15.924M4.16663 10.0907L9.99996 4.25732"
-      stroke-width="1.66667"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.66667"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
