@@ -3,7 +3,7 @@
 import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
-const CSSIcon = () => {
+const CSSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
   const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
