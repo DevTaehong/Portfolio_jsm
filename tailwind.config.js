@@ -25,6 +25,7 @@ module.exports = {
       }
     },
     colors: {
+      textArea: "#CCE1FF",
       myProcess: "#333C4A",
       jobit: "#0BAB7C",
       hipnode: "#FF6934",
