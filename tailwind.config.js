@@ -25,6 +25,8 @@ module.exports = {
       }
     },
     colors: {
+      challenges: "#E15A46",
+      learnings: "#02BC7D",
       myProcess: "#333C4A",
       jobit: "#0BAB7C",
       hipnode: "#FF6934",
