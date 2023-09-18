@@ -2,6 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+.seeCaseStudyButton {
+  display: flex;
+  overflow: hidden;
+  padding: 0.75rem 6.25rem;
+  border-radius: 1.75506rem;
+  border: 0.802px solid var(--accent-primary-light, #0252CD);
+  background: var(--accent-primary-light, #0252CD);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5625rem;
+  color: var(--white-900, #FFF);
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+}
+
+.otherCaseStudies {
+  border-radius: 1.00294rem;
+  background: var(--white-900, #FFF);
+  box-shadow: 0px 0.80233px 16.04651px 0px #E0ECFF;
+}
+
+.challengesLearnings {
+  display: flex;
+  overflow: hidden;
+  padding: 1.5rem 0.875rem;
+  border-radius: 0.625rem;
+  background: var(--white-800, #F3F8FF);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.figmaDesign {
+  display: flex;
+  overflow: hidden;
+  background: var(--accent-primary-light, #0252CD);
+  justify-content: center;
+  align-items: center;
+  gap: 0.17056rem;
+}
+
+.figmaDesignText {
+  color: var(--white-900, #FFF);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+  text-transform: uppercase;
+}
+
+.caseStudyDetailTechStack {
+  color: var(--black-200, #151E2C);
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%;
+  letter-spacing: -0.00875rem;
+}
+
+.technologiesUsed {
+  color: var(--accent-primary-light, #0252CD);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+}
+
 .mobileHeading1 {
   color: var(--black-200, #151E2C);
   font-size: 2.625rem;

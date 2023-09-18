@@ -3,7 +3,7 @@
 import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
-const GitIcon = () => {
+const GitIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
   const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
@@ -13,9 +13,11 @@ const GitIcon = () => {
       content="Git"
     >
       <svg
-        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
-          isCircleHovered && "drop-shadow-skill"
-        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        className={`${
+          isCaseDetailPage
+            ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
+            : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
+        } ${isCircleHovered && "drop-shadow-skill"}`}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,12 +33,16 @@ const GitIcon = () => {
           }`}
         />
         <path
-          className={`${isCircleHovered ? "fill-[#EE513B]" : "fill-[#778295]"}`}
+          className={`${
+            isCircleHovered || isCaseDetailPage
+              ? "fill-[#EE513B]"
+              : "fill-[#778295]"
+          }`}
           d="M16.5343 28.0969C15.8907 27.4533 15.8907 26.4099 16.5343 25.7663L26.4304 15.8702C27.0739 15.2267 28.1174 15.2267 28.7609 15.8702L38.657 25.7663C39.3005 26.4099 39.3005 27.4533 38.657 28.0969L28.7609 37.9929C28.1174 38.6365 27.0739 38.6365 26.4304 37.9929L16.5343 28.0969Z"
         />
         <path
           className={` ${
-            isCircleHovered
+            isCircleHovered || isCaseDetailPage
               ? "fill-white900"
               : "fill-white900 dark:fill-black300"
           } `}

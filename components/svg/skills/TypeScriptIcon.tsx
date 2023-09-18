@@ -3,7 +3,11 @@
 import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
-const TypescriptIcon = () => {
+const TypescriptIcon = ({
+  isCaseDetailPage,
+}: {
+  isCaseDetailPage?: boolean;
+}) => {
   const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip
@@ -13,9 +17,11 @@ const TypescriptIcon = () => {
       content="TypeScript"
     >
       <svg
-        className={`h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem] ${
-          isCircleHovered && "drop-shadow-skill"
-        } lg:h-[6.25rem] lg:w-[6.25rem]`}
+        className={`${
+          isCaseDetailPage
+            ? "h-[3.18744rem] w-[3.18744rem] sm:h-[5.82625rem] sm:w-[5.82625rem]"
+            : "h-[3.29831rem] w-[3.29831rem] sm:h-[6.25rem] sm:w-[6.25rem]"
+        } ${isCircleHovered && "drop-shadow-skill"}`}
         viewBox="0 0 55 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -33,13 +39,15 @@ const TypescriptIcon = () => {
         <g clipPath="url(#clip0_3357_3917)">
           <path
             className={`${
-              isCircleHovered ? "fill-[#3178C6]" : "fill-[#778295]"
+              isCircleHovered || isCaseDetailPage
+                ? "fill-[#3178C6]"
+                : "fill-[#778295]"
             }`}
             d="M36.286 13.9658H17.8156C15.6297 13.9658 13.8577 15.7379 13.8577 17.9238V36.3942C13.8577 38.5801 15.6297 40.3521 17.8156 40.3521H36.286C38.4719 40.3521 40.244 38.5801 40.244 36.3942V17.9238C40.244 15.7379 38.4719 13.9658 36.286 13.9658Z"
           />
           <path
             className={`  ${
-              isCircleHovered
+              isCircleHovered || isCaseDetailPage
                 ? "fill-[#FFFFFF]"
                 : "fill-white900 dark:fill-black300"
             }`}

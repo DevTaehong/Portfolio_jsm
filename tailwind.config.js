@@ -20,10 +20,14 @@ module.exports = {
       boxShadow: {
         'darkServiceCard': '0px 1px 20px 0px #1F2E48',
         'darkServiceCardHover': '32px 32px 71px 0px rgba(2, 82, 205, 0.28)',
-        'jobCardHover': '-25px 47px 66px 0px rgba(0, 0, 0, 0.08)'
+        'jobCardHover': '-25px 47px 66px 0px rgba(0, 0, 0, 0.08)',
+        "caseStudyCard": "0px 3px 30px 0px #1F2C41",
       }
     },
     colors: {
+      challenges: "#E15A46",
+      learnings: "#02BC7D",
+      myProcess: "#333C4A",
       jobit: "#0BAB7C",
       hipnode: "#FF6934",
       morrentLight: "#5CAFFC",
