@@ -25,6 +25,7 @@ module.exports = {
       }
     },
     colors: {
+      contactInputs: "#2C3C56",
       textArea: "#CCE1FF",
       myProcess: "#333C4A",
       jobit: "#0BAB7C",
