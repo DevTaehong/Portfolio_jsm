@@ -12,7 +12,7 @@ const FigmaDesign = ({ project }: { project: string }) => {
       </div>
       <Image
         className="h-full max-h-[47.9375rem] w-full max-w-[90rem] 2xl:mx-auto"
-        src={projectDetail.figmaDesignImage}
+        src={projectDetail?.figmaDesignImage}
         alt="Problem Statement Image"
         width={393}
         height={209.327}

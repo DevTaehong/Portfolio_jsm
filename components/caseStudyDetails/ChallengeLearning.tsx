@@ -22,7 +22,7 @@ const ChallengeLearning = ({
         {challengesOrLearnings}
       </h6>
       <div className="flex flex-col gap-6">
-        {bulletPoints.map((bulletPoint: string) => (
+        {bulletPoints?.map((bulletPoint: string) => (
           <BulletPoint
             key={bulletPoint}
             bulletPoint={bulletPoint}

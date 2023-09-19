@@ -29,7 +29,7 @@ export const NavBar = () => {
         className="bg-white800 dark:bg-black300 xl:h-[6.25rem] xl:pl-[3.81rem] xl:pr-[3.94rem] 2xl:mx-auto 2xl:max-w-[90rem]"
         onMenuOpenChange={setIsMenuOpen}
       >
-        <NavbarContent>
+        <NavbarContent justify="center">
           <NavbarBrand>
             {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
             <Link href="/" className="lg:drop-shadow-2xl">
@@ -47,12 +47,6 @@ export const NavBar = () => {
           <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
             <NavBarLinks isMobile="navBarLinkDestTop" />
           </div>
-          <NavbarItem>
-            <DividerIcon />
-          </NavbarItem>
-          <NavbarItem className="h-6">
-            <ThemeSwitch />
-          </NavbarItem>
           <NavbarItem className="sm:hidden">
             <NavbarMenuToggle
               icon={NavBarMenuButton}
@@ -73,7 +67,7 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
   return (
     <>
       {siteConfig.navItems.map((item) => (
-        <NavbarItem key={item.label}>
+        <NavbarMenuItem key={item.label}>
           <Link
             className={`${isMobile} w-full ${
               item.href === pathname
@@ -85,7 +79,7 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
           >
             {item.label}
           </Link>
-        </NavbarItem>
+        </NavbarMenuItem>
       ))}
       <NavbarMenuItem className="flex flex-row items-center gap-[0.1875rem]">
         <DownloadResumeIcon />
@@ -98,6 +92,12 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
           Resume
         </Link>
       </NavbarMenuItem>
+      <NavbarItem>
+        <DividerIcon />
+      </NavbarItem>
+      <NavbarItem className="h-6">
+        <ThemeSwitch />
+      </NavbarItem>
     </>
   );
 };

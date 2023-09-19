@@ -8,10 +8,10 @@ const ChallengesLearnings = ({ project }: { project: string }) => {
   const challengesOrLearnings = [
     {
       text: "CHALLENGES",
-      value: projectDetail.challenges,
+      value: projectDetail?.challenges,
       icon: challengeImage,
     },
-    { text: "LEARNINGS", value: projectDetail.learnings, icon: tick },
+    { text: "LEARNINGS", value: projectDetail?.learnings, icon: tick },
   ];
 
   return (
