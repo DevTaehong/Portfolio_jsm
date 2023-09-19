@@ -15,8 +15,8 @@ const ChallengeLearning = ({
       <h6
         className={`bodyBold ${
           challengesOrLearnings === "CHALLENGES"
-            ? "text-[#E15A46]"
-            : "text-[#02BC7D]"
+            ? "text-challenges"
+            : "text-learnings"
         }  sm:text-[1.25rem] sm:leading-[1.625rem]`}
       >
         {challengesOrLearnings}
