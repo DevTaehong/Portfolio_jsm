@@ -1,3 +1,5 @@
+"use client";
+
 import ContactHero from "@/components/contact/ContactHero";
 import ContactInputs from "@/components/contact/ContactInputs";
 import MyEmailPhoneNumber from "@/components/contact/MyEmailPhoneNumber";

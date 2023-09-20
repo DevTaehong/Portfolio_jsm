@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 import "@/styles/globals.css";
 import { NavBar } from "@/components/navBar/NavBar";
@@ -37,6 +38,7 @@ export default function RootLayout({
           <NavBar />
           {children}
           <Footer />
+          <Toaster position="bottom-right" reverseOrder={true} />
         </Providers>
       </body>
     </html>

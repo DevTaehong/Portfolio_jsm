@@ -50,6 +50,7 @@ import {
   Deployment,
 } from "@/components/svg/myProcess";
 import { FooterGitHubIcon, LinkedInIcon } from "@/components/svg/footer";
+import { Call, Email } from "@/components/svg/contact";
 
 export const myProcess = [
   Definition,
@@ -371,5 +372,18 @@ export const links = [
   {
     link: "https://github.com/DevTaehong",
     icon: FooterGitHubIcon,
+  },
+];
+
+export const emailPhoneNumber = [
+  {
+    title: "Phone Number",
+    icon: Call,
+    numberOrEmail: "+1 (782) 234-7489",
+  },
+  {
+    title: "Email Address",
+    icon: Email,
+    numberOrEmail: "minth1123@icloud.com",
   },
 ];
