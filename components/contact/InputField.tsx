@@ -53,7 +53,7 @@ const InputField = ({
         <Button
           spinner={<Spinner size="sm" className="mr-2" />}
           isLoading={isLoading}
-          className="smallBold contactInputsButton  mt-1 w-full cursor-pointer text-white900 transition-opacity hover:opacity-80 dark:bg-primaryDark md:mt-[1.75rem] md:text-[1.125rem] md:leading-[1.8rem] lg:max-w-[11.625rem]"
+          className="smallBold contactInputsButton mt-1 w-full cursor-pointer text-white900 hover:opacity-80 hover:transition-opacity dark:bg-primaryDark md:mt-[1.75rem] md:text-[1.125rem] md:leading-[1.8rem] lg:max-w-[11.625rem]"
           type="submit"
         >
           Send
