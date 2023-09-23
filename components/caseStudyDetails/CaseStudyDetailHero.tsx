@@ -22,8 +22,8 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
 
   return (
     <section className="bg-white800 px-6 py-12 dark:bg-black300">
-      <div className="flex flex-col items-center gap-6 text-center sm:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
-        <div className="flex flex-col gap-[0.62rem] sm:gap-[1.88rem]">
+      <article className="flex flex-col items-center gap-6 text-center sm:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
+        <header className="flex flex-col gap-[0.62rem] sm:gap-[1.88rem]">
           <p className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]">
             {projectDetail?.type}
           </p>
@@ -35,7 +35,7 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
             {" - "}
             {projectDetail?.description}
           </h1>
-        </div>
+        </header>
         <Image
           className="sm:h-full sm:max-h-[21.875rem] sm:w-full sm:max-w-[46.375rem]"
           width={345}
@@ -43,12 +43,12 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
           src={projectDetail?.image}
           alt={`An image of ${projectDetail?.name}`}
         />
-        <div className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]">
+        <section className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]">
           {HeroLinks.map(({ text, href, Icon }) => (
             <HeroLink key={text} Icon={Icon} href={href} text={text} />
           ))}
-        </div>
-      </div>
+        </section>
+      </article>
     </section>
   );
 };

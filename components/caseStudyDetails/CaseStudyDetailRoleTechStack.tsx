@@ -34,8 +34,8 @@ const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
             </div>
           </div>
           <div className="flex flex-row flex-wrap gap-x-5 gap-y-[2.06rem] xl:grid xl:grid-cols-7 xl:gap-x-[2.32rem] xl:gap-y-[2.1rem]">
-            {projectDetail?.techStack.map((Tech) => (
-              <CaseStudyDetailSkill Tech={Tech} key={Tech.name} />
+            {projectDetail?.techStack.map((tech) => (
+              <CaseStudyDetailSkill Tech={tech} key={tech.name} />
             ))}
           </div>
         </div>

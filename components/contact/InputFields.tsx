@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/button";
 import { Spinner } from "@nextui-org/spinner";
 
-const InputField = ({
+const InputFields = ({
   label,
   id,
   name,
@@ -27,7 +27,15 @@ const InputField = ({
       className="bodyRegular text-black300 dark:text-white900 md:text-[1.25rem] md:leading-[1.875rem]"
       htmlFor={id}
     >
-      {label}
+      {label !== "How to react out" ? (
+        label
+      ) : (
+        <>
+          {label}
+          <br className="block lg:hidden" />
+          <span className="text-black400">{` eg. phone number or email`}</span>
+        </>
+      )}
     </label>
     {isTextArea ? (
       <textarea
@@ -63,4 +71,4 @@ const InputField = ({
   </div>
 );
 
-export default InputField;
+export default InputFields;
