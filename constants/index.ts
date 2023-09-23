@@ -50,6 +50,7 @@ import {
   Deployment,
 } from "@/components/svg/myProcess";
 import { FooterGitHubIcon, LinkedInIcon } from "@/components/svg/footer";
+import { Call, Email } from "@/components/svg/contact";
 
 export const myProcess = [
   Definition,
@@ -371,5 +372,55 @@ export const links = [
   {
     link: "https://github.com/DevTaehong",
     icon: FooterGitHubIcon,
+  },
+];
+
+export const emailPhoneNumber = [
+  {
+    title: "Phone Number",
+    icon: Call,
+    numberOrEmail: "+1 (782) 234-7489",
+  },
+  {
+    title: "Email Address",
+    icon: Email,
+    numberOrEmail: "minth1123@icloud.com",
+  },
+];
+
+export const inputFields = [
+  {
+    label: "What's your name?",
+    id: "name",
+    name: "name",
+    type: "text",
+    maxLength: 50,
+    required: true,
+  },
+  {
+    label: "What's your email?",
+    id: "email",
+    name: "email",
+    type: "email",
+    maxLength: 500,
+    required: true,
+  },
+  {
+    label: "Write something about your project goals and time frame",
+    id: "goalsTimeFrame",
+    name: "goalsTimeFrame",
+    type: "text",
+    maxLength: 500,
+    required: true,
+    isTextArea: true,
+  },
+  {
+    label: "How to react out",
+    id: "howToReactOut",
+    name: "howToReactOut",
+    type: "text",
+    maxLength: 500,
+    pattern: "^(?:\\d{10}|\\w+@\\w+\\.\\w{2,3})$",
+    required: true,
   },
 ];

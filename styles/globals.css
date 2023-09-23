@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.contactInputsButton {
+  display: flex;
+  height: 3.75rem;
+  padding: 0.84394rem 0.50638rem;
+  border-radius: 379.77006rem;
+  background: var(--accent-primary-light, #0252CD);
+  justify-content: center;
+  align-items: center;
+  gap: 0.42194rem;
+}
+
+.contactInputs {
+  height: 3.75rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  border: 1px solid #CCE1FF;
+  background: var(--white-800, #F3F8FF);
+}
+
 .seeCaseStudyButton {
   display: flex;
   overflow: hidden;

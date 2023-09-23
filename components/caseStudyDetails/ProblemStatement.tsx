@@ -18,11 +18,11 @@ const ProblemStatement = ({ project }: { project: string }) => {
           </div>
         </div>
         <p className="smallRegular whitespace-pre-line text-white500 sm:text-[1.25rem] sm:leading-[1.875rem]">
-          {projectDetail.problemStatement}
+          {projectDetail?.problemStatement}
         </p>
         <Image
           className="sm:h-full sm:w-full"
-          src={projectDetail.problemStatementImage}
+          src={projectDetail?.problemStatementImage}
           alt="Problem Statement Image"
           width={348}
           height={363.836}

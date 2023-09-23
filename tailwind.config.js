@@ -25,6 +25,8 @@ module.exports = {
       }
     },
     colors: {
+      contactInputs: "#2C3C56",
+      textArea: "#CCE1FF",
       challenges: "#E15A46",
       learnings: "#02BC7D",
       myProcess: "#333C4A",

@@ -5,9 +5,9 @@ const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
 
   const myRoleOrDates = [
-    { text: "My Role", value: projectDetail.myRole },
-    { text: "Start Date", value: projectDetail.startDate },
-    { text: "End Date", value: projectDetail.endDate },
+    { text: "My Role", value: projectDetail?.myRole },
+    { text: "Start Date", value: projectDetail?.startDate },
+    { text: "End Date", value: projectDetail?.endDate },
   ];
 
   return (
@@ -16,9 +16,9 @@ const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
         <div className="flex flex-col gap-9 py-10 sm:flex-row sm:justify-between xl:pb-[2.69rem] xl:pt-[3.31rem]">
           {myRoleOrDates.map((myRoleOrDate) => (
             <MyRoleOrDates
-              key={myRoleOrDate.text}
+              key={myRoleOrDate?.text}
               text={"My Role"}
-              myRoleOrDates={myRoleOrDate.value}
+              myRoleOrDates={myRoleOrDate?.value}
             />
           ))}
         </div>
@@ -34,8 +34,8 @@ const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
             </div>
           </div>
           <div className="flex flex-row flex-wrap gap-x-5 gap-y-[2.06rem] xl:grid xl:grid-cols-7 xl:gap-x-[2.32rem] xl:gap-y-[2.1rem]">
-            {projectDetail.techStack.map((Tech) => (
-              <CaseStudyDetailSkill Tech={Tech} key={Tech.name} />
+            {projectDetail?.techStack.map((tech) => (
+              <CaseStudyDetailSkill Tech={tech} key={tech.name} />
             ))}
           </div>
         </div>
