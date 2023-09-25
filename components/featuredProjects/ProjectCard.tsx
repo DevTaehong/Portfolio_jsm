@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
 import { Card } from "@nextui-org/card";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 import { arrow } from "@/public";
 
@@ -27,26 +27,29 @@ const ProjectCard = ({
     jobit: "bg-jobit",
     hipnode: "bg-hipnode",
   };
-
   const ref = useRef<HTMLDivElement>(null);
-
   const { scrollYProgress } = useScroll({
     target: ref,
+    // NOTE - "0 1": '1' means when the end of viewpoint(=container) crosses the start ('0') of the target, the animation starts
+    // "1.33 1": '1' means when the end of viewpoint(=container) has gone 33% beyond the end of target, the animation ends
     offset: ["0 1", "1.33 1"],
   });
 
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
   return (
     <motion.div
-      style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
-      }}
       ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
     >
       <Card
         className={`${
           colorVariants[project.name.toLowerCase()]
-        } flex flex-col justify-center pb-[2.99rem] pt-[2.88rem] 
+        } flex flex-col justify-center rounded-[1.25rem] pb-[2.99rem] pt-[2.88rem] 
                   xl:pb-[5.81rem] xl:pt-[6.06rem] ${
                     (index + 1) % 2 === 0
                       ? "xl:pr-[4.38rem]"
@@ -80,11 +83,12 @@ const ProjectCard = ({
               </div>
             </div>
             <Link
-              href={`/case-studies/${project.name}`}
-              className="bodyBold inline-flex gap-[0.47rem] text-white900"
+              href={`/case-studies/${project.name.toLowerCase()}`}
+              className="bodyBold group inline-flex gap-[0.47rem] text-white900"
             >
               See Detail Project
               <Image
+                className="transition group-hover:translate-x-[0.47rem]"
                 src={arrow}
                 alt="See Detail Project Arrow"
                 width={35}

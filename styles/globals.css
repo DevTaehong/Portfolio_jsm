@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .contactInputsButton {
   display: flex;
   height: 3.75rem;
@@ -290,7 +296,7 @@
   /* 21.7px */
 }
 
-.navBarLinkDestTop {
+.navBarLinkDeskTop {
   font-size: 0.875rem;
   font-style: normal;
   line-height: 155%;

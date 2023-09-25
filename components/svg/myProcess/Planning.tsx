@@ -12,7 +12,7 @@ const Planning = () => {
         r="50"
         className="fill-white800 dark:fill-black300"
       />
-      <g clip-path="url(#clip0_3316_22554)">
+      <g clipPath="url(#clip0_3316_22554)">
         <path
           d="M56.9445 61.7768L71.5685 48.9636L69.5642 46.6746L54.6666 59.7267L53.4707 65.3761L56.2153 65.2168L56.9445 61.7768Z"
           className="fill-[#D4E1F4] dark:fill-myProcess"

@@ -1,4 +1,6 @@
-"use client"; // NOTE - companies is a client-side svg component
+"use client";
+
+import { motion } from "framer-motion";
 
 import { companies } from "@/constants";
 import Company from "./Company";
@@ -7,11 +9,16 @@ const Companies = () => {
   return (
     <>
       {companies.map((CompanyLogo, index) => (
-        <Company
+        <motion.li
+          className="list-none"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          viewport={{ once: true }}
           key={CompanyLogo.name}
-          CompanyLogo={CompanyLogo}
-          index={index}
-        />
+        >
+          <Company CompanyLogo={CompanyLogo} index={index} />
+        </motion.li>
       ))}
     </>
   );

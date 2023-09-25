@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
+import Tilt from "react-parallax-tilt";
 
 import { projectDetails } from "@/constants";
 import {
@@ -7,6 +10,7 @@ import {
   CaseStudyGitHubIcon,
   DemoSiteIcon,
 } from "../svg/caseStudyDetails";
+import { paragraphVariants, headingVariants } from "@/utils";
 
 const CaseStudyDetailHero = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
@@ -24,30 +28,55 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
     <section className="bg-white800 px-6 py-12 dark:bg-black300">
       <article className="flex flex-col items-center gap-6 text-center sm:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <header className="flex flex-col gap-[0.62rem] sm:gap-[1.88rem]">
-          <p className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]">
+          <motion.p
+            variants={paragraphVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]"
+          >
             {projectDetail?.type}
-          </p>
-          <h1 className="mobileHeading1 dark:text-white900 xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]">
+          </motion.p>
+          <motion.h1
+            variants={headingVariants}
+            initial="hidden"
+            animate="visible"
+            className="mobileHeading1 dark:text-white900 xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]"
+          >
             <span className="relative inline-block">
               <span className="absolute top-[1.88rem] h-[1.1875rem] w-full shrink-0 bg-accentSecondary xl:top-[3.3rem] xl:h-[1.757rem]" />
               <span className="relative">{projectDetail?.name}</span>
             </span>
             {" - "}
             {projectDetail?.description}
-          </h1>
+          </motion.h1>
         </header>
-        <Image
-          className="sm:h-full sm:max-h-[21.875rem] sm:w-full sm:max-w-[46.375rem]"
-          width={345}
-          height={163}
-          src={projectDetail?.image}
-          alt={`An image of ${projectDetail?.name}`}
-        />
-        <section className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]">
+        <Tilt
+          scale={1.3}
+          transitionSpeed={2500}
+          tiltMaxAngleX={5}
+          tiltMaxAngleY={5}
+        >
+          <motion.img
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="sm:h-full sm:max-h-[21.875rem] sm:w-full sm:max-w-[46.375rem]"
+            width={345}
+            height={163}
+            src={`/images/${projectDetail?.name.toLowerCase()}.svg`}
+            alt={`An image of ${projectDetail?.name}`}
+          />
+        </Tilt>
+        <motion.section
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4 }}
+          className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]"
+        >
           {HeroLinks.map(({ text, href, Icon }) => (
             <HeroLink key={text} Icon={Icon} href={href} text={text} />
           ))}
-        </section>
+        </motion.section>
       </article>
     </section>
   );
@@ -62,11 +91,11 @@ const HeroLink = ({
   href: string;
   text: string;
 }) => (
-  <div className="flex flex-row items-center gap-[0.19rem]">
+  <div className="group flex flex-row items-center gap-[0.19rem]">
     <Icon />
     <Link
       href={href}
-      className="smallBold text-primaryLight dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
+      className="smallBold  text-primaryLight dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
     >
       {text}
     </Link>

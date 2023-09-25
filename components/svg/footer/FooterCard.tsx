@@ -1,10 +1,17 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
 
 const FooterCard = () => (
-  <svg
+  <motion.svg
     width="1270"
     height="358"
     className="hidden h-full w-full md:flex"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.5 }}
     viewBox="0 0 1270 358"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +115,7 @@ const FooterCard = () => (
       rx="19.5"
       stroke="#FFBE62"
     />
-  </svg>
+  </motion.svg>
 );
 
 export default FooterCard;

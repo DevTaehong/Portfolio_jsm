@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import ProjectCard from "./ProjectCard";
 import { projects } from "@/constants";
+import SeeMoreCaseStudiesButton from "./SeeMoreCaseStudiesButton";
 
 const FeaturedProjects = () => {
   return (
@@ -17,14 +16,7 @@ const FeaturedProjects = () => {
         {projects.map((project, index) => (
           <ProjectCard key={project.name} project={project} index={index} />
         ))}
-        <div className="flex justify-center">
-          <Link
-            href="/case-studies"
-            className="seeMoreCaseStudies dark:bg-primaryDark"
-          >
-            See more case studies
-          </Link>
-        </div>
+        <SeeMoreCaseStudiesButton />
       </div>
     </section>
   );

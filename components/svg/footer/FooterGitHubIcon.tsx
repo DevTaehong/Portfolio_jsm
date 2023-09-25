@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
-export const FooterGitHubIcon = () => {
+const FooterGitHubIcon = () => {
   const pathName = usePathname();
   const isContactPage =
     pathName === "/contact" && "md:h-[1.875rem] md:w-[1.875rem]";

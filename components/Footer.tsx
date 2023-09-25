@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
 import { usePathname } from "next/navigation";
 
@@ -23,7 +24,11 @@ function Footer() {
             <FooterCard />
           </>
         )}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.6 }}
           className={`flex flex-col gap-4 md:flex-row ${isContactPage} md:border-t md:border-white800 md:pt-8 dark:md:border-black300`}
         >
           <p className="bodyRegular text-black400 dark:text-white800">{`© ${new Date().getFullYear()} Taehong. All rights reserved.`}</p>
@@ -38,7 +43,7 @@ function Footer() {
               </div>
             </>
           )}
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

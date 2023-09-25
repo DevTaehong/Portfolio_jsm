@@ -1,8 +1,15 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
 
 const MobileFooterCard = () => (
-  <svg
+  <motion.svg
     className="flex h-full w-full md:hidden"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.5 }}
     viewBox="0 0 345 312"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +103,7 @@ const MobileFooterCard = () => (
         <rect y="0.0908203" width="345" height="311" rx="20" fill="white" />
       </clipPath>
     </defs>
-  </svg>
+  </motion.svg>
 );
 
 export default MobileFooterCard;

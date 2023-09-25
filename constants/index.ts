@@ -11,6 +11,10 @@ import {
   morrentFigmaDesign,
   jobitFigmaDesign,
   hipNodeFigmaDesign,
+  morrentLaptop,
+  jobitLaptop,
+  hipnodeLaptop,
+  filmpireLaptop,
 } from "@/public";
 import {
   AnalyticsSEOIcon,
@@ -65,7 +69,6 @@ export const projectDetails: {
     type: string;
     name: string;
     description: string;
-    image: string;
     myRole: string;
     startDate: string;
     endDate: string;
@@ -84,7 +87,6 @@ export const projectDetails: {
     type: "WEB DEV PROJECT",
     name: "Morrent",
     description: `A Car Rental Website`,
-    image: morrent,
     myRole: "Software Developer",
     startDate: "08/08/2023",
     endDate: "03/09/2023",
@@ -127,7 +129,6 @@ export const projectDetails: {
     type: "WEB DEV PROJECT",
     name: "Jobit",
     description: `Job Finding Application`,
-    image: jobit,
     myRole: "Software Developer",
     startDate: "08/08/2023",
     endDate: "03/09/2023",
@@ -166,7 +167,6 @@ export const projectDetails: {
     type: "WEB DEV PROJECT",
     name: "HipNode",
     description: `Social Platform for Developers`,
-    image: hipnode,
     myRole: "Software Developer",
     startDate: "08/08/2023",
     endDate: "03/09/2023",
@@ -210,7 +210,6 @@ export const projectDetails: {
   //   type: "WEB DEV PROJECT",
   //   name: "Morrent",
   //   description: `A Car Rental Website`,
-  //   image: filmpire,
   //   myRole: "Software Developer",
   //   startDate: "08/08/2023",
   //   endDate: "03/09/2023",
@@ -422,5 +421,28 @@ export const inputFields = [
     maxLength: 500,
     pattern: "^(?:\\d{10}|\\w+@\\w+\\.\\w{2,3})$",
     required: true,
+  },
+];
+
+export const caseStudyProjects = [
+  {
+    name: "Morrent",
+    description: "Car Rental Application",
+    image: morrentLaptop,
+  },
+  {
+    name: "Jobit",
+    description: "Job Finding Application",
+    image: jobitLaptop,
+  },
+  {
+    name: "HipNode",
+    description: "Social Platform for Developers",
+    image: hipnodeLaptop,
+  },
+  {
+    name: "Filmpire",
+    description: "AI-Powered Movie Application",
+    image: filmpireLaptop,
   },
 ];

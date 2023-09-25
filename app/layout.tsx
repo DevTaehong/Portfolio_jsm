@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <head />
-      <body>
+      <body className="bg-white800 dark:bg-black300">
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <NavBar />
           {children}
