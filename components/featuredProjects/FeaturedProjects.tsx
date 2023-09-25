@@ -5,7 +5,7 @@ import { projects } from "@/constants";
 
 const FeaturedProjects = () => {
   return (
-    <section className="bg-white900 dark:bg-black200">
+    <section id="featuredProjects" className="bg-white900 dark:bg-black200">
       <div className="flex flex-col gap-9 px-6 py-12 lg:gap-12 lg:px-[5.31rem] lg:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <h1 className="mobileHeading2 relative dark:text-white900 xl:text-[3rem] xl:tracking-[-0.03rem]">
           {"Featured "}

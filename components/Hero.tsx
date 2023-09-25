@@ -1,5 +1,5 @@
+import { Link } from "@nextui-org/link";
 import Image from "next/image";
-import Link from "next/link";
 
 import { contactIcon } from "@/public";
 import { HeroImage } from "@/components/svg/HeroImage";
@@ -30,7 +30,7 @@ function Hero() {
           <div className="gap-[1.13rem] xl:flex xl:max-w-[32rem] xl:flex-row xl:items-baseline">
             <Link
               rel="noreferrer"
-              href="#featuredProject"
+              href="#featuredProjects"
               className="primaryButton primaryButtonText dark:bg-primaryDark xl:h-[4.3rem] xl:max-w-[11.625rem] xl:px-3 xl:py-5 xl:text-[1.125rem] xl:leading-[1.8rem]"
             >
               My Work
