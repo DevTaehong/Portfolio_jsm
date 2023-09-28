@@ -6,18 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
+import { colorVariants } from "@/constants";
+
 const CaseStudiesProject = ({
   project,
 }: {
   project: { name: string; description: string; image: string };
 }) => {
-  const colorVariants: { [key: string]: string } = {
-    morrent: "bg-morrentLight",
-    jobit: "bg-jobit",
-    hipnode: "bg-hipnode",
-    filmpire: "bg-filmpire",
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}

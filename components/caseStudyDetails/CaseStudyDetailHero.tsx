@@ -51,10 +51,10 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
           </motion.h1>
         </header>
         <Tilt
-          scale={1.3}
+          scale={1.1}
           transitionSpeed={2500}
-          tiltMaxAngleX={5}
-          tiltMaxAngleY={5}
+          tiltMaxAngleX={3}
+          tiltMaxAngleY={3}
         >
           <motion.img
             initial={{ opacity: 0, y: 100 }}

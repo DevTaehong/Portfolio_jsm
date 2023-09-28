@@ -1,38 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Card } from "@nextui-org/card";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 
 import { projectDetails } from "@/constants";
-import { generateFadeInAnimationVariants } from "@/utils";
-
-const OtherCaseStudyCard = ({ project }: { project: string }) => {
-  const otherProjects = Object.keys(projectDetails).filter(
-    (key) => key !== project
-  );
-  const fadeInAnimationVariants = generateFadeInAnimationVariants(0.5);
-
-  return (
-    <div className="flex flex-col items-center justify-center gap-6 md:flex-row">
-      {otherProjects.map((otherProject, index) => (
-        <motion.li
-          className="list-none"
-          variants={fadeInAnimationVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          custom={index}
-          key={otherProject}
-        >
-          <CaseStudyCard otherProject={otherProject} />
-        </motion.li>
-      ))}
-    </div>
-  );
-};
 
 const CaseStudyCard = ({ otherProject }: { otherProject: string }) => {
   const projectDetail = projectDetails[otherProject];
@@ -64,4 +35,4 @@ const CaseStudyCard = ({ otherProject }: { otherProject: string }) => {
   );
 };
 
-export default OtherCaseStudyCard;
+export default CaseStudyCard;

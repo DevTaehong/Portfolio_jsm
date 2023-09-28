@@ -446,3 +446,16 @@ export const caseStudyProjects = [
     image: filmpireLaptop,
   },
 ];
+
+export const colorVariants: { [key: string]: string } = {
+  morrent: "bg-morrentLight",
+  jobit: "bg-jobit",
+  hipnode: "bg-hipnode",
+  filmpire: "bg-filmpire",
+};
+
+export const colorVariantsInProjectCard: { [key: string]: string } = {
+  morrent: "bg-morrentDark",
+  jobit: "bg-jobit",
+  hipnode: "bg-hipnode",
+};

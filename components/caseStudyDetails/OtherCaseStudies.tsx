@@ -1,5 +1,5 @@
 import CaseStudiesDetailHeadings from "./CaseStudiesDetailHeadings";
-import OtherCaseStudyCard from "./OtherCaseStudyCard";
+import OtherCaseStudyCards from "./OtherCaseStudyCards";
 
 const OtherCaseStudies = ({ project }: { project: string }) => {
   return (
@@ -12,7 +12,7 @@ const OtherCaseStudies = ({ project }: { project: string }) => {
           smallText="Projects"
           headingText="Other Case Studies"
         />
-        <OtherCaseStudyCard project={project} />
+        <OtherCaseStudyCards project={project} />
       </div>
     </section>
   );
