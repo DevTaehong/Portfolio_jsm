@@ -6,25 +6,26 @@ export default function Error({
   error,
   reset,
 }: {
-  error: Error;
+  error: Error & { digest?: string };
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <main className="flex h-screen w-full flex-col items-center justify-center bg-white900 dark:bg-black200">
+      <h1 className="text-9xl font-extrabold tracking-widest text-primaryLight dark:text-primaryDark">
+        Something went wrong!
+      </h1>
       <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
+        onClick={() => reset()}
+        className="mt-5 rounded-[562.5rem] bg-primaryLight p-4 hover:opacity-80 hover:transition-opacity dark:bg-primaryDark"
       >
-        Try again
+        <span className="px-8 py-3 text-sm font-medium text-white900">
+          Try again
+        </span>
       </button>
-    </div>
+    </main>
   );
 }

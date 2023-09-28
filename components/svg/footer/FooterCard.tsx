@@ -1,10 +1,17 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
 
 const FooterCard = () => (
-  <svg
+  <motion.svg
     width="1270"
     height="358"
     className="hidden h-full w-full md:flex"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.5 }}
     viewBox="0 0 1270 358"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +90,7 @@ const FooterCard = () => (
         fill="#151E2C"
       />
     </g>
-    <Link href="/contact">
+    <Link className="group" href="/contact">
       <rect
         className="h-[4.3125rem] w-[20.1875rem] fill-primaryLight dark:fill-primaryDark"
         x="877"
@@ -97,6 +104,7 @@ const FooterCard = () => (
       <path
         d="M1130 213.5C1129.45 213.5 1129 213.948 1129 214.5C1129 215.052 1129.45 215.5 1130 215.5V213.5ZM1146.71 215.207C1147.1 214.817 1147.1 214.183 1146.71 213.793L1140.34 207.429C1139.95 207.038 1139.32 207.038 1138.93 207.429C1138.54 207.819 1138.54 208.453 1138.93 208.843L1144.59 214.5L1138.93 220.157C1138.54 220.547 1138.54 221.181 1138.93 221.571C1139.32 221.962 1139.95 221.962 1140.34 221.571L1146.71 215.207ZM1130 215.5H1146V213.5H1130V215.5Z"
         fill="white"
+        className="transition group-hover:translate-x-[0.47rem]"
       />
     </Link>
     <rect
@@ -107,7 +115,7 @@ const FooterCard = () => (
       rx="19.5"
       stroke="#FFBE62"
     />
-  </svg>
+  </motion.svg>
 );
 
 export default FooterCard;

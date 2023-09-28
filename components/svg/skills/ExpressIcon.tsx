@@ -3,11 +3,7 @@
 import { useHover } from "@/utils/useHover";
 import { Tooltip } from "@nextui-org/react";
 
-export const ExpressIcon = ({
-  isCaseDetailPage,
-}: {
-  isCaseDetailPage?: boolean;
-}) => {
+const ExpressIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
   const { isCircleHovered, handleCircleHover, handleCircleLeave } = useHover();
   return (
     <Tooltip

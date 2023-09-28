@@ -1,17 +1,29 @@
-"use client"; // NOTE - serviceIcons is a client-side svg component
+"use client";
+
+import { motion } from "framer-motion";
 
 import { serviceIcons } from "@/constants";
 import Service from "./Service";
+import { generateFadeInAnimationVariants } from "@/utils";
 
 const Services = () => {
+  const fadeInAnimationVariantsForServices =
+    generateFadeInAnimationVariants(0.2);
+
   return (
     <>
       {serviceIcons.map((ServiceIcon, index) => (
-        <Service
+        <motion.li
+          className="list-none"
+          variants={fadeInAnimationVariantsForServices}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          custom={index}
           key={ServiceIcon.name}
-          ServiceIcon={ServiceIcon}
-          index={index}
-        />
+        >
+          <Service ServiceIcon={ServiceIcon} index={index} />
+        </motion.li>
       ))}
     </>
   );

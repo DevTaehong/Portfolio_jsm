@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svg/testimonial";
@@ -10,85 +10,148 @@ import { testimonialsData } from "@/constants";
 
 const Testimonial = () => {
   const [testimonialsIndex, setTestimonialsIndex] = useState<number>(0);
+  const [direction, setDirection] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleArrowNextButton = () => {
-    setTestimonialsIndex((prevIndex) =>
-      prevIndex === testimonialsData.length - 1 ? 0 : ++prevIndex
-    );
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setDirection(1);
+      setTestimonialsIndex((prevIndex) =>
+        prevIndex === testimonialsData.length - 1 ? 0 : prevIndex + 1
+      );
+    }
   };
   const handleArrowPreviousButton = () => {
-    setTestimonialsIndex((prevIndex) =>
-      prevIndex === 0 ? testimonialsData.length - 1 : --prevIndex
-    );
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setDirection(-1);
+      setTestimonialsIndex((prevIndex) =>
+        prevIndex === 0 ? testimonialsData.length - 1 : prevIndex - 1
+      );
+    }
+  };
+
+  useEffect(() => {
+    const animationTimeout = setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+    return () => clearTimeout(animationTimeout);
+  }, [testimonialsIndex]);
+
+  const variants = {
+    initial: (direction: number) => {
+      return {
+        x: direction > 0 ? 100 : -100,
+        opacity: 0,
+      };
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 },
+      },
+    },
+    exit: (direction: number) => {
+      return {
+        x: direction > 0 ? -100 : 100,
+        opacity: 0,
+        transition: {
+          x: { type: "spring", stiffness: 300, damping: 30 },
+          opacity: { duration: 0.2 },
+        },
+      };
+    },
   };
 
   return (
     <>
-      <Button
-        radius="full"
-        className="testimonialButton hidden dark:border-black300 dark:bg-black200 lg:flex xl:h-14 xl:w-14"
-        isIconOnly
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        className="testimonialButton hidden rounded-full dark:border-black300 dark:bg-black200 lg:flex xl:h-14 xl:w-14"
         aria-label="Testimonial previous"
         onClick={handleArrowPreviousButton}
       >
         <ArrowLeftIcon />
-      </Button>
+      </motion.button>
       <div className="mt-9 flex flex-row justify-between xl:mt-0">
-        <Image
-          src={testimonialsData[testimonialsIndex].picture}
-          className="rounded-[1rem] xl:h-[328px] xl:w-[328px]"
-          width={200}
-          height={200}
-          alt="Testimonial"
-        />
+        <AnimatePresence mode="wait" custom={direction}>
+          <motion.div
+            variants={variants}
+            whileInView="animate"
+            viewport={{ once: true }}
+            initial="initial"
+            exit="exit"
+            key={testimonialsData[testimonialsIndex].name}
+            custom={direction}
+          >
+            <Image
+              src={testimonialsData[testimonialsIndex].picture}
+              className="rounded-[1rem] xl:h-[20.5rem] xl:w-[20.5rem]"
+              width={200}
+              height={200}
+              alt="Testimonial"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="flex flex-row gap-4 md:items-center md:gap-96">
-          <Button
-            radius="full"
-            className="testimonialButton dark:border-black300 dark:bg-black200 lg:hidden"
-            isIconOnly
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="testimonialButton inline-flex dark:border-black300 dark:bg-black200 lg:hidden"
             aria-label="Testimonial previous"
             onClick={handleArrowPreviousButton}
           >
             <ArrowLeftIcon />
-          </Button>
-          <Button
-            radius="full"
-            className="testimonialButton dark:border-black300 dark:bg-black200 lg:hidden"
-            isIconOnly
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="testimonialButton inline-flex dark:border-black300 dark:bg-black200 lg:hidden"
             aria-label="Testimonial Next"
             onClick={handleArrowNextButton}
           >
             <ArrowRightIcon />
-          </Button>
+          </motion.button>
         </div>
       </div>
-      <div className="flex flex-1 flex-col">
-        <Image
-          className="mt-10 xl:mt-0"
-          src={stars}
-          width={116}
-          height={20}
-          alt="Testimonials stars"
-        />
-        <p className="bodyRegular mt-4 text-white500 dark:text-white800 xl:mt-6 xl:text-[1.5rem]">
-          {testimonialsData[testimonialsIndex].testimonial}
-        </p>
-        <p className="bodyBold mt-6 text-black300 dark:text-white800 xl:mt-8">
-          {testimonialsData[testimonialsIndex].name}
-        </p>
-        <p className="bodyRegular mt-1 text-white500 dark:text-white800">
-          {testimonialsData[testimonialsIndex].title}
-        </p>
-      </div>
-      <Button
-        radius="full"
+      <AnimatePresence mode="wait" custom={direction}>
+        <motion.div
+          variants={variants}
+          whileInView="animate"
+          viewport={{ once: true }}
+          initial="initial"
+          exit="exit"
+          key={testimonialsData[testimonialsIndex].name}
+          className="flex flex-1 flex-col"
+          custom={direction}
+        >
+          <Image
+            className="mt-10 xl:mt-0"
+            src={stars}
+            width={116}
+            height={20}
+            alt="Testimonials stars"
+          />
+          <p className="bodyRegular mt-4 text-white500 dark:text-white800 xl:mt-6 xl:text-[1.5rem] xl:leading-[1.95rem]">
+            {testimonialsData[testimonialsIndex].testimonial}
+          </p>
+          <p className="bodyBold mt-6 text-black300 dark:text-white800 xl:mt-8">
+            {testimonialsData[testimonialsIndex].name}
+          </p>
+          <p className="bodyRegular mt-1 text-white500 dark:text-white800">
+            {testimonialsData[testimonialsIndex].title}
+          </p>
+        </motion.div>
+      </AnimatePresence>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
         className="testimonialButton hidden dark:border-black300 dark:bg-black200 lg:flex xl:h-14 xl:w-14"
-        isIconOnly
         aria-label="Testimonial Next"
         onClick={handleArrowNextButton}
       >
         <ArrowRightIcon />
-      </Button>
+      </motion.button>
     </>
   );
 };

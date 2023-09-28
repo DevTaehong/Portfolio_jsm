@@ -1,11 +1,20 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export const HeroImage = () => (
   <svg
-    className="max-h-[33.25rem] w-full max-w-[49.875rem]"
+    className="max-h-[33.25rem] w-full max-w-[49.875rem] min-[1440px]:mb-[6.56rem] min-[1440px]:min-w-[49.875rem]"
     viewBox="0 0 768 532"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clipPath="url(#clip0_3309_13)">
+    <motion.g
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+      clipPath="url(#clip0_3309_13)"
+    >
       <g clipPath="url(#clip1_3309_13)">
         <path
           d="M185.881 43.9432V124.648H264.723V376.709"
@@ -777,7 +786,7 @@ export const HeroImage = () => (
           />
         </g>
       </g>
-    </g>
+    </motion.g>
     <defs>
       <clipPath id="clip0_3309_13">
         <rect

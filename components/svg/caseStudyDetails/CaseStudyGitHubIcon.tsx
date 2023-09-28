@@ -3,7 +3,7 @@ const CaseStudyGitHubIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 18 18"
     fill="none"
-    className="h-[1.125rem] w-[1.125rem] sm:h-[1.25rem] sm:w-[1.25rem]"
+    className="h-[1.125rem] w-[1.125rem] group-hover:opacity-80 group-hover:transition-opacity sm:h-[1.25rem] sm:w-[1.25rem]"
   >
     <path
       fillRule="evenodd"
