@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="flex h-screen w-full flex-col items-center justify-center bg-white900 dark:bg-black200">
-      <h1 className="text-9xl font-extrabold tracking-widest text-primaryLight dark:text-primaryDark">
+    <main className="flex h-screen w-full flex-col items-center justify-center gap-8 bg-white900 dark:bg-black200">
+      <h1 className="text-6xl font-extrabold tracking-widest text-primaryLight dark:text-primaryDark">
         Not Found
       </h1>
       <div className="absolute rotate-12 rounded bg-accentSecondary px-2 text-sm font-semibold text-black200">

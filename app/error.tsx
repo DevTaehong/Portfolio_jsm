@@ -14,8 +14,8 @@ export default function Error({
   }, [error]);
 
   return (
-    <main className="flex h-screen w-full flex-col items-center justify-center bg-white900 dark:bg-black200">
-      <h1 className="text-9xl font-extrabold tracking-widest text-primaryLight dark:text-primaryDark">
+    <main className="flex h-screen w-full flex-col items-center justify-center gap-8 bg-white900 dark:bg-black200">
+      <h1 className="text-6xl font-extrabold tracking-widest text-primaryLight dark:text-primaryDark">
         Something went wrong!
       </h1>
       <button
