@@ -1,16 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Link } from "@nextui-org/link";
+
 import Tilt from "react-parallax-tilt";
 
 import { projectDetails } from "@/constants";
-import {
-  CaseStudyArrow,
-  CaseStudyGitHubIcon,
-  DemoSiteIcon,
-} from "../svg/caseStudyDetails";
+import { CaseStudyGitHubIcon, DemoSiteIcon } from "../svg/caseStudyDetails";
 import { paragraphVariants, headingVariants } from "@/utils";
+import HeroLink from "./HeroLink";
 
 const CaseStudyDetailHero = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
@@ -81,26 +78,5 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
     </section>
   );
 };
-
-const HeroLink = ({
-  Icon,
-  href,
-  text,
-}: {
-  Icon: React.FC;
-  href: string;
-  text: string;
-}) => (
-  <div className="group flex flex-row items-center gap-[0.19rem]">
-    <Icon />
-    <Link
-      href={href}
-      className="smallBold  text-primaryLight dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
-    >
-      {text}
-    </Link>
-    <CaseStudyArrow />
-  </div>
-);
 
 export default CaseStudyDetailHero;

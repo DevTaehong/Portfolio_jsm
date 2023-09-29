@@ -4,15 +4,14 @@ import { Card } from "@nextui-org/card";
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
-import { colorVariantsInProjectCard } from "@/constants";
-import { ProjectProps } from "@/types";
 import ProjectCardContent from "./ProjectCardContent";
+import { FeaturedProjectsType } from "@/types";
 
 const ProjectCard = ({
   project,
   index,
 }: {
-  project: ProjectProps;
+  project: FeaturedProjectsType;
   index: number;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,6 +25,12 @@ const ProjectCard = ({
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const colorVariants: { [key: string]: string } = {
+    morent: "bg-morentDark",
+    jobit: "bg-jobit",
+    hipnode: "bg-hipnode",
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -36,7 +41,7 @@ const ProjectCard = ({
     >
       <Card
         className={`${
-          colorVariantsInProjectCard[project.name.toLowerCase()]
+          colorVariants[project.name.toLowerCase()]
         } flex flex-col justify-center rounded-[1.25rem] pb-[2.99rem] pt-[2.88rem] 
                   xl:pb-[5.81rem] xl:pt-[6.06rem] ${
                     (index + 1) % 2 === 0

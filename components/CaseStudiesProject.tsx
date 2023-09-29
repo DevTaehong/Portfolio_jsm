@@ -6,13 +6,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
-import { colorVariants } from "@/constants";
+import { CaseStudiesProjectsType } from "@/types";
 
 const CaseStudiesProject = ({
   project,
 }: {
-  project: { name: string; description: string; image: string };
+  project: CaseStudiesProjectsType;
 }) => {
+  const colorVariants: { [key: string]: string } = {
+    morent: "bg-morentLight",
+    jobit: "bg-jobit",
+    hipnode: "bg-hipnode",
+    filmpire: "bg-filmpire",
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -30,9 +37,11 @@ const CaseStudiesProject = ({
         >
           <Tilt transitionSpeed={2500} tiltMaxAngleX={10} tiltMaxAngleY={10}>
             <Image
+              width={278.486}
+              height={165.054}
               className="lg:h-[15.8rem] lg:w-[26.8rem]"
-              src={project.image}
-              alt={project.description}
+              src={project.image.url}
+              alt={project.image.alt}
             />
           </Tilt>
         </Card>

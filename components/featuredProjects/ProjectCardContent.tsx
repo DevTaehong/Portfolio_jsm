@@ -1,13 +1,13 @@
 import ProjectHeading from "./ProjectHeading";
 import ProjectLink from "./ProjectLink";
 import ProjectCardImage from "./ProjectCardImage";
-import { ProjectProps } from "@/types";
+import { FeaturedProjectsType } from "@/types";
 
 const ProjectCardContent = ({
   project,
   index,
 }: {
-  project: ProjectProps;
+  project: FeaturedProjectsType;
   index: number;
 }) => {
   return (

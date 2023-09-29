@@ -1,10 +1,11 @@
+import { FeaturedProjectsType } from "@/types";
 import Image from "next/image";
 
 const ProjectCardImage = ({
   project,
   index,
 }: {
-  project: { image: string; name: string };
+  project: FeaturedProjectsType;
   index: number;
 }) => {
   return (
@@ -22,10 +23,10 @@ const ProjectCardImage = ({
             ? "xl:translate-x-[-3.72rem]"
             : "xl:translate-x-[1.17rem]"
         } `}
-        src={project.image}
+        src={project?.image.url}
         width={320}
         height={155}
-        alt={`Project ${project.name}`}
+        alt={`Project ${project?.name}`}
       />
     </div>
   );

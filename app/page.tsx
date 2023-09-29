@@ -5,7 +5,7 @@ import ServiceIProvide from "@/components/myServices/ServiceIProvide";
 import Testimonials from "@/components/testimonials/Testimonials";
 import WorkExperience from "@/components/workExperience/WorkExperience";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Hero />

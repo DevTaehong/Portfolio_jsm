@@ -1,23 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-import { companies } from "@/constants";
 import Company from "./Company";
+import { ExperienceType } from "@/types";
+import { sortedExperience } from "@/constants";
 
-const Companies = () => {
+const Companies = ({ experience }: { experience: ExperienceType[] }) => {
+  experience.sort(
+    (a, b) => sortedExperience[a.description] - sortedExperience[b.description]
+  );
   return (
     <>
-      {companies.map((CompanyLogo, index) => (
+      {experience.map((company) => (
         <motion.li
           className="list-none"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          key={CompanyLogo.name}
+          key={company._id}
         >
-          <Company CompanyLogo={CompanyLogo} index={index} />
+          <Company company={company} />
         </motion.li>
       ))}
     </>

@@ -18,7 +18,7 @@ const CaseStudyDetailRoleTechStack = ({ project }: { project: string }) => {
           {myRoleOrDates.map((myRoleOrDate) => (
             <MyRoleOrDates
               key={myRoleOrDate?.text}
-              text={"My Role"}
+              text={myRoleOrDate?.text}
               myRoleOrDates={myRoleOrDate?.value}
             />
           ))}

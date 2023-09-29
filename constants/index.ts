@@ -1,20 +1,13 @@
 import {
-  adrian,
-  test,
-  test2,
-  morrent,
+  morent,
   jobit,
   hipnode,
   // NOTE - Commented out for now, later having a project image will be required
   // filmpire,
-  morrentProblemStatementImage,
-  morrentFigmaDesign,
+  morentProblemStatementImage,
+  morentFigmaDesign,
   jobitFigmaDesign,
   hipNodeFigmaDesign,
-  morrentLaptop,
-  jobitLaptop,
-  hipnodeLaptop,
-  filmpireLaptop,
 } from "@/public";
 import {
   AnalyticsSEOIcon,
@@ -83,9 +76,9 @@ export const projectDetails: {
     challenges: string[];
   };
 } = {
-  morrent: {
+  morent: {
     type: "WEB DEV PROJECT",
-    name: "Morrent",
+    name: "Morent",
     description: `A Car Rental Website`,
     myRole: "Software Developer",
     startDate: "08/08/2023",
@@ -102,7 +95,7 @@ export const projectDetails: {
       GitHubIcon,
       FramerMotionIcon,
     ],
-    demoSite: "https://morrent.vercel.app/",
+    demoSite: "https://morent.vercel.app/",
     sourceCode: "https://github.com/DevTaehong",
     detail: `Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.
 
@@ -111,8 +104,8 @@ export const projectDetails: {
     Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.`,
     problemStatement:
       "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
-    problemStatementImage: morrentProblemStatementImage,
-    figmaDesignImage: morrentFigmaDesign,
+    problemStatementImage: morentProblemStatementImage,
+    figmaDesignImage: morentFigmaDesign,
     challenges: [
       "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
       "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
@@ -144,12 +137,12 @@ export const projectDetails: {
       GitHubIcon,
       FramerMotionIcon,
     ],
-    demoSite: "https://morrent.vercel.app/",
+    demoSite: "https://morent.vercel.app/",
     sourceCode: "https://github.com/DevTaehong",
     detail: `Jobit, a web app made with React and JSearch API, links developers to millions of job openings. It offers easy job search by...`,
     problemStatement:
       "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
-    problemStatementImage: morrentProblemStatementImage,
+    problemStatementImage: morentProblemStatementImage,
     figmaDesignImage: jobitFigmaDesign,
     challenges: [
       "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
@@ -182,7 +175,7 @@ export const projectDetails: {
       GitHubIcon,
       FramerMotionIcon,
     ],
-    demoSite: "https://morrent.vercel.app/",
+    demoSite: "https://morent.vercel.app/",
     sourceCode: "https://github.com/DevTaehong",
     detail: `Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.
       
@@ -191,7 +184,7 @@ export const projectDetails: {
     Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.`,
     problemStatement:
       "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
-    problemStatementImage: morrentProblemStatementImage,
+    problemStatementImage: morentProblemStatementImage,
     figmaDesignImage: hipNodeFigmaDesign,
     challenges: [
       "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
@@ -208,7 +201,7 @@ export const projectDetails: {
   // NOTE - Commented out for now, later having a project image will be required
   // filmpire: {
   //   type: "WEB DEV PROJECT",
-  //   name: "Morrent",
+  //   name: "Morent",
   //   description: `A Car Rental Website`,
   //   myRole: "Software Developer",
   //   startDate: "08/08/2023",
@@ -225,14 +218,14 @@ export const projectDetails: {
   //     GitHubIcon,
   //     FramerMotionIcon,
   //   ],
-  //   demoSite: "https://morrent.vercel.app/",
+  //   demoSite: "https://morent.vercel.app/",
   //   sourceCode: "https://github.com/DevTaehong",
   //   detail:
   //     "Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.  My team and I also developed the car listing page which offers a search bar and various filtering options for users to find the perfect vehicle. Additionally, it has a car details page which provides users with detailed information along with suggestions for other recommended vehicles. Car owners are also able to list their cars for rent through our Add Car page, while users can easily track their rented and rented-out cars through their profile page. Overall, we've created an intuitive and user-friendly MVP version of the platform that will make renting a car a breeze.",
   //   problemStatement:
   //     "One of the main problems that people face when looking to rent a car is the hassle of finding a reliable and user-friendly platform to search for and book rental cars. In addition, car owners who want to rent out their vehicles often struggle to find a suitable platform to list their cars and manage their rentals.",
-  //   problemStatementImage: morrentProblemStatementImage,
-  //   figmaDesignImage: morrentFigmaDesign,
+  //   problemStatementImage: morentProblemStatementImage,
+  //   figmaDesignImage: morentFigmaDesign,
   //   challenges: [
   //     "Gained extensive knowledge of full authentication and authorization implementation, including the use of industry-standard security protocols such as JSON Web Tokens.",
   //     "We conducted brainstorming and carefully weighed our options before making a decision. Furthermore, using NextJS was a new experience for us, and we encountered difficulties while implementing its features. Finally, we had to work under time constraints, which added pressure to the project.",
@@ -275,54 +268,12 @@ export const techSkills = [
   MongoDBIcon,
 ];
 
-export const jobs = [
-  {
-    company: "Slack",
-    description: "Product Design - 4 Years Experience",
-  },
-  {
-    company: "Firefox",
-    description: "Sr. UI Design - 4 Years Experience",
-  },
-  {
-    company: "Digital Ocean",
-    description: "UI & Motion Designer - 4 Years Experience",
-  },
-  {
-    company: "Mailchimp",
-    description: "UI Designer - 4 Years Experience",
-  },
-];
-
-export const testimonialsData = [
-  {
-    name: "— Adrian Hajdin",
-    testimonial:
-      "I have had the pleasure of working with Adrian as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in ReactJS, NextJS, Javascript, Material UI, Tailwind CSS, Redux, and GitHub, and consistently delivers high-quality code. ",
-    title: "Founder & CEO at JS Mastery",
-    picture: adrian,
-  },
-  // NOTE - Add real people testimonial data
-  {
-    name: "- Jane Smith",
-    testimonial: "I love the design and functionality of this website.",
-    title: "Full-stack developer",
-    picture: test,
-  },
-  {
-    name: "- Test",
-    testimonial: "Test Test Test Test",
-    title: "Software developer",
-    picture: test2,
-  },
-];
-
 export const projects = [
   {
-    name: "Morrent",
+    name: "Morent",
     description: `A Car Rental Application`,
     techStack: ["ReactJS, Next.js", "Tailwind, MongoDB"],
-    image: morrent,
+    image: morent,
   },
   {
     name: "JobIT",
@@ -424,38 +375,16 @@ export const inputFields = [
   },
 ];
 
-export const caseStudyProjects = [
-  {
-    name: "Morrent",
-    description: "Car Rental Application",
-    image: morrentLaptop,
-  },
-  {
-    name: "Jobit",
-    description: "Job Finding Application",
-    image: jobitLaptop,
-  },
-  {
-    name: "HipNode",
-    description: "Social Platform for Developers",
-    image: hipnodeLaptop,
-  },
-  {
-    name: "Filmpire",
-    description: "AI-Powered Movie Application",
-    image: filmpireLaptop,
-  },
-];
-
-export const colorVariants: { [key: string]: string } = {
-  morrent: "bg-morrentLight",
-  jobit: "bg-jobit",
-  hipnode: "bg-hipnode",
-  filmpire: "bg-filmpire",
+export const sortOrder: {
+  [key: string]: number;
+} = {
+  Morent: 1,
+  JobIT: 2,
+  HipNode: 3,
 };
 
-export const colorVariantsInProjectCard: { [key: string]: string } = {
-  morrent: "bg-morrentDark",
-  jobit: "bg-jobit",
-  hipnode: "bg-hipnode",
+export const sortedExperience: { [key: string]: number } = {
+  "Web Developer - 6 months Experience": 1,
+  "Web Developer - 5 weeks Experience": 2,
+  "IT Programming - 2 years Experience": 3,
 };

@@ -6,9 +6,14 @@ import Image from "next/image";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@/components/svg/testimonial";
 import { stars } from "@/public";
-import { testimonialsData } from "@/constants";
+import { testimonialAnimationVariants } from "@/utils";
+import { TestimonialType } from "@/types";
 
-const Testimonial = () => {
+const Testimonial = ({
+  testimonialsData,
+}: {
+  testimonialsData: TestimonialType;
+}) => {
   const [testimonialsIndex, setTestimonialsIndex] = useState<number>(0);
   const [direction, setDirection] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -39,33 +44,6 @@ const Testimonial = () => {
     return () => clearTimeout(animationTimeout);
   }, [testimonialsIndex]);
 
-  const variants = {
-    initial: (direction: number) => {
-      return {
-        x: direction > 0 ? 100 : -100,
-        opacity: 0,
-      };
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      },
-    },
-    exit: (direction: number) => {
-      return {
-        x: direction > 0 ? -100 : 100,
-        opacity: 0,
-        transition: {
-          x: { type: "spring", stiffness: 300, damping: 30 },
-          opacity: { duration: 0.2 },
-        },
-      };
-    },
-  };
-
   return (
     <>
       <motion.button
@@ -79,7 +57,7 @@ const Testimonial = () => {
       <div className="mt-9 flex flex-row justify-between xl:mt-0">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
-            variants={variants}
+            variants={testimonialAnimationVariants}
             whileInView="animate"
             viewport={{ once: true }}
             initial="initial"
@@ -88,7 +66,7 @@ const Testimonial = () => {
             custom={direction}
           >
             <Image
-              src={testimonialsData[testimonialsIndex].picture}
+              src={testimonialsData[testimonialsIndex].image.url}
               className="rounded-[1rem] xl:h-[20.5rem] xl:w-[20.5rem]"
               width={200}
               height={200}
@@ -117,7 +95,7 @@ const Testimonial = () => {
       </div>
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div
-          variants={variants}
+          variants={testimonialAnimationVariants}
           whileInView="animate"
           viewport={{ once: true }}
           initial="initial"

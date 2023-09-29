@@ -1,6 +1,8 @@
 import Testimonial from "./Testimonial";
+import { getTestimonials } from "@/sanity/sanity-utils";
 
-const Testimonials = () => {
+const Testimonials = async () => {
+  const testimonialsData = await getTestimonials();
   return (
     <section className="bg-white800 dark:bg-black300">
       <div className="flex flex-col px-6 py-12 xl:gap-[4.5rem] xl:px-[5.31rem] xl:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -13,7 +15,7 @@ const Testimonials = () => {
           <br className="block sm:hidden" /> about me
         </h1>
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-[1.62rem]">
-          <Testimonial />
+          <Testimonial testimonialsData={testimonialsData} />
         </div>
       </div>
     </section>
