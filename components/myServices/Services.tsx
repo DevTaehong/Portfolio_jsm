@@ -12,7 +12,7 @@ const Services = () => {
 
   return (
     <>
-      {serviceIcons.map((ServiceIcon, index) => (
+      {serviceIcons.map((serviceIcon, index) => (
         <motion.li
           className="list-none"
           variants={fadeInAnimationVariantsForServices}
@@ -20,9 +20,9 @@ const Services = () => {
           whileInView="animate"
           viewport={{ once: true }}
           custom={index}
-          key={ServiceIcon.name}
+          key={serviceIcon.name}
         >
-          <Service ServiceIcon={ServiceIcon} index={index} />
+          <Service ServiceIcon={serviceIcon} index={index} />
         </motion.li>
       ))}
     </>

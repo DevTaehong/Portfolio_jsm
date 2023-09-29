@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { paragraphVariants } from "@/utils";
+import { paragraphAnimationVariants } from "@/utils";
 
 import { projectDetails } from "@/constants";
 const AboutProject = ({ project }: { project: string }) => {
@@ -10,7 +10,7 @@ const AboutProject = ({ project }: { project: string }) => {
   return (
     <section className="bg-white800 dark:bg-black300">
       <motion.p
-        variants={paragraphVariants}
+        variants={paragraphAnimationVariants}
         initial="hidden"
         whileInView="visible"
         transition={{ delay: 1 }}

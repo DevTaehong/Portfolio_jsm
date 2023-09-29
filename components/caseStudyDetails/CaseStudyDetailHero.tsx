@@ -6,7 +6,7 @@ import Tilt from "react-parallax-tilt";
 
 import { projectDetails } from "@/constants";
 import { CaseStudyGitHubIcon, DemoSiteIcon } from "../svg/caseStudyDetails";
-import { paragraphVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingVariants } from "@/utils";
 import HeroLink from "./HeroLink";
 
 const CaseStudyDetailHero = ({ project }: { project: string }) => {
@@ -26,7 +26,7 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
       <article className="flex flex-col items-center gap-6 text-center sm:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <header className="flex flex-col gap-[0.62rem] sm:gap-[1.88rem]">
           <motion.p
-            variants={paragraphVariants}
+            variants={paragraphAnimationVariants}
             initial="hidden"
             animate="visible"
             className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem]"

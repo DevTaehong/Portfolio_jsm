@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { paragraphVariants2 } from "@/utils";
+import { paragraphAnimationVariants2 } from "@/utils";
 
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ const ProblemStatement = ({ project }: { project: string }) => {
           />
         </div>
         <motion.p
-          variants={paragraphVariants2}
+          variants={paragraphAnimationVariants2}
           initial="hidden"
           whileInView="visible"
           transition={{ delay: 2 }}
