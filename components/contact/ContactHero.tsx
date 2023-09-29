@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { paragraphVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingVariants } from "@/utils";
 
 const ContactHero = () => {
   return (
@@ -21,7 +21,7 @@ const ContactHero = () => {
             </span>
           </motion.h1>
           <motion.p
-            variants={paragraphVariants}
+            variants={paragraphAnimationVariants}
             initial="hidden"
             animate="visible"
             className="smallRegular max-w-[21.125rem] text-white500 dark:text-white800 md:max-w-[44rem] md:text-[1.25rem] md:leading-[1.875rem]"

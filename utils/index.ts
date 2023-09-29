@@ -22,7 +22,7 @@ export const revealAnimationVariants = (y: number) => ({
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 });
 
-export const paragraphVariants = revealAnimationVariants(35);
+export const paragraphAnimationVariants = revealAnimationVariants(35);
 export const headingVariants = revealAnimationVariants(30);
-export const paragraphVariants2 = revealAnimationVariants(25);
-export const paragraphVariants3 = revealAnimationVariants(20);
+export const paragraphAnimationVariants2 = revealAnimationVariants(25);
+export const paragraphAnimationVariants3 = revealAnimationVariants(20);
