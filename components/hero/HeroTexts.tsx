@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   paragraphAnimationVariants,
   paragraphAnimationVariants2,
-  headingVariants,
+  headingAnimationVariants,
 } from "@/utils";
 
 const HeroTexts = () => {
@@ -22,7 +22,7 @@ const HeroTexts = () => {
       <motion.h1
         initial="hidden"
         animate="visible"
-        variants={headingVariants}
+        variants={headingAnimationVariants}
         className="mobileHeading1 pt-5 dark:text-white900  xl:pt-[1.69rem] xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]"
       >
         Professional

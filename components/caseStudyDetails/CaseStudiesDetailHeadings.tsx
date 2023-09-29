@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { paragraphAnimationVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
 const CaseStudiesDetailHeadings = ({
   smallText,
@@ -24,7 +24,7 @@ const CaseStudiesDetailHeadings = ({
         {smallText}
       </motion.p>
       <motion.h6
-        variants={headingVariants}
+        variants={headingAnimationVariants}
         initial="hidden"
         whileInView="visible"
         transition={{ delay: 2 }}

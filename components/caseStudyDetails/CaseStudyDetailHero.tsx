@@ -10,7 +10,7 @@ import {
   CaseStudyGitHubIcon,
   DemoSiteIcon,
 } from "../svg/caseStudyDetails";
-import { paragraphAnimationVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
 const CaseStudyDetailHero = ({ project }: { project: string }) => {
   const projectDetail = projectDetails[project];
@@ -37,7 +37,7 @@ const CaseStudyDetailHero = ({ project }: { project: string }) => {
             {projectDetail?.type}
           </motion.p>
           <motion.h1
-            variants={headingVariants}
+            variants={headingAnimationVariants}
             initial="hidden"
             animate="visible"
             className="mobileHeading1 dark:text-white900 xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]"

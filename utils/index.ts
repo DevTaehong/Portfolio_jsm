@@ -23,6 +23,6 @@ export const revealAnimationVariants = (y: number) => ({
 });
 
 export const paragraphAnimationVariants = revealAnimationVariants(35);
-export const headingVariants = revealAnimationVariants(30);
+export const headingAnimationVariants = revealAnimationVariants(30);
 export const paragraphAnimationVariants2 = revealAnimationVariants(25);
 export const paragraphAnimationVariants3 = revealAnimationVariants(20);
