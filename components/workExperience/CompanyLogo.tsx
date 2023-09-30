@@ -7,15 +7,11 @@ const CompanyLogo = ({ company }: { company: ExperienceType }) => {
   const imageSources = [
     {
       src: company?.logo?.url,
-      className: `block group-hover:hidden dark:hidden dark:group-hover:hidden`,
+      className: `brightness-0 dark:brightness-100 block group-hover:hidden dark:group-hover:hidden`,
     },
     {
       src: company?.logo?.srcLightHover?.url,
       className: `hidden group-hover:block dark:hidden dark:group-hover:hidden group-hover:dark:hidden`,
-    },
-    {
-      src: company?.logo?.srcDark?.url,
-      className: `hidden group-hover:hidden dark:block`,
     },
     {
       src: company?.logo?.srcDarkHover?.url,

@@ -6,10 +6,10 @@ export async function getExperience() {
     groq`*[_type == "experience"]{
       _id,
       name,
-      logo {alt, "url": asset->url, srcDark {"url": asset->url}, srcLightHover {"url": asset->url}, srcDarkHover {"url": asset->url}},
+      logo {alt, "url": asset->url, srcLightHover {"url": asset->url}, srcDarkHover {"url": asset->url}},
       description
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }
@@ -23,7 +23,7 @@ export async function getFeaturedProjects() {
       description,
       techStack
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }
@@ -37,7 +37,7 @@ export async function getTestimonials() {
       title,
       testimonial
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }
@@ -50,7 +50,7 @@ export async function getCaseStudiesProjects() {
       image {alt, "url": asset->url},
       description,
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }
@@ -76,7 +76,7 @@ export async function getCaseStudiesDetail() {
       "heroImage": heroImage.asset->url,
       challenges
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }
@@ -86,7 +86,7 @@ export async function getResume() {
     groq`*[_type == "resume"]{
       "resumeUpload": resumeUpload.asset->url
     }`,
-    { next: { revalidate: 1100 } }
+    { next: { revalidate: 1500 } }
   );
   return data;
 }

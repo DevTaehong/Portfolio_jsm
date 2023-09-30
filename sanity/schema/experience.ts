@@ -15,7 +15,6 @@ const experience = {
       options: { hotspot: true },
       fields: [
         { name: "alt", title: "Alt", type: "string" },
-        { name: "srcDark", title: "Dark Mode Image", type: "image" },
         {
           name: "srcLightHover",
           title: "Light Mode Hover Image",
