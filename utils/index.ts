@@ -90,3 +90,13 @@ export const heroLinks = (projectDetail: CaseStudiesDetailType) => {
   ];
   return links;
 };
+
+export const myRoleOrDates = (project: {
+  myRole: string;
+  startDate: string;
+  endDate: string;
+}) => [
+  { text: "My Role", value: project?.myRole },
+  { text: "Start Date", value: project?.startDate },
+  { text: "End Date", value: project?.endDate },
+];
