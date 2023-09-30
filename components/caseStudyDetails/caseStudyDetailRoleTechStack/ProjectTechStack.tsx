@@ -11,7 +11,7 @@ import { techStackIcons } from "@/constants";
 const ProjectTechStack = ({
   projectDetail,
 }: {
-  projectDetail: CaseStudiesDetailType | undefined;
+  projectDetail: CaseStudiesDetailType;
 }) => {
   const fadeInAnimationVariants = generateFadeInAnimationVariants(0.05);
 
