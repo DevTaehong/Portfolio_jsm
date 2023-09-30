@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { myProcess } from "@/constants";
+import { myProcess, myProcessText } from "@/constants";
 import { generateFadeInAnimationVariants } from "@/utils";
 import ProcessIcons from "./ProcessIcons";
 
@@ -22,7 +22,10 @@ const MyProcessIcons = () => {
           whileHover={{ scale: 1.1 }}
           key={process.name}
         >
-          <ProcessIcons Process={process} />
+          <ProcessIcons
+            Process={process}
+            myProcessText={myProcessText[index]}
+          />
         </motion.li>
       ))}
     </div>
