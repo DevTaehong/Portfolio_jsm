@@ -29,6 +29,7 @@ const ProjectCard = ({
     morent: "bg-morentDark",
     jobit: "bg-jobit",
     hipnode: "bg-hipnode",
+    filmpire: "bg-filmpire",
   };
 
   return (

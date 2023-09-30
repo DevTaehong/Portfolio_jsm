@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { paragraphAnimationVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
 const ContactHero = () => {
   return (
@@ -10,7 +10,7 @@ const ContactHero = () => {
       <div className="flex flex-col items-center gap-6 text-center md:gap-[3.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
         <div className="flex flex-col gap-5 md:gap-8">
           <motion.h1
-            variants={headingVariants}
+            variants={headingAnimationVariants}
             initial="hidden"
             animate="visible"
             className="mobileHeading1 dark:text-white900 md:text-[4rem] md:leading-[5.2rem] md:tracking-[-0.04rem]"
