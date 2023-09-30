@@ -1,6 +1,5 @@
 import { getCaseStudiesProjects } from "@/sanity/sanity-utils";
 import CaseStudiesProject from "./CaseStudiesProject";
-// import { caseStudyProjects } from "@/constants";
 import { CaseStudiesProjectsType } from "@/types";
 
 const CaseStudiesProjects = async () => {
