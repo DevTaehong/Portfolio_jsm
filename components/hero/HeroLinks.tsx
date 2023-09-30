@@ -6,14 +6,14 @@ import Image from "next/image";
 
 import { contactIcon } from "@/public";
 
-import { paragraphVariants3 } from "@/utils";
+import { paragraphAnimationVariants3 } from "@/utils";
 
 const HeroLinks = () => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={paragraphVariants3}
+      variants={paragraphAnimationVariants3}
       className="gap-[1.13rem] xl:flex xl:max-w-[32rem] xl:flex-row xl:items-baseline"
     >
       <Link

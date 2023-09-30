@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 import {
-  paragraphVariants,
-  paragraphVariants2,
-  headingVariants,
+  paragraphAnimationVariants,
+  paragraphAnimationVariants2,
+  headingAnimationVariants,
 } from "@/utils";
 
 const HeroTexts = () => {
@@ -14,7 +14,7 @@ const HeroTexts = () => {
       <motion.p
         initial="hidden"
         animate="visible"
-        variants={paragraphVariants}
+        variants={paragraphAnimationVariants}
         className="text-sm font-semibold uppercase not-italic leading-[1.1375rem] tracking-[0.2625rem] text-primaryLight dark:text-primaryDark xl:text-[1.25rem] xl:leading-[1.625rem] xl:tracking-[0.375rem]"
       >
         HI, I AM TAEHONG
@@ -22,7 +22,7 @@ const HeroTexts = () => {
       <motion.h1
         initial="hidden"
         animate="visible"
-        variants={headingVariants}
+        variants={headingAnimationVariants}
         className="mobileHeading1 pt-5 dark:text-white900  xl:pt-[1.69rem] xl:text-[4rem] xl:leading-[5.2rem] xl:tracking-[-0.04rem]"
       >
         Professional
@@ -41,7 +41,7 @@ const HeroTexts = () => {
       <motion.p
         initial="hidden"
         animate="visible"
-        variants={paragraphVariants2}
+        variants={paragraphAnimationVariants2}
         className="w-full max-w-[32rem] pb-5 pt-[0.87rem] text-xs font-normal not-italic leading-[1.1625rem] text-white500 dark:text-white800 xl:pb-9 xl:pt-[0.63rem] xl:text-[1.125rem] xl:leading-[1.8rem]"
       >
         Transforming the web one line of code at a time: Crafting cutting-edge

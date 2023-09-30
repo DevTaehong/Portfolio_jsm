@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { paragraphVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
 const CaseStudiesDetailHeadings = ({
   smallText,
@@ -14,7 +14,7 @@ const CaseStudiesDetailHeadings = ({
   return (
     <div className="flex flex-col gap-[0.56rem] sm:gap-[0.62rem]">
       <motion.p
-        variants={paragraphVariants}
+        variants={paragraphAnimationVariants}
         initial="hidden"
         whileInView="visible"
         transition={{ delay: 2 }}
@@ -24,7 +24,7 @@ const CaseStudiesDetailHeadings = ({
         {smallText}
       </motion.p>
       <motion.h6
-        variants={headingVariants}
+        variants={headingAnimationVariants}
         initial="hidden"
         whileInView="visible"
         transition={{ delay: 2 }}
