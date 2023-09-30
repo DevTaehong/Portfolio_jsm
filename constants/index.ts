@@ -40,6 +40,14 @@ export const myProcess = [
   Deployment,
 ];
 
+export const myProcessText: { [key: string]: string } = {
+  Definition: "Definition",
+  Design: "Design",
+  Planning: "Planning",
+  Development: "Development",
+  Deployment: "Deployment",
+};
+
 export const serviceIcons = [
   AnalyticsSEOIcon,
   FrontEndIcon,

@@ -1,3 +1,5 @@
+import { myProcessText } from "@/constants";
+
 const ProcessIcons = ({ Process }: { Process: React.FC }) => {
   return (
     <div
@@ -6,7 +8,7 @@ const ProcessIcons = ({ Process }: { Process: React.FC }) => {
     >
       <Process />
       <p className="smallBold text-black300 dark:text-white900 sm:text-[1.25rem] sm:leading-[1.625rem]">
-        {Process.name.toString()}
+        {myProcessText[Process.name]}
       </p>
     </div>
   );
