@@ -10,7 +10,7 @@ const TailwindIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
       classNames={{
         base: "text-white500 dark:text-white900 dark:bg-black300",
       }}
-      content="TailwindCSS"
+      content="Tailwind CSS"
     >
       <svg
         className={`${

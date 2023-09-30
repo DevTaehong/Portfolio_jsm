@@ -33,12 +33,14 @@ const JSIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         />
         <g clipPath="url(#clip0_3357_3898)">
           <path
-            className={`fill-[#778295] ${isCircleHovered && "fill-[#F0DB4F]"}`}
+            className={`fill-[#778295] ${
+              (isCircleHovered || isCaseDetailPage) && "fill-[#F0DB4F]"
+            }`}
             d="M36.286 13.1931H17.8156C15.6297 13.1931 13.8577 14.9651 13.8577 17.1511V35.6215C13.8577 37.8074 15.6297 39.5794 17.8156 39.5794H36.286C38.4719 39.5794 40.244 37.8074 40.244 35.6215V17.1511C40.244 14.9651 38.4719 13.1931 36.286 13.1931Z"
           />
           <path
             className={` ${
-              isCircleHovered
+              isCircleHovered || isCaseDetailPage
                 ? "fill-[#323330] dark:fill-black300"
                 : "fill-[#F3F8FF] dark:fill-black300"
             }`}

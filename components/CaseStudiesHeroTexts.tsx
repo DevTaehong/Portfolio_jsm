@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { heroText, projects } from "@/constants";
+import { heroText } from "@/constants";
 import CaseStudiesHeading from "./CaseStudiesHeading";
 import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
@@ -17,7 +17,7 @@ const CaseStudiesHeroTexts = () => {
       >
         Recent{" "}
         {heroText.map((text, i) => (
-          <CaseStudiesHeading text={text} key={projects[i].name} />
+          <CaseStudiesHeading text={text} key={text} />
         ))}
       </motion.h1>
       <motion.p

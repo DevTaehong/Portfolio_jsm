@@ -1,10 +1,8 @@
 import Image from "next/image";
 
-import { projectDetails } from "@/constants";
+import { CaseStudiesDetailType } from "@/types";
 
-const FigmaDesign = ({ project }: { project: string }) => {
-  const projectDetail = projectDetails[project];
-
+const FigmaDesign = ({ project }: { project: CaseStudiesDetailType }) => {
   return (
     <section className="flex flex-col dark:bg-black200">
       <div className="figmaDesign figmaDesignText h-[2.47812rem] dark:bg-primaryDark sm:text-[2rem] sm:leading-[2.1rem] sm:tracking-[-0.01rem] md:h-[6.625rem]">
@@ -12,7 +10,7 @@ const FigmaDesign = ({ project }: { project: string }) => {
       </div>
       <Image
         className="h-full w-full"
-        src={projectDetail?.figmaDesignImage}
+        src={project?.figmaDesignImage}
         alt="Problem Statement Image"
         width={393}
         height={209.327}

@@ -35,7 +35,7 @@ const ExpressIcon = ({ isCaseDetailPage }: { isCaseDetailPage?: boolean }) => {
         <g clipPath="url(#clip0_3357_3971)">
           <path
             className={`${
-              isCircleHovered
+              isCircleHovered || isCaseDetailPage
                 ? "fill-[#000000] dark:fill-white900"
                 : "fill-[#778295]"
             }`}

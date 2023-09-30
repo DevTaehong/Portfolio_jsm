@@ -1,7 +1,11 @@
 import Companies from "./Companies";
 import SquareWorkExperienceCard from "./SquareWorkExperienceCard";
+import { getExperience } from "@/sanity/sanity-utils";
+import { ExperienceType } from "@/types";
 
-const WorkExperience = () => {
+const WorkExperience = async () => {
+  const experience: ExperienceType[] = await getExperience();
+
   return (
     <section className="bg-white900 dark:bg-black200">
       <div
@@ -10,7 +14,7 @@ const WorkExperience = () => {
       >
         <SquareWorkExperienceCard />
         <div className="flex w-full max-w-[37.9375rem] flex-col gap-4 xl:gap-[2.19rem]">
-          <Companies />
+          <Companies experience={experience} />
         </div>
       </div>
     </section>

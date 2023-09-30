@@ -7,6 +7,7 @@ import { poppins } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer";
+import { getResume } from "@/sanity/sanity-utils";
 
 export const metadata: Metadata = {
   title: {
@@ -25,17 +26,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const resume = await getResume();
   return (
     <html lang="en" className={poppins.className}>
       <head />
       <body className="bg-white800 dark:bg-black300">
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <NavBar />
+          <NavBar resume={resume[0]} />
           {children}
           <Footer />
           <Toaster position="bottom-right" reverseOrder={true} />

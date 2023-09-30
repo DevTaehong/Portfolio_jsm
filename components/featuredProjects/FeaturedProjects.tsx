@@ -1,8 +1,13 @@
+import { sortOrder } from "@/constants";
 import ProjectCard from "./ProjectCard";
-import { projects } from "@/constants";
 import SeeMoreCaseStudiesButton from "./SeeMoreCaseStudiesButton";
+import { getFeaturedProjects } from "@/sanity/sanity-utils";
+import { FeaturedProjectsType } from "@/types";
 
-const FeaturedProjects = () => {
+const FeaturedProjects = async () => {
+  const featuredProjects: FeaturedProjectsType[] = await getFeaturedProjects();
+  featuredProjects.sort((a, b) => sortOrder[a.name] - sortOrder[b.name]);
+
   return (
     <section id="featuredProjects" className="bg-white900 dark:bg-black200">
       <div className="flex flex-col gap-9 px-6 py-12 lg:gap-12 lg:px-[5.31rem] lg:py-[4.5rem] 2xl:mx-auto 2xl:max-w-[90rem]">
@@ -13,7 +18,7 @@ const FeaturedProjects = () => {
             <span className="relative">Projects</span>
           </span>
         </h1>
-        {projects.map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <ProjectCard key={project.name} project={project} index={index} />
         ))}
         <SeeMoreCaseStudiesButton />
