@@ -79,7 +79,7 @@ export const testimonialAnimationVariants = {
   },
 };
 
-export const heroLinks = (projectDetail: CaseStudiesDetailType | undefined) => {
+export const heroLinks = (projectDetail: CaseStudiesDetailType) => {
   const links = [
     { text: "Demo Site", href: projectDetail?.demoSite, Icon: DemoSiteIcon },
     {

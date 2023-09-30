@@ -68,7 +68,7 @@ const CaseStudyDetailHero = ({
           className="flex flex-row gap-[2.56rem] sm:mt-[1.13rem]  sm:gap-[6.81rem]"
         >
           {links.map(({ text, href, Icon }) => (
-            <HeroLink key={text} Icon={Icon} href={href || ""} text={text} />
+            <HeroLink key={text} Icon={Icon} href={href} text={text} />
           ))}
         </motion.section>
       </article>
