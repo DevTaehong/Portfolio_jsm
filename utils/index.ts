@@ -1,4 +1,4 @@
-import { ExperienceType, CaseStudiesDetailType } from "@/types";
+import { CaseStudiesDetailType } from "@/types";
 import {
   CaseStudyGitHubIcon,
   DemoSiteIcon,
@@ -32,25 +32,6 @@ export const paragraphAnimationVariants = revealAnimationVariants(35);
 export const headingAnimationVariants = revealAnimationVariants(30);
 export const paragraphAnimationVariants2 = revealAnimationVariants(25);
 export const paragraphAnimationVariants3 = revealAnimationVariants(20);
-
-export const getImageSources = (company: ExperienceType) => [
-  {
-    src: company?.logo?.url,
-    className: `block group-hover:hidden dark:hidden dark:group-hover:hidden`,
-  },
-  {
-    src: company?.logo?.srcLightHover?.url,
-    className: `hidden group-hover:block dark:hidden dark:group-hover:hidden group-hover:dark:hidden`,
-  },
-  {
-    src: company?.logo?.srcDark?.url,
-    className: `hidden group-hover:hidden dark:block`,
-  },
-  {
-    src: company?.logo?.srcDarkHover?.url,
-    className: `hidden dark:hidden dark:group-hover:block`,
-  },
-];
 
 export const testimonialAnimationVariants = {
   initial: (direction: number) => {
