@@ -1,4 +1,8 @@
-import { ExperienceType } from "@/types";
+import { ExperienceType, CaseStudiesDetailType } from "@/types";
+import {
+  CaseStudyGitHubIcon,
+  DemoSiteIcon,
+} from "@/components/svg/caseStudyDetails";
 
 export const generateFadeInAnimationVariants = (
   delayFactor: number,
@@ -25,7 +29,7 @@ export const revealAnimationVariants = (y: number) => ({
 });
 
 export const paragraphAnimationVariants = revealAnimationVariants(35);
-export const headingVariants = revealAnimationVariants(30);
+export const headingAnimationVariants = revealAnimationVariants(30);
 export const paragraphAnimationVariants2 = revealAnimationVariants(25);
 export const paragraphAnimationVariants3 = revealAnimationVariants(20);
 
@@ -73,4 +77,16 @@ export const testimonialAnimationVariants = {
       },
     };
   },
+};
+
+export const heroLinks = (projectDetail: CaseStudiesDetailType | undefined) => {
+  const links = [
+    { text: "Demo Site", href: projectDetail?.demoSite, Icon: DemoSiteIcon },
+    {
+      text: "Source Code",
+      href: projectDetail?.sourceCode,
+      Icon: CaseStudyGitHubIcon,
+    },
+  ];
+  return links;
 };

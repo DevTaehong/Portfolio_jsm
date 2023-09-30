@@ -9,7 +9,7 @@ export async function getExperience() {
       logo {alt, "url": asset->url, srcDark {"url": asset->url}, srcLightHover {"url": asset->url}, srcDarkHover {"url": asset->url}},
       description
     }`,
-    { next: { revalidate: 150 } }
+    { next: { revalidate: 1100 } }
   );
   return data;
 }
@@ -23,7 +23,7 @@ export async function getFeaturedProjects() {
       description,
       techStack
     }`,
-    { next: { revalidate: 40 } }
+    { next: { revalidate: 1100 } }
   );
   return data;
 }
@@ -37,7 +37,7 @@ export async function getTestimonials() {
       title,
       testimonial
     }`,
-    { next: { revalidate: 40 } }
+    { next: { revalidate: 1100 } }
   );
   return data;
 }
@@ -50,7 +50,43 @@ export async function getCaseStudiesProjects() {
       image {alt, "url": asset->url},
       description,
     }`,
-    { next: { revalidate: 40 } }
+    { next: { revalidate: 1100 } }
+  );
+  return data;
+}
+
+export async function getCaseStudiesDetail() {
+  const data = await client.fetch(
+    groq`*[_type == "caseStudiesDetail"]{
+      _id,
+      type,
+      name,
+      description,
+      myRole,
+      startDate,
+      endDate,
+      techStack,
+      demoSite,
+      sourceCode,
+      learnings,
+      detail,
+      problemStatement,
+      "problemStatementImage": problemStatementImage.asset->url,
+      "figmaDesignImage": figmaDesignImage.asset->url,
+      "heroImage": heroImage.asset->url,
+      challenges
+    }`,
+    { next: { revalidate: 1100 } }
+  );
+  return data;
+}
+
+export async function getResume() {
+  const data = await client.fetch(
+    groq`*[_type == "resume"]{
+      "resumeUpload": resumeUpload.asset->url
+    }`,
+    { next: { revalidate: 1100 } }
   );
   return data;
 }

@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-import { heroText, projects } from "@/constants";
+import { heroText } from "@/constants";
 import CaseStudiesHeading from "./CaseStudiesHeading";
-import { paragraphAnimationVariants, headingVariants } from "@/utils";
+import { paragraphAnimationVariants, headingAnimationVariants } from "@/utils";
 
 const CaseStudiesHeroTexts = () => {
   return (
@@ -12,12 +12,12 @@ const CaseStudiesHeroTexts = () => {
       <motion.h1
         initial="hidden"
         animate="visible"
-        variants={headingVariants}
+        variants={headingAnimationVariants}
         className="mobileHeading1 max-w-[21rem] dark:text-white800 sm:max-w-[41.125rem] lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.04rem]"
       >
         Recent{" "}
         {heroText.map((text, i) => (
-          <CaseStudiesHeading text={text} key={projects[i].name} />
+          <CaseStudiesHeading text={text} key={text} />
         ))}
       </motion.h1>
       <motion.p

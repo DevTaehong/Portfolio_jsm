@@ -20,9 +20,8 @@ import NavBarMenuButton from "@/components/navBar/NavBarMenuButton";
 import { siteConfig } from "@/config/site";
 import { DownloadResumeIcon, DividerIcon } from "../svg/navBar";
 
-export const NavBar = () => {
+export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50">
       <motion.div
@@ -53,7 +52,10 @@ export const NavBar = () => {
           </NavbarContent>
           <NavbarContent className="sm:flex sm:flex-row sm:gap-9" justify="end">
             <div className="hidden sm:flex sm:flex-row sm:items-center sm:gap-9">
-              <NavBarLinks isMobile="navBarLinkDeskTop" />
+              <NavBarLinks
+                isMobile="navBarLinkDeskTop"
+                resumeUrl={resume.resumeUpload}
+              />
             </div>
             <NavbarItem className="sm:hidden">
               <NavbarMenuToggle
@@ -63,7 +65,10 @@ export const NavBar = () => {
             </NavbarItem>
           </NavbarContent>
           <NavbarMenu className="items-center gap-6 pt-12">
-            <NavBarLinks isMobile="navBarLinkMobile" />
+            <NavBarLinks
+              isMobile="navBarLinkMobile"
+              resumeUrl={resume.resumeUpload}
+            />
           </NavbarMenu>
         </NextUiNavBar>
       </motion.div>
@@ -71,7 +76,13 @@ export const NavBar = () => {
   );
 };
 
-const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
+const NavBarLinks = ({
+  isMobile,
+  resumeUrl,
+}: {
+  isMobile: string;
+  resumeUrl: string;
+}) => {
   const pathname = usePathname();
   return (
     <>
@@ -94,9 +105,9 @@ const NavBarLinks = ({ isMobile }: { isMobile: string }) => {
         <DownloadResumeIcon />
         <Link
           className={`text-black200 dark:text-white900 ${isMobile}`}
-          href="/Resume.pdf"
-          download="Resume.pdf"
+          href={`${resumeUrl}?dl=Taehong's Resume.pdf`}
           size="lg"
+          isExternal
         >
           Resume
         </Link>

@@ -55,3 +55,22 @@ export type CaseStudiesProjectsType = {
     url: string;
   };
 };
+
+export type CaseStudiesDetailType = {
+  type: string;
+  name: string;
+  description: string;
+  myRole: string;
+  startDate: string;
+  endDate: string;
+  techStack: string[];
+  demoSite: string;
+  sourceCode: string;
+  learnings: string[];
+  detail: string;
+  problemStatement: string;
+  problemStatementImage: string;
+  figmaDesignImage: string;
+  heroImage: string;
+  challenges: string[];
+};
