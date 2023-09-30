@@ -6,7 +6,7 @@ const ProcessIcons = ({ Process }: { Process: React.FC }) => {
     >
       <Process />
       <p className="smallBold text-black300 dark:text-white900 sm:text-[1.25rem] sm:leading-[1.625rem]">
-        {Process.name}
+        {Process.name.toString()}
       </p>
     </div>
   );
