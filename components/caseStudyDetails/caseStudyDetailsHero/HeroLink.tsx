@@ -14,6 +14,7 @@ const HeroLink = ({
     <Icon />
     <Link
       href={href}
+      isExternal
       className="smallBold text-primaryLight group-hover:opacity-80 group-hover:transition-opacity dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
     >
       {text}
