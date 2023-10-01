@@ -1,4 +1,6 @@
+import { revalidatePath } from "next/cache";
 import { groq } from "next-sanity";
+
 import { client } from "./lib/client";
 
 export async function getExperience() {
@@ -8,9 +10,9 @@ export async function getExperience() {
       name,
       logo {alt, "url": asset->url, srcLightHover {"url": asset->url}, srcDarkHover {"url": asset->url}},
       description
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/", "page");
   return data;
 }
 
@@ -22,9 +24,9 @@ export async function getFeaturedProjects() {
       image {alt, "url": asset->url},
       description,
       techStack
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/", "page");
   return data;
 }
 
@@ -36,9 +38,9 @@ export async function getTestimonials() {
       image {alt, "url": asset->url},
       title,
       testimonial
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/", "page");
   return data;
 }
 
@@ -49,9 +51,9 @@ export async function getCaseStudiesProjects() {
       name,
       image {alt, "url": asset->url},
       description,
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/case-studies", "page");
   return data;
 }
 
@@ -75,9 +77,9 @@ export async function getCaseStudiesDetail() {
       "figmaDesignImage": figmaDesignImage.asset->url,
       "heroImage": heroImage.asset->url,
       challenges
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/case-studies/[project]", "page");
   return data;
 }
 
@@ -85,8 +87,8 @@ export async function getResume() {
   const data = await client.fetch(
     groq`*[_type == "resume"]{
       "resumeUpload": resumeUpload.asset->url
-    }`,
-    { next: { revalidate: 1500 } }
+    }`
   );
+  revalidatePath("/", "layout");
   return data;
 }
