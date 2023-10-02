@@ -10,7 +10,10 @@ const MySkills = () => {
             My Skills
           </h1>
         </span>
-        <div className="grid grid-cols-4 gap-x-[2.5rem] gap-y-12 md:flex md:flex-wrap md:justify-center lg:gap-[4rem] xl:gap-[2.73rem]">
+        <div
+          className="grid grid-cols-4 gap-x-[2.5rem] gap-y-12 md:flex md:flex-wrap md:justify-center lg:gap-[4rem] 
+            xl:gap-x-[2.8916rem] xl:gap-y-[4.13rem]"
+        >
           <Skill />
         </div>
       </div>

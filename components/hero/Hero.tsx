@@ -5,7 +5,7 @@ import HeroLinks from "./HeroLinks";
 function Hero() {
   return (
     <section className="bg-white800 dark:bg-black300">
-      <div className="flex flex-col justify-start pb-8 md:flex-row xl:pb-0 min-[1440px]:items-end 2xl:mx-auto 2xl:max-w-[90rem]">
+      <div className="flex flex-col justify-start pb-8 md:flex-row xl:pb-0 2xl:mx-auto 2xl:max-w-[90rem] min-[1440px]:items-end">
         <div className="w-full px-6 pt-12 xl:pl-[5.31rem] xl:pr-0 xl:pt-[4.6875rem]">
           <HeroTexts />
           <HeroLinks />

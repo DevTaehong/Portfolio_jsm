@@ -21,7 +21,6 @@ const ProblemStatement = ({ project }: { project: CaseStudiesDetailType }) => {
           variants={paragraphAnimationVariants2}
           initial="hidden"
           whileInView="visible"
-          transition={{ delay: 2 }}
           viewport={{ once: true }}
           className="smallRegular whitespace-pre-line text-white500 sm:text-[1.25rem] sm:leading-[1.875rem]"
         >
@@ -30,7 +29,7 @@ const ProblemStatement = ({ project }: { project: CaseStudiesDetailType }) => {
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <Image
@@ -39,6 +38,7 @@ const ProblemStatement = ({ project }: { project: CaseStudiesDetailType }) => {
             alt="Problem Statement Image"
             width={348}
             height={363.836}
+            unoptimized
           />
         </motion.div>
       </div>

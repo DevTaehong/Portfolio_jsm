@@ -11,10 +11,10 @@ const SquareWorkExperienceCard = () => {
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1 }}
     >
       <Card
-        className="mainWorkExperienceCard flex max-w-[37.9375rem] flex-none grow flex-col items-center justify-center gap-[0.86rem] dark:bg-white800 sm:px-[4rem] sm:pb-[3.5rem] 
+        className="mainWorkExperienceCard flex max-w-[37.9375rem] flex-none grow flex-col justify-center gap-[0.86rem] dark:bg-white800 sm:px-[4rem] sm:pb-[3.5rem] 
               sm:pt-[4.5rem] xl:min-h-[37.0625rem] xl:pb-[6.56rem] xl:pl-[6.56rem] xl:pr-[8.94rem] xl:pt-[9.5rem]"
       >
         <div className="flex flex-col gap-[1.49rem]">
@@ -30,7 +30,9 @@ const SquareWorkExperienceCard = () => {
             and achievements in my career.
           </p>
         </div>
-        <LineDecoration />
+        <div className="w-[16.8125rem] sm:w-[22.25rem]">
+          <LineDecoration />
+        </div>
       </Card>
     </motion.div>
   );

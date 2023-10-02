@@ -1,5 +1,6 @@
-import { FeaturedProjectsType } from "@/types";
 import Image from "next/image";
+
+import { FeaturedProjectsType } from "@/types";
 
 const ProjectCardImage = ({
   project,
@@ -18,13 +19,13 @@ const ProjectCardImage = ({
                       }`}
     >
       <Image
-        className={`sm:h-full sm:w-full xl:h-[20.56731rem] ${
+        className={`h-full w-full px-[0.62rem] md:px-0 xl:h-[20.56731rem] ${
           (index + 1) % 2 === 0
             ? "xl:translate-x-[-3.72rem]"
             : "xl:translate-x-[1.17rem]"
         } `}
         src={project?.image.url}
-        width={320}
+        width={325}
         height={155}
         alt={`Project ${project?.name}`}
       />

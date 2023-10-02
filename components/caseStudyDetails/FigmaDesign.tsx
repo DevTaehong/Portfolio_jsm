@@ -14,6 +14,7 @@ const FigmaDesign = ({ project }: { project: CaseStudiesDetailType }) => {
         alt="Problem Statement Image"
         width={393}
         height={209.327}
+        unoptimized
       />
     </section>
   );

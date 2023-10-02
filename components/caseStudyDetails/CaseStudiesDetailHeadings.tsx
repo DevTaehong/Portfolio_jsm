@@ -17,7 +17,6 @@ const CaseStudiesDetailHeadings = ({
         variants={paragraphAnimationVariants}
         initial="hidden"
         whileInView="visible"
-        transition={{ delay: 2 }}
         viewport={{ once: true }}
         className="technologiesUsed dark:text-primaryDark sm:text-[0.875rem] sm:leading-[1.26875rem]"
       >
@@ -27,7 +26,6 @@ const CaseStudiesDetailHeadings = ({
         variants={headingAnimationVariants}
         initial="hidden"
         whileInView="visible"
-        transition={{ delay: 2 }}
         viewport={{ once: true }}
         className="caseStudyDetailTechStack dark:text-white900 sm:text-[2rem] sm:leading-[2.1rem]"
       >

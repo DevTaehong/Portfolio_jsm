@@ -31,12 +31,15 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
         transition={{ duration: 1 }}
       >
         <NextUiNavBar
-          classNames={{ wrapper: "max-w-[79.375rem] min-[1440px]:px-0" }}
+          classNames={{ wrapper: "max-w-[79.375rem] xl:px-0" }}
           shouldHideOnScroll
-          className="bg-white800 dark:bg-black300 xl:h-[7.3125rem]"
+          className="bg-white800 dark:bg-black300 xl:h-[7.3125rem] xl:px-[5.31rem]"
           onMenuOpenChange={setIsMenuOpen}
         >
-          <NavbarContent justify="center">
+          <NavbarContent
+            justify="center"
+            className="justify-between 2xl:justify-center"
+          >
             <NavbarBrand>
               {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
               <Link href="/" className="lg:drop-shadow-2xl">

@@ -9,11 +9,11 @@ const ProjectLink = ({ project }: { project: { name: string } }) => {
       href={`/case-studies/${project.name.toLowerCase()}`}
       className="bodyBold group inline-flex gap-[0.47rem] text-white900"
     >
-      See Detail Project
+      See Case Study
       <Image
         className="transition group-hover:translate-x-[0.47rem]"
         src={arrow}
-        alt="See Detail Project Arrow"
+        alt="Case Study Arrow"
         width={35}
         height={0}
       />

@@ -10,10 +10,12 @@ const ProjectHeading = ({
         {project.description}
       </h2>
       <div className="flex flex-row gap-1 truncate xl:gap-5">
-        {project.techStack.map((tech) => (
+        {project.techStack.map((tech, index) => (
           <div
             key={tech}
-            className="smallRegular techStack flex items-start text-white900"
+            className={`smallRegular techStack items-start text-white900 ${
+              index >= 3 ? "hidden xl:flex" : "flex"
+            }`}
           >
             {tech}
           </div>

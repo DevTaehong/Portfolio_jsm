@@ -16,7 +16,7 @@ const Companies = ({ experience }: { experience: ExperienceType[] }) => {
           className="list-none"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
           key={company._id}
         >

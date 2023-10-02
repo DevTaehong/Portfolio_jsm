@@ -1,5 +1,6 @@
 "use client";
 
+import { useMediaQuery } from "usehooks-ts";
 import { Card, CardHeader } from "@nextui-org/card";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -13,6 +14,7 @@ type ServiceProps = {
 
 const Service = ({ ServiceIcon, index }: ServiceProps) => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const isOneRow = useMediaQuery("(min-width: 1280px)");
 
   const handleCardHovered = (index: number) => {
     setHoveredCard(index);
@@ -22,7 +24,10 @@ const Service = ({ ServiceIcon, index }: ServiceProps) => {
   };
 
   return (
-    <motion.div transition={{ type: "spring" }} whileHover={{ y: 71 }}>
+    <motion.div
+      transition={{ type: "spring" }}
+      whileHover={isOneRow ? { y: 71 } : undefined}
+    >
       <Card
         className="serviceCard flex flex-col gap-9 pb-[1.88rem] pl-[1.56rem] pr-[1.83rem] pt-[1.87rem] dark:bg-black300 
                 dark:shadow-darkServiceCard dark:hover:bg-primaryDark dark:hover:shadow-darkServiceCardHover"
