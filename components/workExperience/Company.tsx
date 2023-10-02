@@ -23,11 +23,6 @@ const Company = ({ company }: { company: ExperienceType }) => {
         <p className="smallRegular text-white500 dark:text-white800">
           {company.description}
         </p>
-        <ul>
-          <li>Test</li>
-          <li>Test</li>
-          <li>Test</li>
-        </ul>
       </div>
     </motion.div>
   );
