@@ -37,6 +37,7 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
         transition={{ duration: 1 }}
       >
         <NextUiNavBar
+          disableAnimation
           isMenuOpen={isMenuOpen}
           onMenuOpenChange={setIsMenuOpen}
           classNames={{ wrapper: "max-w-[79.375rem] xl:px-0" }}
@@ -101,10 +102,7 @@ const NavBarLinks = ({
   const pathname = usePathname();
 
   const handleLinkClick = () => {
-    // Add a delay of 0.5 seconds (500 milliseconds) before closing the menu
-    setTimeout(() => {
-      onCloseMenu(); // Call the onCloseMenu function to close the menu
-    }, 800);
+    onCloseMenu();
   };
 
   return (
