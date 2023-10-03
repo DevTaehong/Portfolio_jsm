@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
+import NextLink from "next/link";
 
 const FooterCard = () => (
   <motion.svg
@@ -90,7 +91,7 @@ const FooterCard = () => (
         fill="#151E2C"
       />
     </g>
-    <Link className="group" href="/contact">
+    <Link as={NextLink} className="group" href="/contact">
       <rect
         className="h-[4.3125rem] w-[20.1875rem] fill-primaryLight dark:fill-primaryDark"
         x="877"
