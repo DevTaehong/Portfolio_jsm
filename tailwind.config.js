@@ -22,6 +22,7 @@ module.exports = {
         'darkServiceCardHover': '32px 32px 71px 0px rgba(2, 82, 205, 0.28)',
         'jobCardHover': '-25px 47px 66px 0px rgba(0, 0, 0, 0.08)',
         "caseStudyCard": "0px 3px 30px 0px #1F2C41",
+        "darkExperienceCard": "0px 1px 20px 0px rgba(31, 46, 71, 0.50)",
       },
       screens: {
         '2xl': '1440px',

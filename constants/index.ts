@@ -170,9 +170,8 @@ export const sortOrder: {
 };
 
 export const sortedExperience: { [key: string]: number } = {
-  "Web Developer - 6 months Experience": 1,
-  "Web Developer - 5 weeks Experience": 2,
-  "IT Programming - 2 years Experience": 3,
+  "Web Developer - July 2023 - January 2024": 1,
+  "Web Developer - April 2022 - May 2022": 2,
 };
 
 export const techStackIcons: {

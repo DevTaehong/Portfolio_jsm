@@ -1,7 +1,7 @@
 import { Card } from "@nextui-org/card";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 
 import { CaseStudiesDetailType } from "@/types";
 
@@ -31,7 +31,7 @@ const CaseStudyCard = ({
         <Button
           as={Link}
           href={`/case-studies/${otherProjects.name.toLowerCase()}`}
-          className="seeCaseStudyButton h-[2.5625rem] hover:transition-opacity dark:bg-primaryDark lg:h-12 lg:text-[0.875rem]"
+          className="seeCaseStudyButton h-[2.5625rem] hover:opacity-80 hover:transition-opacity dark:bg-primaryDark lg:h-12 lg:text-[0.875rem]"
         >
           See Case Study
         </Button>

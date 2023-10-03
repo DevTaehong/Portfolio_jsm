@@ -1,4 +1,5 @@
 import { Link } from "@nextui-org/link";
+import NextLink from "next/link";
 import Image from "next/image";
 
 import { arrow } from "@/public";
@@ -6,6 +7,7 @@ import { arrow } from "@/public";
 const ProjectLink = ({ project }: { project: { name: string } }) => {
   return (
     <Link
+      as={NextLink}
       href={`/case-studies/${project.name.toLowerCase()}`}
       className="bodyBold group inline-flex gap-[0.47rem] text-white900"
     >

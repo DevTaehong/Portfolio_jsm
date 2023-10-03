@@ -23,6 +23,11 @@ import { DownloadResumeIcon, DividerIcon } from "../svg/navBar";
 
 export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50">
       <motion.div
@@ -32,10 +37,11 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
         transition={{ duration: 1 }}
       >
         <NextUiNavBar
+          isMenuOpen={isMenuOpen}
+          onMenuOpenChange={setIsMenuOpen}
           classNames={{ wrapper: "max-w-[79.375rem] xl:px-0" }}
           shouldHideOnScroll
           className="bg-white800 dark:bg-black300 xl:h-[7.3125rem] xl:px-[5.31rem]"
-          onMenuOpenChange={setIsMenuOpen}
         >
           <NavbarContent
             justify="center"
@@ -59,11 +65,13 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
               <NavBarLinks
                 isMobile="navBarLinkDeskTop"
                 resumeUrl={resume.resumeUpload}
+                onCloseMenu={closeMenu}
               />
             </div>
             <NavbarItem className="sm:hidden">
               <NavbarMenuToggle
                 icon={NavBarMenuButton}
+                className="sm:hidden"
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               />
             </NavbarItem>
@@ -72,6 +80,7 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
             <NavBarLinks
               isMobile="navBarLinkMobile"
               resumeUrl={resume.resumeUpload}
+              onCloseMenu={closeMenu}
             />
           </NavbarMenu>
         </NextUiNavBar>
@@ -83,11 +92,18 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
 const NavBarLinks = ({
   isMobile,
   resumeUrl,
+  onCloseMenu,
 }: {
   isMobile: string;
   resumeUrl: string;
+  onCloseMenu: () => void;
 }) => {
   const pathname = usePathname();
+
+  const handleLinkClick = () => {
+    onCloseMenu(); // Call the onCloseMenu function to close the menu
+  };
+
   return (
     <>
       {siteConfig.navItems.map((item) => (
@@ -101,6 +117,7 @@ const NavBarLinks = ({
             }`}
             href={item.href}
             size="lg"
+            onClick={handleLinkClick}
           >
             {item.label}
           </Link>

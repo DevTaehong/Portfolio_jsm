@@ -1,4 +1,3 @@
-export { default as contactIcon } from "./images/contactIcon.svg";
 export { default as arrow } from "./images/detailProjectArrow.svg";
 export { default as stars } from "./images/stars.svg";
 export { default as tick } from "./images/tick.svg";

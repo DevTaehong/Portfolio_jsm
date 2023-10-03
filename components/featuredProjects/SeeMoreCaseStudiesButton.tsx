@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
+import NextLink from "next/link";
 
 const SeeMoreCaseStudiesButton = () => {
   return (
@@ -13,6 +14,7 @@ const SeeMoreCaseStudiesButton = () => {
       className="flex justify-center"
     >
       <Link
+        as={NextLink}
         href="/case-studies"
         className="seeMoreCaseStudies dark:bg-primaryDark"
       >

@@ -161,18 +161,14 @@
 }
 
 .mainWorkExperienceCard {
-  padding: 3.68181rem 2.375rem 2.392rem 2.375rem;
-  border-radius: 1rem;
-  background: var(--black-200, #151e2c);
+  border-radius: 1.25rem;
+  box-shadow: 0px 10px 66px 0px rgba(0, 0, 0, 0.07);
+  background: var(--white-800, #F3F8FF);
+  flex-shrink: 0;
 }
 
 .ExperienceCardHeader {
-  display: flex;
-  height: 5.09788rem;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--white-900, #fff);
+  color: var(--black-200, #151E2C);
   font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;

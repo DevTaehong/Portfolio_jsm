@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import { Link } from "@nextui-org/link";
-import Image from "next/image";
-
-import { contactIcon } from "@/public";
+import { Snippet } from "@nextui-org/snippet";
+import { useMediaQuery } from "usehooks-ts";
 
 import { paragraphAnimationVariants3 } from "@/utils";
+import { HeroEmailCopyIcon } from "../svg/HeroEmailCopyIcon";
+import { CheckIcon } from "../svg/CheckIcon";
 
 const HeroLinks = () => {
+  const isDeskTop = useMediaQuery("(min-width: 1280px)");
   return (
     <motion.div
       initial="hidden"
@@ -23,19 +25,31 @@ const HeroLinks = () => {
       >
         My Work
       </Link>
-      <Link
-        href="mailto:minth1123@icloud.com"
+      <Snippet
+        copyIcon={
+          <HeroEmailCopyIcon
+            width={isDeskTop ? 21 : 16}
+            height={isDeskTop ? 21 : 16}
+          />
+        }
+        checkIcon={
+          <CheckIcon width={isDeskTop ? 21 : 16} height={isDeskTop ? 21 : 16} />
+        }
         className="contactButton contactButtonText mb-[1.69rem] mt-[0.88rem] dark:bg-black200 dark:text-white900 xl:mb-[6.06rem] xl:mt-0 xl:h-[4.3rem] xl:max-w-[19.06rem] xl:px-6 xl:py-5 xl:text-[1.125rem] xl:leading-[1.8rem]"
+        symbol=""
+        classNames={{
+          pre: "contactButtonText xl:text-[1.125rem] xl:leading-[1.8rem] font-poppins dark:text-white900",
+        }}
+        tooltipProps={{
+          delay: 0,
+          classNames: {
+            base: "text-white500 dark:text-white900 dark:bg-black300",
+          },
+          closeDelay: 0,
+        }}
       >
-        <span>minth1123@icloud.com</span>
-        <Image
-          className="xl:h-[1.3125rem] xl:w-[1.3125rem]"
-          src={contactIcon}
-          alt="contact icon"
-          width={16}
-          height={16}
-        />
-      </Link>
+        minth1123@icloud.com
+      </Snippet>
     </motion.div>
   );
 };
