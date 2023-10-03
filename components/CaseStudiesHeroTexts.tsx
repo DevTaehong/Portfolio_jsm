@@ -16,7 +16,7 @@ const CaseStudiesHeroTexts = () => {
         className="mobileHeading1 max-w-[21rem] dark:text-white800 sm:max-w-[41.125rem] lg:text-[4rem] lg:leading-[5.2rem] lg:tracking-[-0.04rem]"
       >
         Recent{" "}
-        {heroText.map((text, i) => (
+        {heroText.map((text) => (
           <CaseStudiesHeading text={text} key={text} />
         ))}
       </motion.h1>

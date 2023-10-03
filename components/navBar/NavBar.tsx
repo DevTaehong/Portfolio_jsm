@@ -6,13 +6,14 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/react";
+} from "@nextui-org/navbar";
+import { Link } from "@nextui-org/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import NextLink from "next/link";
 
 import { ThemeSwitch } from "@/components/navBar/ThemeSwitch";
 import { righteous } from "@/config/fonts";
@@ -42,7 +43,7 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
           >
             <NavbarBrand>
               {/* //NOTE - The image file from the design can't be exported with high quality. So I used the text logo instead. */}
-              <Link href="/" className="lg:drop-shadow-2xl">
+              <Link as={NextLink} href="/" className="lg:drop-shadow-2xl">
                 <div className="logo xl:h-[2.81rem] xl:w-[2.81rem] xl:rounded-full xl:p-[0.78rem]">
                   <span
                     className={`logoText xl:h-5 xl:w-5 xl:text-[1.1rem] xl:leading-[2.625rem] ${righteous.className}`}
@@ -92,6 +93,7 @@ const NavBarLinks = ({
       {siteConfig.navItems.map((item) => (
         <NavbarMenuItem key={item.label}>
           <Link
+            as={NextLink}
             className={`${isMobile} w-full ${
               item.href === pathname
                 ? "font-semibold text-primaryLight dark:text-primaryDark"
@@ -107,6 +109,7 @@ const NavBarLinks = ({
       <NavbarMenuItem className="flex flex-row items-center gap-[0.1875rem]">
         <DownloadResumeIcon />
         <Link
+          as={NextLink}
           className={`text-black200 dark:text-white900 ${isMobile}`}
           href={`${resumeUrl}?dl=Taehong's Resume.pdf`}
           size="lg"
