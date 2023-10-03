@@ -163,7 +163,7 @@ export const inputFields = [
 export const sortOrder: {
   [key: string]: number;
 } = {
-  HipNode: 1,
+  Hipnode: 1,
   Morent: 2,
   JobIt: 3,
   Filmpire: 4,
