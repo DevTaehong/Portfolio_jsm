@@ -101,7 +101,10 @@ const NavBarLinks = ({
   const pathname = usePathname();
 
   const handleLinkClick = () => {
-    onCloseMenu(); // Call the onCloseMenu function to close the menu
+    // Add a delay of 0.5 seconds (500 milliseconds) before closing the menu
+    setTimeout(() => {
+      onCloseMenu(); // Call the onCloseMenu function to close the menu
+    }, 800);
   };
 
   return (
