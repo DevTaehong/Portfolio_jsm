@@ -22,7 +22,7 @@ const ProblemStatement = ({ project }: { project: CaseStudiesDetailType }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="smallRegular whitespace-pre-line text-white500 sm:text-[1.25rem] sm:leading-[1.875rem]"
+          className="smallRegular whitespace-pre-line text-white500 dark:text-white800 sm:text-[1.25rem] sm:leading-[1.875rem]"
         >
           {project?.problemStatement}
         </motion.p>
