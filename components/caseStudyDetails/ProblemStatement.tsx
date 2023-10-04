@@ -33,7 +33,7 @@ const ProblemStatement = ({ project }: { project: CaseStudiesDetailType }) => {
           viewport={{ once: true }}
         >
           <Image
-            className="sm:h-full sm:w-full"
+            className="rounded-[0.625rem] sm:h-full sm:w-full"
             src={project?.problemStatementImage}
             alt="Problem Statement Image"
             width={348}
