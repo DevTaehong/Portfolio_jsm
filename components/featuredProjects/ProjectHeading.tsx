@@ -9,7 +9,7 @@ const ProjectHeading = ({
         {project.name} {" - "} <br className="block xl:hidden" />
         {project.description}
       </h2>
-      <div className="flex flex-row gap-1 truncate xl:gap-5">
+      <div className="flex flex-row gap-[0.31rem] truncate xl:gap-[0.625rem]">
         {project.techStack.map((tech, index) => (
           <div
             key={tech}
