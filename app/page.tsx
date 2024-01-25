@@ -1,3 +1,5 @@
+import { HoverProvider } from "@/context/HoverContext";
+
 import FeaturedProjects from "@/components/featuredProjects/FeaturedProjects";
 import Hero from "@/components/hero/Hero";
 import MySkills from "@/components/mySkills/MySkills";
@@ -11,7 +13,9 @@ export default async function Home() {
       <Hero />
       <MySkills />
       <ServiceIProvide />
-      <WorkExperience />
+      <HoverProvider>
+        <WorkExperience />
+      </HoverProvider>
       <FeaturedProjects />
       <Testimonials />
     </main>

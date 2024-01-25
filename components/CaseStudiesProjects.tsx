@@ -1,10 +1,13 @@
 import { getCaseStudiesProjects } from "@/sanity/sanity-utils";
 import CaseStudiesProject from "./CaseStudiesProject";
 import { CaseStudiesProjectsType } from "@/types";
+import { sortOrder } from "@/constants";
 
 const CaseStudiesProjects = async () => {
   const caseStudyProjectData: CaseStudiesProjectsType[] =
     await getCaseStudiesProjects();
+  caseStudyProjectData.sort((a, b) => sortOrder[a.name] - sortOrder[b.name]);
+
   return (
     <section className="bg-white900 dark:bg-black200">
       <div

@@ -7,7 +7,7 @@ const MoonFilledIcon = ({
   ...props
 }: IconSvgProps) => (
   <svg
-    className="fill-primaryDark"
+    className="fill-primaryDark transition-opacity hover:opacity-80"
     aria-hidden="true"
     focusable="false"
     height={size || height}

@@ -170,8 +170,8 @@ export const sortOrder: {
 };
 
 export const sortedExperience: { [key: string]: number } = {
-  "Web Developer - July 2023 - January 2024": 1,
-  "Web Developer - April 2022 - May 2022": 2,
+  "Software Developer - July 2023 - January 2024": 1,
+  "Software Developer - April 2022 - May 2022": 2,
 };
 
 export const techStackIcons: {
@@ -193,4 +193,10 @@ export const techStackIcons: {
   SASS: SASSIcon,
   CSS: CSSIcon,
   Git: GitIcon,
+};
+
+export const companyPositions: { [key: string]: number } = {
+  "": 0,
+  "JSM Masterclass Experience": 200.5,
+  "Nova Scotia Community College": 401,
 };

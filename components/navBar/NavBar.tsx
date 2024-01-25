@@ -20,6 +20,7 @@ import { righteous } from "@/config/fonts";
 import NavBarMenuButton from "@/components/navBar/NavBarMenuButton";
 import { siteConfig } from "@/config/site";
 import { DownloadResumeIcon, DividerIcon } from "../svg/navBar";
+import Image from "next/image";
 
 export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,9 +70,23 @@ export const NavBar = ({ resume }: { resume: { resumeUpload: string } }) => {
                 onCloseMenu={closeMenu}
               />
             </div>
+            <NavbarItem className="inline-flex sm:hidden">
+              <ThemeSwitch />
+            </NavbarItem>
             <NavbarItem className="sm:hidden">
               <NavbarMenuToggle
-                icon={NavBarMenuButton}
+                icon={
+                  isMenuOpen ? (
+                    <Image
+                      alt="close button"
+                      src="/images/close.svg"
+                      width={24}
+                      height={24}
+                    />
+                  ) : (
+                    NavBarMenuButton
+                  )
+                }
                 className="sm:hidden"
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               />
@@ -125,7 +140,6 @@ const NavBarLinks = ({
         </NavbarMenuItem>
       ))}
       <NavbarMenuItem className="flex flex-row items-center gap-[0.1875rem]">
-        <DownloadResumeIcon />
         <Link
           as={NextLink}
           className={`text-black200 dark:text-white900 ${isMobile}`}
@@ -133,6 +147,7 @@ const NavBarLinks = ({
           size="lg"
           isExternal
         >
+          <DownloadResumeIcon />
           Resume
         </Link>
       </NavbarMenuItem>

@@ -26,8 +26,7 @@ const CaseStudiesHeroTexts = () => {
         variants={paragraphAnimationVariants}
         className="smallRegular max-w-[21.125rem] text-white500 dark:text-white800 lg:max-w-[44rem] lg:text-[1.25rem] lg:leading-[1.875rem]"
       >
-        {`Dive into my recent success stories and discover how I've helped clients
-        overcome challenges, innovate, and achieve their goals`}
+        {`Dive into my recent success stories and discover how I've assisted teams in overcoming challenges, innovating, and achieving their goals.`}
       </motion.p>
     </>
   );

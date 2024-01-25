@@ -7,7 +7,7 @@ const SunFilledIcon = ({
   ...props
 }: IconSvgProps) => (
   <svg
-    className="fill-primaryLight"
+    className="fill-primaryLight transition-opacity hover:opacity-80"
     aria-hidden="true"
     focusable="false"
     height={size || height}
