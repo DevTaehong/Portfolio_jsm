@@ -17,55 +17,32 @@ const NSCCDetail = () => (
     </h2>
     <div className="flex flex-col gap-4">
       <p className="smallRegular leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
-        5 Weeks work tem placement at NSCC. I worked on a team of 4 to develop a
+        I collaborated with a team to enhance the IT Job Fair website,
+        contributing to effective IT asset management for Nova Scotia Community
+        College. This experience not only improved the website but also advanced
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
-          web application{" "}
-        </span>
-        for the{" "}
-        <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          {" "}
-          Nova Scotia Community College{" "}
-        </span>
-        to help them manage their{" "}
-        <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          {" "}
-          IT assets{" "}
-        </span>
-        and{" "}
-        <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          {" "}
-          tickets{" "}
+          my web development skills
         </span>
         .
       </p>
       <p className="smallRegular leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
-        I worked on the{" "}
-        <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          {" "}
-          front-end{" "}
-        </span>
-        of the application using{" "}
+        I focused on front-end development using
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
           JavaScript{" "}
         </span>
-        . I also worked on the{" "}
-        <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          {" "}
-          back-end{" "}
-        </span>
-        using{" "}
+        for a user-friendly interface. I also handled back-end tasks, employing
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
           Laravel{" "}
         </span>
-        and{" "}
+        and
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
-          MySQL{" "}
-        </span>
-        .
+          MySQL
+        </span>{" "}
+        for effective server-side functionality and database management.
       </p>
     </div>
   </motion.div>

@@ -5,11 +5,8 @@ import { motion } from "framer-motion";
 import Company from "./Company";
 import { ExperienceType } from "@/types";
 import { sortedExperience } from "@/constants";
-import { useHover } from "@/context/HoverContext";
 
 const Companies = ({ experience }: { experience: ExperienceType[] }) => {
-  const { setHoveredCompany } = useHover();
-
   experience.sort(
     (a, b) => sortedExperience[a.description] - sortedExperience[b.description]
   );
@@ -24,8 +21,6 @@ const Companies = ({ experience }: { experience: ExperienceType[] }) => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           key={company._id}
-          onMouseEnter={() => setHoveredCompany(company.name)}
-          onMouseLeave={() => setHoveredCompany("")}
         >
           <Company company={company} />
         </motion.li>

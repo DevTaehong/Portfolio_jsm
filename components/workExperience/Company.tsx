@@ -20,12 +20,11 @@ const Company = ({ company }: { company: ExperienceType }) => {
       animate={{
         x: isBiggerThan1280 && hasTheBarMoved ? 30 : 0,
       }}
-      whileHover={isBiggerThan1280 ? { x: 30 } : undefined}
       className={twMerge(
-        `job group flex flex-col 
+        `job flex flex-col 
         justify-center gap-[1.12rem] px-9 dark:bg-black200 xl:h-[7.625rem] xl:flex-row
-        xl:items-center xl:justify-start xl:border xl:border-white800 xl:pl-8 xl:hover:border-none 
-        xl:hover:shadow-jobCardHover dark:xl:border-black200 dark:xl:hover:bg-black300 2xl:w-[37.9375rem]`,
+        xl:items-center xl:justify-start xl:border xl:border-white800 xl:pl-8  
+      dark:xl:border-black200 2xl:w-[37.9375rem]`,
         hasTheBarMoved
           ? "border-none shadow-jobCardHover dark:bg-black300"
           : "xl:shadow-none"

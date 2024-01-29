@@ -29,16 +29,17 @@ const DefaultDetail = () => (
         , and accomplished notable things.
       </p>
       <p className="smallRegular leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
-        From coding in the late hours to collaborating with talented teams, my
-        career has been a dynamic adventure filled with{" "}
+        {`My professional trajectory has been a dynamic adventure, ranging from
+        late-night coding sessions to fruitful collaborations with skilled
+        teams. Throughout this multifaceted journey, I've consistently embraced`}{" "}
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           growth{" "}
         </span>
-        and{" "}
+        and a{" "}
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
-          innovation
-        </span>
-        .
+          dedication{" "}
+        </span>{" "}
+        to fostering innovation.
       </p>
     </div>
   </motion.div>

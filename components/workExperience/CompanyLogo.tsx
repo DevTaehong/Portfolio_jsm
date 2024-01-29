@@ -15,23 +15,17 @@ const CompanyLogo = ({
     {
       src: company?.logo?.url,
       className: twMerge(
-        "brightness-0 dark:brightness-100 group-hover:hidden dark:group-hover:hidden",
+        "brightness-0 dark:brightness-100",
         hasTheBarMoved && "hidden"
       ),
     },
     {
       src: company?.logo?.srcLightHover?.url,
-      className: twMerge(
-        "hidden group-hover:block dark:hidden dark:group-hover:hidden group-hover:dark:hidden",
-        hasTheBarMoved && "block"
-      ),
+      className: twMerge("hidden  dark:hidden", hasTheBarMoved && "block"),
     },
     {
       src: company?.logo?.srcDarkHover?.url,
-      className: twMerge(
-        "hidden dark:hidden dark:group-hover:block",
-        hasTheBarMoved && "dark:block"
-      ),
+      className: twMerge("hidden dark:hidden", hasTheBarMoved && "dark:block"),
     },
   ];
 
