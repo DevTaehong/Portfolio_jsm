@@ -10,17 +10,15 @@ const HeroLink = ({
   href: string;
   text: string;
 }) => (
-  <div className="group flex flex-row items-center gap-[0.19rem]">
+  <Link
+    href={href}
+    isExternal
+    className="smallBold group inline-flex gap-x-[0.19rem] text-primaryLight group-hover:opacity-80 group-hover:transition-opacity dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
+  >
     <Icon />
-    <Link
-      href={href}
-      isExternal
-      className="smallBold text-primaryLight group-hover:opacity-80 group-hover:transition-opacity dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
-    >
-      {text}
-    </Link>
+    {text}
     <CaseStudyArrow />
-  </div>
+  </Link>
 );
 
 export default HeroLink;
