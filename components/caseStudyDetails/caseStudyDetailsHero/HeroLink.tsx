@@ -13,7 +13,7 @@ const HeroLink = ({
   <Link
     href={href}
     isExternal
-    className="smallBold group inline-flex gap-x-[0.19rem] text-primaryLight group-hover:opacity-80 group-hover:transition-opacity dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
+    className="smallBold group inline-flex gap-x-[0.19rem] text-primaryLight transition-opacity group-hover:opacity-80 dark:text-primaryDark sm:text-[1.25rem] sm:leading-[1.625rem]"
   >
     <Icon />
     {text}
