@@ -1,40 +1,66 @@
-# Next.js & NextUI Template
+# Portfolio
+<img width="1354" alt="Screenshot 2024-02-11 at 4 03 37 PM" src="https://github.com/DevTaehong/Portfolio_jsm/assets/71358207/8fe63f9f-31f4-49fa-a3bf-efb5789ed1b6">
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
+[![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://github.com/DevTaehong/Hipnode)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Technologies Used
+## 🌐 Demo
+Here is a working live demo:  https://hipnode-devtaehong.vercel.app/
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+## 🛠️ Setup Project
+To get this project up and running in your development environment, follow these step-by-step instructions.
 
-## How to Use
+### 🍴 Prerequisites
 
+We need to install or make sure that these tools are pre-installed on your machine:
 
-### Use the template with create-next-app
+- [NodeJS](https://nodejs.org/en/download/): It is a JavaScript runtime build. 
+- [Git](https://git-scm.com/downloads): It is an open-source version control system. 
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## 🔍 Usage
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+### How To Use
 
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run the development server
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-npm run dev
+# Clone this repository
+$ git clone https://github.com/DevTaehong/Portfolio_jsm.git
+
+# Go into the repository
+$ cd Portfolio_jsm
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
 ```
 
-## License
+> **Note**
+> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+### ⚒️ How to Contribute
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+- Fork the repo
+- Create a new branch (`git checkout -b improve-feature`)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (`git commit -am 'Improve feature'`)
+- Push to the branch (`git push origin improve-feature`)
+- Create a Pull Request 
+
+### 📩 Bug / Feature Request
+
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/devtaehong/hipnode/issues/new) by including your search query and the expected result.
+
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/devtaehong/hipnode/issues/new). Please include sample queries and their corresponding results
+
+
+## 📞 Contact Me
+
+[![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-taehong-blue?style=flat&logo=linkedin&logoColor=b0c0c0&labelColor=363D44)](https://www.linkedin.com/in/taehong/)
