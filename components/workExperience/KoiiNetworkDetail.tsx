@@ -28,7 +28,7 @@ const KoiiNetworkDetail = () => (
         </span>
         skills.
       </p>
-      <p className="smallRegular flex flex-col leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
+      <p className="smallRegular leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
         I focused on full-stack development using
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
