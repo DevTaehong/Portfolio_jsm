@@ -20,7 +20,7 @@ const LineDecoration = () => {
   const handleDragStop = (e: DraggableEvent, data: DraggableData) => {
     setHoveredCompany(
       data.x === 200.5
-        ? "JSM Masterclass Experience"
+        ? "Koii network"
         : data.x === 401
         ? "Nova Scotia Community College"
         : ""
