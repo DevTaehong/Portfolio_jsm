@@ -6,7 +6,7 @@ import { Card } from "@nextui-org/card";
 import LineDecoration from "../svg/workExperience/LineDecoration";
 import { useHover } from "@/context/HoverContext";
 import DefaultDetail from "./DefaultDetail";
-import JSMDetail from "./JSMDetail";
+import KoiiNetworkDetail from "./KoiiNetworkDetail";
 import NSCCDetail from "./NSCCDetail";
 
 const SquareWorkExperienceCard = () => {
@@ -14,7 +14,7 @@ const SquareWorkExperienceCard = () => {
 
   const details: { [key: string]: JSX.Element } = {
     "": <DefaultDetail />,
-    "JSM Masterclass Experience": <JSMDetail />,
+    "Koii network": <KoiiNetworkDetail />,
     "Nova Scotia Community College": <NSCCDetail />,
   };
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const JSMDetail = () => (
+const KoiiNetworkDetail = () => (
   <motion.div
     transition={{ type: "spring" }}
     initial={{ opacity: 0 }}
@@ -29,15 +29,25 @@ const JSMDetail = () => (
         skills.
       </p>
       <p className="smallRegular flex flex-col leading-[1.8rem] text-white500 dark:text-white800 xl:text-[1.125rem]">
-        Built 3 web applications in teams with an average size of 6 members.
-        <ul className="list-inside list-disc">
-          <li>A social media forum</li>
-          <li>A car-renting web application</li>
-          <li>A job finder web app </li>
-        </ul>
+        I focused on full-stack development using
+        <span className="font-semibold text-primaryLight dark:text-primaryDark">
+          {" "}
+          JavaScript{" "}
+        </span>
+        for a user-friendly interface. I also handled back-end tasks, employing
+        <span className="font-semibold text-primaryLight dark:text-primaryDark">
+          {" "}
+          Node.js{" "}
+        </span>
+        and
+        <span className="font-semibold text-primaryLight dark:text-primaryDark">
+          {" "}
+          MongoDB
+        </span>{" "}
+        for effective server-side functionality and database management.
       </p>
     </div>
   </motion.div>
 );
 
-export default JSMDetail;
+export default KoiiNetworkDetail;

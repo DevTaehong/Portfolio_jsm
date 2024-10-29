@@ -170,7 +170,7 @@ export const sortOrder: {
 };
 
 export const sortedExperience: { [key: string]: number } = {
-  "Software Developer - July 2023 - January 2024": 1,
+  "Software Developer - March 2024 - Present": 1,
   "Software Developer - April 2022 - May 2022": 2,
 };
 
@@ -197,6 +197,6 @@ export const techStackIcons: {
 
 export const companyPositions: { [key: string]: number } = {
   "": 0,
-  "JSM Masterclass Experience": 200.5,
+  "Koii network": 200.5,
   "Nova Scotia Community College": 401,
 };
