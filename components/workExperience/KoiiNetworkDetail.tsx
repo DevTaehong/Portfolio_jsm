@@ -32,12 +32,12 @@ const KoiiNetworkDetail = () => (
         I focused on full-stack development using
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
-          JavaScript{" "}
+          React and MUI{" "}
         </span>
         for a user-friendly interface. I also handled back-end tasks, employing
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
           {" "}
-          Node.js{" "}
+          Node.js, Express.js and Next.js{" "}
         </span>
         and
         <span className="font-semibold text-primaryLight dark:text-primaryDark">
